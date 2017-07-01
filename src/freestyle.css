@@ -1,0 +1,17 @@
+/*
+icon rotation when hover
+*/
+.icon{
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px auto auto;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
