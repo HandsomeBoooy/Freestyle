@@ -7,4 +7,18 @@ class Freestyle{
     }
 }
 
-//2017-07-02
+//plugin used as DOM-attribution title
+class Plugin_title{
+    constructor() {
+
+    }
+    init(elementId, content, mouseOn_time, autoDisappear, disappearTime) {
+        autoDisappear = (autoDisappear === undefined || autoDisappear === null) ? false : autoDisappear;
+        disappearTime = (disappearTime === undefined || disappearTime === null) ? false : disappearTime;
+
+        let ele = document.getElementById(elementId);
+        //todo
+        //define a function to bind the mouseon events
+    }
+}
+
