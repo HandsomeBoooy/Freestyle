@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Before</title>
+    <style>
+        #hahaha {
+            margin: 200px;
+            height: 100px;
+            width: 100px;
+            background-color: #ffffff;
+            border: solid 1px #000000;
+            position: relative;
+        }
+        /*#hahaha:before, #hahaha:after {*/
+            /*border: solid transparent;*/
+            /*content: " ";*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*top: -20px;*/
+            /*position: absolute;*/
+        /*}*/
+        #hahaha:before {
+            border: solid transparent;
+            content: " ";
+            width: 0;
+            height: 0;
+            top: -20px;
+            position: absolute;
+            border-width: 10px;
+            /*border-left-color: #fff;*/
+            /*border-right-color: #fff;*/
+            /*border-top-color: #fff;*/
+            border-bottom-color: #000;
+            left: 20px;
+        }
+        /*#hahaha:after {*/
+            /*border-width: 10px;*/
+            /*border-left-color: #000;*/
+            /*border-right-color: #fff;*/
+            /*border-top-color: #fff;*/
+            /*border-bottom-color: #000;*/
+            /*left: 40px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="hahaha"></div>
+</body>
+</html>
