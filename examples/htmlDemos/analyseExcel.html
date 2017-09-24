@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Example for analysing a excel file</title>
+    <script>
+        function analyseExcel() {
+            let tempStr = '';
+            let filePath = document.getElementById('uploadExcel').value;    // get file path
+            let oXL = new ActiveXObject('Excel.application');   // enable an Automation object and call a excel analysis service
+            let oWB = oXL.Workbooks.open(filePath);     // open the excel file by its file path
+            oWB.worksheets(1).select();     // get the first sheet
+            let oSheet = oWB.ActiveSheet;
+            let rows = oSheet.usedrange.rows.count;
+            try {
+                for (let i = 1; i < rows; i++) {
+                    if (oSheet.Cells(i, 2).value === null || oSheet.Cells(i, 3).value === null) break;
+                    let a = (oSheet.Cells(i, 2).value.toString() == 'undefined' ? '' : oSheet.Cells(i, 2).value);
+                    tempStr += (' ' + oSheet.Cells(i, 2).value + ' ' + oSheet.Cells(i, 3).value);
+                }
+            } catch (e) {
+                document.getElementById('textArea').value = tempStr;
+            }
+            document.getElementById('textArea').value = tempStr;
+            oXL.Application.Quit();
+            CollectGarbage();
+        }
+    </script>
+</head>
+<body>
+<input type="file" id="uploadExcel"><input type="button" onclick="analyseExcel();" value="read">
+<br>
+<textarea name="" id="textArea" rows="10"></textarea>
+</body>
+</html>
