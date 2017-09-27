@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip Demo</title>
+    <!--<script src="../../../jquery-3.2.1.js"></script>-->
+    <style>
+        .tooltip-rectangle {
+            width: 300px;
+            height: 300px;
+        }
+        #hahaha {
+            position: absolute;
+            top: 400px;
+            left: 400px;
+            background-color: #00A00A;
+        }
+        #hahaha::after{
+            content: attr(data-value);
+        }
+        /*#hehehe {*/
+            /*position: relative;*/
+        /*}*/
+        /*#hihihi {*/
+
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="hahaha" class="tooltip-rectangle" data-value="直接调用"></div>
+<!--<div id="hehehe" class="tooltip-rectangle"></div>-->
+<!--<div id="hihihi" class="tooltip-rectangle"></div>-->
+</body>
+<script>
+
+</script>
+</html>

@@ -22,3 +22,16 @@ class Plugin_title{
     }
 }
 
+class util{
+    constructor () {
+
+    }
+
+    clickInWindow () {
+        (function () {
+            setInterval(function () {
+                $('body')
+            }, 570000)
+        })();
+    }
+}
