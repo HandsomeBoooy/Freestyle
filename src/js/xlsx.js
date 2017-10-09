@@ -5,6 +5,10 @@
 /*exported XLSX */
 /*global global, exports, module, require:false, process:false, Buffer:false */
 var XLSX = {};
+/*exported XLS */
+var XLS = XLSX;
+/*exported ODS */
+var ODS = XLSX;
 (function make_xlsx(XLSX) {
 	XLSX.version = '0.11.4';
 	var current_codepage = 1200;
@@ -18555,7 +18559,3 @@ var XLSX = {};
 	XLSX.utils = utils;
 	XLSX.SSF = SSF;
 })(typeof exports !== 'undefined' ? exports : XLSX);
-/*exported XLS */
-var XLS = XLSX;
-/*exported ODS */
-var ODS = XLSX;

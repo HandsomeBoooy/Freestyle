@@ -1,2 +1,4 @@
 # Freestyle
-Decide to build a frame in freestyle
+Decide to freestyle building a frame
+
+[-] everything that I'm interested in will be concluded.
