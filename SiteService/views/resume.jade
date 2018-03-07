@@ -1,3 +1,10 @@
 extends layout
-
-block content
+block head
+    link(rel="stylesheet", href="/stylesheets/resume_header.css")
+    link(rel="stylesheet", href="/stylesheets/resume_body.css")
+block body
+    div.resume-container
+        div.resume-page
+            include ./resume_header.jade
+        div.resume-division
+        div.resume-page
