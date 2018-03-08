@@ -1,18 +1,18 @@
-.header-container{
+.resume-header-container {
     width: 100%;
 }
-.header-title{
+
+.resume-header-title {
     margin-top: 20px;
     font-size: 28px;
     font-weight: 600;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 56px;
     padding-left: 84px;
 }
-.header-title-content{
-    
-}
-.header-decorator{
+
+.resume-header-title-content {}
+
+.resume-header-decorator {
     height: 0;
     width: 75%;
     border-bottom: 15px solid #cccccc;

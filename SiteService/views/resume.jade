@@ -1,10 +1,11 @@
 extends layout
+
 block head
-    link(rel="stylesheet", href="/stylesheets/resume_header.css")
-    link(rel="stylesheet", href="/stylesheets/resume_body.css")
+    link(rel="stylesheet", href="/stylesheets/resume/resume_header.css")
+    link(rel="stylesheet", href="/stylesheets/resume/resume_body.css")
+    link(rel="stylesheet", href="/stylesheets/resume/resume_block.css")
 block body
     div.resume-container
-        div.resume-page
+        div.resume-page.first-page
             include ./resume_header.jade
-        div.resume-division
         div.resume-page
