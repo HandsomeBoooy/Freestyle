@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.flex-layout-container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 100vh;
+		}
+		.flex-item {
+			flex: 1;
+		}
+		.son-item {
+			width: 200px;
+			height: 200px;
+			background-color: #cccccc;
+		}
+		.first-item {
+			margin-left: 0;
+		}
+		.second-item {
+			margin: auto;
+		}
+		.third-item {
+			margin-left: calc(100% - 200px);
+		}
+	</style>
+</head>
+<body>
+<div class="flex-layout-container">
+	<div class="flex-item">
+		<div class="son-item first-item"></div>
+	</div>
+	<div class="flex-item">
+		<div class="son-item second-item"></div>
+	</div>
+	<div class="flex-item">
+		<div class="son-item third-item"></div>
+	</div>
+</div>
+</body>
+</html>
