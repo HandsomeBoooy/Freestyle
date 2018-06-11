@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<input type="file" id="uploader">
-<textarea type="text" readonly id="base64_output"></textarea>
+    <input type="file" id="uploader">
+    <textarea type="text" readonly id="base64_output"></textarea>
 </body>
 <script>
-    (function () {
-//        let tempType = document.getElementById('uploader').type;
-//        console.log(tempType);
-        document.getElementById("uploader").onchange = function () {
+    (function() {
+        console.clear();
+        document.getElementById("uploader").onchange = function() {
             gen_base64();
         };
+
         function $_(id) {
             return document.getElementById(id);
         }
+
         function gen_base64() {
-            var file = $_('uploader').files[0];
-            r = new FileReader();  //本地预览
-            r.onload = function(){
+            let file = $_('uploader').files[0];
+            let url = URL.createObjectURL(file);
+            r = new FileReader(); //本地预览
+            r.onload = function() {
                 $_('base64_output').value = r.result;
             };
-            r.readAsDataURL(file);    //Base64
-            debugger;
-            console.log(r)
+            r.readAsDataURL(file); //Base64
+            console.log(url);
         }
     })();
 </script>
+
 </html>

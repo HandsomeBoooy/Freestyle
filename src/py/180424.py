@@ -8,5 +8,9 @@ def testFunc():
 	print(name, gender, arr, dic)
 testFunc()
 filename = "test.txt"
-with open("C:/Users/Administrator/Desktop/" + filename) as testFile:
+filepath = "C:/Users/Administrator/Desktop/"
+with open(filepath + filename) as testFile:
 	print(testFile.read())
+newfilename = "pyTest.txt"
+with open(filepath + newfilename, 'w') as f:
+	f.write("hello new file.")
