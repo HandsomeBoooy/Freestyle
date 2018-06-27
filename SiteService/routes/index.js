@@ -10,9 +10,9 @@ router.get('/resume', (req, res, next) => {
     res.render('resume');
 });
 
-router.post('/addTestInfo', (req, res, next) => {
-    debugger;
-    return 'addTestInfor entering...';
+router.get('/addTestInfo', (req, res, next) => {
+    console.log(res);
+    res.send('addTestInfor entering...');
 })
 
 module.exports = router;
