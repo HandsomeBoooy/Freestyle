@@ -11,6 +11,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var bubbleTea = require('./routes/bubbleTea/index');
 
+var logFile = fs.createWriteStream('server.log', {flags: 'a'});
+
 var app = express();
 
 // view engine setup
