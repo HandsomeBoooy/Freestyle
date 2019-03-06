@@ -7,13 +7,19 @@
 .resume-entrance {
     width: 14vw;
     margin: 25vh calc((100% - 14vw) / 2);
-    color: #00B7FF;
+    color: #FFFFFF;
     text-align: center;
     font-size: 24px;
     line-height: 48px;
     cursor: pointer;
     padding: 12px 20px;
     border: none;
+    transition-duration: 2000ms;
+}
+
+.resume-entrance:hover {
+    color: #00B7FF;
+    transition-duration: 2000ms;
 }
 
 .resume-entrance:hover {

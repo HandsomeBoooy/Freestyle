@@ -1,4 +1,6 @@
+import sys
 import hellopython
+
 def testFunc():
 	name = "LiuXing"
 	gender = 'male'

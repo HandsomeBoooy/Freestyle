@@ -3,3 +3,4 @@
 SiteService/node_modules
 node_modules
 src/py/__pyche__
+.vscode
