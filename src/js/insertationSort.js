@@ -1,8 +1,6 @@
 class Sort {
 
-    constructor() {
-
-    }
+    constructor() {}
 
     insertionSort(arr, key) {
         if (arr && arr.length) {
