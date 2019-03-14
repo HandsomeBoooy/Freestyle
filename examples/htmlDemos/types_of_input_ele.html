@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <div class="root-container">
+        <div>
+            <input type="text" oninput="inputChange(event)">
+        </div>
+        <div>
+            <input type="color" oninput="inputChange(event)">
+        </div>
+        <div>
+            <input type="date" oninput="inputChange(event)">
+        </div>
+        <div>
+            <input type="datetime-local" oninput="inputChange(event)">
+        </div>
+    </div>
+</body>
+<script>
+    var inputObj = {};
+    function inputChange($ev) {
+        console.log($ev.data, $ev.target.value, $ev);
+    }
+</script>
+</html>

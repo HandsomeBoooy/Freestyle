@@ -12,6 +12,7 @@
     "cookie-parser": "~1.4.3",
     "css-loader": "^0.28.7",
     "debug": "~2.6.9",
+    "ejs": "^2.6.1",
     "express": "~4.15.5",
     "express-favicon": "^2.0.0",
     "file-loader": "^1.1.5",
@@ -21,6 +22,7 @@
     "jsx-loader": "^0.13.2",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5",
+    "typescript": "^3.3.3333",
     "url-loader": "^0.6.2"
   },
   "devDependencies": {
