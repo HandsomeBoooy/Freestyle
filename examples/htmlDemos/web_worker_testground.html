@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Web Worker</title>
     <script>
         window.onload = () => {
-            
+            let workerUsable = checkWorker();
+            if (workerUsable) {
+                workerOperations();
+            }
+        }
+
+        function checkWorker() {
+            return (typeof Worker !== "undefined");
+        }
+
+        function workerOperations() {
+            var worker = new Worker('./web_worker_test_script.js');
+            worker.postMessage('Hello worker No.1 ----- From Main.');
+            worker.onmessage = (e) => {
+                document.write(e.data);
+                console.log('Roger that. ----- From Main.');
+            }
         }
     </script>
 </head>
