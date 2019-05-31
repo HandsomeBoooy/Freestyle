@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.2.0/animate.min.css">
+    <!-- <link rel="stylesheet" href="./about_us.css"> -->
+    <style>
+        .root-container {
+            background-color: #ffffff;
+            font-family: 'PingFang', 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+        }
+
+        .content-container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .module-container {
+            width: 100%;
+            margin: 0 auto 84px;
+        }
+
+        .main-title {
+            font-size: 48px;
+            color: #CF9B65;
+            line-height: 72px;
+        }
+
+        .sub-title {
+            font-size: 14px;
+            line-height: 24px;
+            color: #1A1A1A;
+            font-weight: 400;
+        }
+
+        .module-content-container {
+            width: 1190px;
+            margin: 0 auto;
+        }
+
+        .cover-container .left-side-content {
+            float: left;
+            width: 476px;
+            height: 600px;
+        }
+
+        .cover-container .left-side-content>span {
+            /* display: inline-block; */
+            float: left;
+        }
+
+        .cover-container .left-side-content .square-horizontal {
+            margin-top: 169px;
+        }
+
+        .cover-container .left-side-content .zh-about-us {
+            margin: 150px 0 0 2px;
+            font-size: 72px;
+            color: #000000;
+        }
+
+        .cover-container .left-side-content .square-vertical {
+            margin: 200px 0 0 82px;
+        }
+
+        .cover-container .left-side-content .supplyframe-text {
+            float: right;
+            margin: -110px 4px 0 0;
+            color: #CF9B65;
+            font-size: 72px;
+            line-height: 108px;
+            font-weight: bold;
+        }
+
+        .cover-container .left-side-content .supplyframe-description {
+            width: 326px;
+            margin-top: 82px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .cover-container .right-side-content {
+            display: inline-block;
+        }
+
+        .wishes-container .wishes-title {
+            width: 100%;
+            margin-bottom: 44px;
+        }
+
+        .wishes-container .wishes-title .wishes-main-title {
+            font-size: 48px;
+            color: #CF9B65;
+        }
+
+        .wishes-container .single-wish-content {
+            margin-bottom: 110px;
+        }
+
+        .wishes-container .single-wish-content.first-wish>div,
+        .wishes-container .single-wish-content.second-wish>div,
+        .wishes-container .single-wish-content.third-wish>div {
+            float: left;
+        }
+
+        .wishes-container .single-wish-content.first-wish {
+            height: 279px;
+        }
+
+        .wishes-container .first-wish .index-container {
+            margin-top: 60px;
+        }
+
+        .wishes-container .first-wish .wish-picture-container {
+            width: 447px;
+            height: 279px;
+            margin-left: 36px;
+            background: url('./assets/images/first_wish.png') no-repeat top left;
+        }
+
+        .wishes-container .first-wish .wish-index-number,
+        .wishes-container .second-wish .wish-index-number,
+        .wishes-container .third-wish .wish-index-number {
+            font-size: 120px;
+            line-height: 180px;
+        }
+
+        .wishes-container .first-wish .wish-description {
+            width: 490px;
+            margin-left: 105px;
+        }
+
+        .wishes-container .first-wish .wish-description h2,
+        .wishes-container .second-wish .wish-description h2,
+        .wishes-container .third-wish .wish-description h2 {
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .wishes-container .first-wish .wish-description p,
+        .wishes-container .second-wish .wish-description p,
+        .wishes-container .third-wish .wish-description p {
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .wishes-container .single-wish-content.second-wish {
+            height: 241px;
+        }
+
+        .wishes-container .second-wish .wish-picture-container {
+            width: 178px;
+            margin-right: 36px;
+        }
+
+        .wishes-container .second-wish .wish-description {
+            width: 650px;
+        }
+
+        .wishes-container .second-wish .wish-description h2 {
+            width: 421px;
+        }
+
+        .wishes-container .second-wish div.index-container {
+            width: 160px;
+            height: 100%;
+            float: right;
+            background: url('./assets/images/square_vertical.png') no-repeat right bottom;
+        }
+
+        .wishes-container .single-wish-content.third-wish {
+            height: 180px;
+        }
+
+        .wishes-container .third-wish .index-container {
+            width: 220px;
+            background: url('./assets/images/square_horizontal.png') no-repeat right 20px;
+        }
+
+        .wishes-container .third-wish .wish-picture-A {
+            margin: 44px 4px 0 88px;
+        }
+
+        .wishes-container .third-wish .wish-description {
+            width: 490px;
+        }
+
+        .wishes-container .third-wish .wish-description h2 {
+            width: 450px;
+            margin: 14px 0 24px;
+        }
+
+        .wishes-container .third-wish div.wish-picture-B {
+            float: right;
+        }
+
+        .content-container .module-container.chart-container {
+            background-color: #1a1a1a;
+            padding-bottom: 117px;
+        }
+
+        .chart-container .chart-title-container .chart-title {
+            width: 360px;
+            display: inline-block;
+        }
+
+        .chart-container .chart-title .chart-percentage-circle {
+            margin-top: 95px;
+            width: 100%;
+        }
+
+        .chart-container .chart-title .chart-percentage-circle .percentage-doughnut {
+            width: 295px;
+            height: 295px;
+            margin-bottom: 36px;
+            background: url('./assets/images/chart_percentage.png') no-repeat left top;
+            color: #AFAFAF;
+            font-size: 30px;
+            line-height: 295px;
+            text-align: center;
+        }
+
+        .chart-container .chart-title-container .chart-main-title {
+            margin-top: 84px;
+        }
+
+        .chart-container .chart-title-container .chart-main-title h1 {
+            font-size: 48px;
+            line-height: 72px;
+            color: #CF9B65;
+        }
+
+        .chart-container .chart-title-container .chart-sub-title h5 {
+            color: #AFAFAF;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .chart-container .chart-title-container .chart-statistics {
+            float: right;
+        }
+
+        .chart-container .chart-title-container .chart-statistics .chart-map-container {
+            display: inline-block;
+            margin-top: 64px;
+        }
+
+        .chart-container .chart-statistics .single-statistic-item {
+            display: inline-block;
+            margin: 18px 48px 0 0;
+        }
+
+        .chart-container .chart-statistics .single-statistic-item:last-child {
+            margin-right: 0;
+        }
+
+        .chart-container .chart-statistics .single-statistic-item {
+            color: #F7F7F7;
+            line-height: 300;
+        }
+
+        .chart-container .single-statistic-item h2 {
+            font-weight: 400;
+        }
+
+        .chart-container .chart-statistics .statistics-title {
+            margin: 115px 0 0;
+        }
+
+        .chart-container .single-statistic-item h2,
+        .chart-container .single-statistic-item h5 {
+            margin-top: 0;
+        }
+
+        .chart-container .chart-statistics .statistics-title,
+        .chart-container .single-statistic-item h5 {
+            color: #AFAFAF;
+            font-weight: 400;
+        }
+
+        .chart-container .single-statistic-item .statistic-unit {
+            font-size: 14px;
+        }
+
+        .chart-container .percentage-examples .single-example {
+            display: inline-block;
+            width: 32%;
+        }
+
+        .chart-container .percentage-examples .single-example .color-example {
+            width: 12px;
+            height: 12px;
+            float: left;
+            border-radius: 50%;
+        }
+
+        .chart-container .percentage-examples .american-color {
+            background-color: #99B983;
+        }
+
+        .chart-container .percentage-examples .european-color {
+            background-color: #EA6A6B;
+        }
+
+        .chart-container .percentage-examples .asian-color {
+            background-color: #D3B167;
+        }
+
+        .chart-container .percentage-examples .example-name {
+            display: inline-block;
+            margin-left: 12px;
+        }
+
+        .chart-container .percentage-examples .example-name h5 {
+            margin-top: 0;
+            color: #afafaf;
+        }
+
+        .chart-container .percentage-examples .example-name p {
+            color: #F7F7F7;
+        }
+
+        .product-container .product-exhibition-container {
+            margin-top: 42px;
+        }
+
+        .product-container .sub-title {
+            width: 240px;
+            margin-bottom: 42px;
+        }
+
+        .product-container .product-exhibition-container .common-half-module {
+            display: inline-block;
+            width: 50%;
+            min-height: 20px;
+        }
+
+        .product-container .product-exhibition-container .common-right-module {
+            float: right;
+        }
+
+        .product-container .product-exhibition-container .product-text-module {
+            padding: 64px 48px;
+            background-color: #F7F7F7;
+        }
+
+        .product-container .product-exhibition-container .product3-right-module.product-text-module {
+            background-color: #EBE3DA;
+        }
+
+        .product-container .product-exhibition-container .product-description-title {
+            color: #1a1a1a;
+            margin-bottom: 24px;
+        }
+
+        .product-container .product-exhibition-container .product-description-text {
+            color: #1A1A1A;
+            line-height: 24px;
+        }
+
+        .product-container .product1-left-module .logo-supplyframe-media,
+        .product-container .product-exhibition-container .logo-container-first-row {
+            margin: 64px 0 0;
+        }
+
+        .product-container .product1-left-module .logo-eefocus {
+            margin-top: 18px;
+        }
+
+        .product-container .product1-left-module .logo-eefocus img {
+            display: inline-block;
+            margin-right: 12px;
+        }
+
+        .product-container .product1-left-module .logo-eefocus span {
+            display: inline-block;
+            line-height: 24px;
+        }
+        .product-container .product-exhibition-container .product1-module {
+            margin-bottom: 12px;
+        }
+        .product-container .product-exhibition-container .product1-right-module {
+            height: 540px;
+            padding: 104px 67px;
+            text-align: center;
+            background: url('./assets/images/product_bg_1.png') no-repeat left top;
+        }
+        .product-container .product-exhibition-container .product-icon-container {
+            display: inline-block;
+            width: 108px;
+            margin: auto;
+        }
+        .product-container .product-exhibition-container .product-icon-container:first-child,
+        .product-container .product-exhibition-container .product-icon-container:nth-child(2),
+        .product-container .product-exhibition-container .product-icon-container:nth-child(3) {
+            margin-bottom: 80px;
+        }
+        .product-container .product-exhibition-container .product-icon-container:nth-child(2),
+        .product-container .product-exhibition-container .product-icon-container:nth-child(5) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .product-container .product-exhibition-container .product-icon-container p {
+            color: #CF9B65;
+            line-height: 22px;
+            text-align: center;
+        }
+        .product-container .product-exhibition-container .product-icon-container p:first-child {
+            height: 60px;
+        }
+        .product-container .product-exhibition-container .product23-left-module {
+            width: 50%;
+            height: 1036px;
+            background-color: #1A1A1A;
+            background-image: url('./assets/images/product_23_illustration.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .product-container .product-exhibition-container .product23-right-module {
+            width: 50%;
+            height: 1036px;
+            padding: 0;
+        }
+        .product-container .product23-right-module .product2-right-module {
+            height: 540px;
+            padding: 109px 48px;
+        }
+        .product-container .product23-right-module .product3-right-module {
+            height: 496px;
+            padding: 64px 48px;
+            background-color: #EBE3DA;
+        }
+        .product-container .logo-container-first-row .inline-logo-3,
+        .product-container .logo-container-first-row .inline-logo-4 {
+            height: 24px;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+        .product-container .logo-container-first-row .inline-logo-3:nth-child(2) {
+            margin-left: 48px;
+            margin-right: 48px;
+        }
+        .product-container .logo-container-first-row .inline-logo-4:nth-child(2) {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .product-container .logo-container-first-row img {
+            height: 24px;
+        }
+        .product-container .product-exhibition-container .product4-right-module {
+            height: 540px;
+            padding: 158px 88px;
+            text-align: center;
+            background: url('./assets/images/product_bg_4.png') no-repeat left top;
+        }
+        .product-container .product-exhibition-container .product4-right-module h4 {
+            color: #CF9B65;
+        }
+        .clients-container .clients-left-side-container {
+            width: 356px;
+            height: 470px;
+            display: inline-block;
+            background: url('./assets/images/square_customers.png') no-repeat left bottom;
+        }
+        .clients-container .clients-right-side-container {
+            width: 784px;
+            float: right;
+            min-height: 30px;
+        }
+        .clients-container .clients-right-side-container .singleclient-logo-container {
+            display: inline-block;
+            width: 195px;
+            margin: 0 1px 12px 0;
+        }
+        .footer-container .common-footer-content-container {
+            display: inline-block;
+        }
+        .footer-container .common-footer-content-container.website-links-container {
+            margin-right: 124px;
+        }
+        .footer-container .common-footer-content-container.phone-number-container {
+            margin-right: 207px;
+        }
+        .footer-container .common-footer-content-container h4 {
+            text-align: left;
+            margin-bottom: 12px;
+        }
+        .footer-container .common-footer-content-container p a,
+        .footer-container .common-footer-content-container p a:hover,
+        .footer-container .common-footer-content-container p a:active,
+        .footer-container .common-footer-content-container p a:visited {
+            margin-right: 36px;
+            color: #1A1A1A;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root-container">
+        <div class="content-container">
+            <div class="module-container cover-container">
+                <div class="module-content-container">
+                    <div class="left-side-content">
+                        <span class="square-horizontal animated fadeInDown wow" data-wow-delay="0.1s">
+                            <img src="./assets/images/square_horizontal.png" alt="">
+                        </span>
+                        <span class="zh-about-us animated fadeInDown wow" data-wow-delay="0.1s">关于</span>
+                        <span class="square-vertical animated fadeInUp wow" data-wow-delay="0.1s">
+                            <img src="./assets/images/square_vertical.png" alt="">
+                        </span>
+                        <span class="supplyframe-text animated fadeInUp wow" data-wow-delay="0.1s">SUPPLY</span>
+                        <span class="supplyframe-description animated fadeInUp wow" data-wow-delay="0.4s">Supplyframe
+                            是领先的面向电子设计和制造业的行业网络平台。我们的目标是通过提供世界上最大的垂直媒体组合、搜索和电子商务引擎、SAAS 工具和在线社区，帮助电子专业人士推动硬件开发。
+                        </span>
+                    </div>
+                    <div class="right-side-content animated fadeInUp wow" data-wow-delay="0.1s">
+                        <img src="./assets/images/top.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="module-container wishes-container">
+                <div class="module-content-container">
+                    <div class="wishes-title animated fadeInUp wow" data-wow-delay="0.1s">
+                        <h1 class="wishes-main-title">我们的愿景</h1>
+                        <h5 class="wishes-sub-title">Supplyframe 的愿景有三重：</h5>
+                    </div>
+                    <div class="single-wish-content first-wish">
+                        <div class="index-container animated fadeInDown wow" data-wow-delay="0.4s">
+                            <img src="./assets/images/square_vertical.png" alt="">
+                        </div>
+                        <div class="wish-picture-container animated fadeInDown wow" data-wow-delay="0.4s">
+                            <p class="wish-index-number">01</p>
+                        </div>
+                        <div class="wish-description animated fadeInUp wow" data-wow-delay="0.4s">
+                            <h2>在制造商、工程师、分销商和买方之间建立有意义的联系。</h2>
+                            <p>电子专业人士追求一个共同的目标：打造伟大的产品。我们的使命源于 2003
+                                年开始创建的网站网络，工程师和买家需要每天使用来完成他们的工作。借助设计工具网络让我们能够建立世界上最大的电子从业者社区—每月有超过 600
+                                万活跃的访问者。我们将这些工程师和器件购买者与制造商和分销商联系起来，后者可以为前者提供所需的器件，让他们的设计成为现实。</p>
+                        </div>
+                    </div>
+                    <div class="single-wish-content second-wish">
+                        <div class="wish-picture-container animated fadeInDown wow" data-wow-delay="0.7s">
+                            <img src="./assets/images/second_wish.png" alt="">
+                        </div>
+                        <div class="wish-description animated fadeInUp wow" data-wow-delay="0.7s">
+                            <h2>构建工具，帮助工程师更快速地设计出更好的产品。</h2>
+                            <p>Supplyframe
+                                深植工程师群体十多年，比任何人都更了解设计工作流程。借助不断收集和组织起来的工程知识，我们正在创建让电子产品设计更高效的工具，致力于帮助工程师找到更好的工作方式。我们花了数年时间收集正确的信息，在此基础上构建了一个平台，行业中任何人都可以借助这个平台，从一个产品理念一直到大规模生产中得到帮助。
+                            </p>
+                        </div>
+                        <div class="index-container animated fadeInUp wow" data-wow-delay="0.7s">
+                            <p class="wish-index-number">02</p>
+                        </div>
+                    </div>
+                    <div class="single-wish-content third-wish">
+                        <div class="index-container animated fadeInUp wow" data-wow-delay="1s">
+                            <p class="wish-index-number">03</p>
+                        </div>
+                        <div class="wish-picture-container wish-picture-A animated fadeInDown wow" data-wow-delay="1s">
+                            <img src="./assets/images/third_wish_A.png" alt="">
+                        </div>
+                        <div class="wish-description animated fadeInUp wow" data-wow-delay="1s">
+                            <h2>培育促进思想共享和创新的社区。</h2>
+                            <p>电子是一个巨大的全球社区，包括专业人士、学生、业余爱好者和黑客。通过开放的硬件和开放的社区，我们聚集了热爱电子产品的人们，分享知识并挑战现状。Supplyframe
+                                正在将人们聚集在一起，构建地球上最具激情的电子社区。</p>
+                        </div>
+                        <div class="wish-picture-container wish-picture-B animated fadeInDown wow" data-wow-delay="1s">
+                            <img src="./assets/images/third_wish_B.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module-container chart-container">
+                <div class="module-content-container">
+                    <div class="chart-title-container">
+                        <div class="chart-title">
+                            <div class="chart-main-title animated fadeInUp wow" data-wow-delay="0.1s">
+                                <h1>我们触达</h1>
+                            </div>
+                            <div class="chart-sub-title animated fadeInUp wow" data-wow-delay="0.1s">
+                                <h5>Supplyframe 网络覆盖全球的每个角落。有电子设计的地方，工程师都在使用 Supplyframe 的网络资源。</h5>
+                            </div>
+                            <div class="chart-percentage-circle animated fadeInUp wow" data-wow-delay="0.4s">
+                                <p class="percentage-doughnut">全球分布</p>
+                                <div class="percentage-examples">
+                                    <div class="single-example">
+                                        <div class="color-example american-color"></div>
+                                        <div class="example-name">
+                                            <h5>美洲</h5>
+                                            <p>33.5%</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-example">
+                                        <div class="color-example european-color"></div>
+                                        <div class="example-name">
+                                            <h5>欧洲</h5>
+                                            <p>29.6%</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-example">
+                                        <div class="color-example asian-color"></div>
+                                        <div class="example-name">
+                                            <h5>美洲</h5>
+                                            <p>36.9%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-statistics">
+                            <p class="statistics-title animated fadeInUp wow" data-wow-delay="0.1s">每月，通过所有网络产品组合，我们有：</p>
+                            <div class="statistics-content animated fadeInUp wow" data-wow-delay="0.1s">
+                                <div class="single-statistic-item">
+                                    <h2>1,090<span class="statistic-unit">万名</span></h2>
+                                    <h5 class="item-name">独立访客</h5>
+                                </div>
+                                <div class="single-statistic-item">
+                                    <h2>1.015<span class="statistic-unit">亿</span></h2>
+                                    <h5 class="item-name">页面浏览量</h5>
+                                </div>
+                                <div class="single-statistic-item">
+                                    <h2>2,200<span class="statistic-unit">万次</span></h2>
+                                    <h5 class="item-name">器件查询</h5>
+                                </div>
+                                <div class="single-statistic-item">
+                                    <h2>220<span class="statistic-unit">万次</span></h2>
+                                    <h5 class="item-name">采购点击</h5>
+                                </div>
+                                <div class="single-statistic-item">
+                                    <h2>1.24<span class="statistic-unit">亿</span></h2>
+                                    <h5 class="item-name">器件索引量</h5>
+                                </div>
+                            </div>
+                            <div class="chart-map-container animated fadeInUp wow" data-wow-delay="0.4s">
+                                <img src="./assets/images/chart_map.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="module-container product-container">
+                <div class="module-content-container">
+                    <div class="product-title-container animated fadeInUp wow" data-wow-delay="0.1s">
+                        <div class="wishes-title">
+                            <h1 class="main-title">我们的产品</h1>
+                            <h5 class="sub-title">我们通过跨越&nbsp;4&nbsp;个关键领域的资源和工具的集合来服务和影响电子产业：</h5>
+                        </div>
+                    </div>
+                    <div class="product-exhibition-container">
+                        <div class="common-product-module product1-module animated fadeInUp wow" data-wow-delay="0.3s">
+                            <div class="common-half-module common-left-module product1-left-module product-text-module">
+                                <h2 class="product-description-title">Supplyframe&nbsp;媒体网络</h2>
+                                <p class="product-description-text">
+                                    Supplyframe&nbsp;已成为全球电子行业最全面、最具影响力的营销渠道。没有其他组织能像行业的日常设计和采购决策那样重要。从关键的早期研究步骤到最终设计和采购，我们在整个设计周期都与关键决策者保持联系。Supplyframe&nbsp;媒体网络汇集&nbsp;60&nbsp;多个网站，重点关注一件事：为工程师和器件采购者提供技术性内容。每月，这些网站在他们积极寻找信息的精准时刻触及超过&nbsp;600&nbsp;万电子专业人士，转化为每月约有&nbsp;1,100&nbsp;万次独特访问和&nbsp;1.02&nbsp;亿次页面访问。<br>仅在中国，Supplyframe&nbsp;就通过新闻网站、社交社区、新闻信、电子邮件列表、活动和在线广告影响了近
+                                    200&nbsp;万名设计工程师。
+                                </p>
+                                <div class="logo-supplyframe-media">
+                                    <a href="https://supplyframe.com/advertising" target="_blank"><img src="./assets/images/logo_SupplyframeMedia.png" alt=""></a>
+                                </div>
+                                <div class="logo-eefocus">
+                                    <a href="https://www.eefocus.com/" target="_blank"><img src="./assets/images/logo_EEFOCUS.png" alt=""></a><span>与非网是&nbsp;SupplyframeMedia
+                                        成员之一</span>
+                                </div>
+                            </div><!--
+                            --><div class="common-half-module common-right-module product1-right-module product-image-module">
+                                <div class="product-icon-container">
+                                    <p><img src="./assets/images/product_1_icon1.png" alt=""></p>
+                                    <p>IPO广告</p>
+                                </div>
+                                <div class="product-icon-container">
+                                    <p><img src="./assets/images/product_1_icon2.png" alt=""></p>
+                                    <p>用户群拓展</p>
+                                </div>
+                                <div class="product-icon-container">
+                                    <p><img src="./assets/images/product_1_icon3.png" alt=""></p>
+                                    <p>展示广告</p>
+                                </div>
+                                <div class="product-icon-container">
+                                    <p><img src="./assets/images/product_1_icon4.png" alt=""></p>
+                                    <p>高级排名</p>
+                                </div>
+                                <div class="product-icon-container">
+                                    <p><img src="./assets/images/product_1_icon5.png" alt=""></p>
+                                    <p>新闻信/邮件群发</p>
+                                </div>
+                                <div class="product-icon-container">
+                                    <p><img src="./assets/images/product_1_icon6.png" alt=""></p>
+                                    <p>电子商务</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="common-product-module product23-module animated fadeInUp wow" data-wow-delay="0.5s">
+                            <div class="common-half-module common-left-module product23-left-module product-image-module"></div><!--
+                            --><div class="common-half-module common-right-module product23-right-module">
+                                <div class="product2-right-module">
+                                    <h2 class="product-description-title">搜索引擎与电子商务</h2>
+                                    <p class="product-description-text">
+                                        专业人员希望通过单个查询就能看到一个元器件的所有可选资源，并且是可视化的。Supplyframe&nbsp;的核心竞争力是拥有行业最大的实时器件数据集，通过各种搜索引擎和采购智能产品提供给工程师和买家。借由&nbsp;70&nbsp;多个网站组合，超过&nbsp;100&nbsp;万采购专业人员和工程师在这里定位库存、比较价格，并直接从电子产品分销商和制造商处购买元器件。在过去&nbsp;12&nbsp;个月中，这些网站，包括 FindChips、OEMsTrade 和 bom2buy，已经产生了超过&nbsp;1,800&nbsp;万个购物车交易。
+                                    </p>
+                                    <div class="logo-container-first-row">
+                                        <a class="inline-logo-3" href="https://www.findchips.com" target="_blank"><img src="./assets/images/logo_Findchips.png" alt=""></a>
+                                        <a class="inline-logo-3" href="https://www.bom2buy.com" target="_blank"><img src="./assets/images/logo_bom2buy.png" alt=""></a>
+                                        <a class="inline-logo-3" href="https://www.oemstrade.com" target="_blank"><img src="./assets/images/logo_OEMsTrade.png" alt=""></a>
+                                    </div>
+                                </div><!--
+                                --><div class="product3-right-module">
+                                    <h2 class="product-description-title">SAAS&nbsp;采购工具</h2>
+                                    <p class="product-description-text">
+                                        Supplyframe&nbsp;开发了各种基于云的平台，帮助供应链各个级别的工程师和采购专业人员在从设计到采购的整个周期中体现效率和智能化。我们的目标是什么？制定更明智的采购决策，并使其更快捷。Polydyne、FindchipsPro、Supplyframe&nbsp;Enterprise、bom2buy&nbsp;Enterprise&nbsp;和&nbsp;Buymanager&nbsp;等产品为&nbsp;OEMs、EMS&nbsp;提供商、分销商和器件制造商提供报价和采购协作解决方案。SAAS&nbsp;产品基于Supplyframe&nbsp;的采购智能平台，为每个工具集提供实时商业数据和部分智能，赋能决策支持工具。
+                                    </p>
+                                    <div class="logo-container-first-row">
+                                        <a class="inline-logo-3" href="https://www.polydyne.com" target="_blank"><img src="./assets/images/logo_Polydyne.png" alt=""></a>
+                                        <a class="inline-logo-3" href="https://pro.findchips.com" target="_blank"><img src="./assets/images/logo_FindchipsPro.png" alt=""></a>
+                                        <!-- <a class="inline-logo-3" href="https://bom2buy.com/enterprise" target="_blank"><img src="./assets/images/logo_OEMsTrade.png" alt=""></a> -->
+                                        <a class="inline-logo-3" href="#" target="_blank"><img src="./assets/images/logo_bom2buy_E.png" alt=""></a>
+                                        <a class="inline-logo-3" href="https://buymanager.biz" target="_blank"><img src="./assets/images/logo_Buymanager.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="common-product-module product4-module animated fadeInUp wow" data-wow-delay="0.7s">
+                            <div class="common-half-module common-left-module product4-left-module product-text-module">
+                                <h2 class="product-description-title">创新社区</h2>
+                                <p class="product-description-text">
+                                    Supplyframe&nbsp;拥有充满激情的工程师社区，他们在硬件创新的前沿。诸如Hackaday.io、Tindie&nbsp;和&nbsp;Cirmall等网站，为工程师提供了共享和写作进行硬件创新的平台。其中Hackaday&nbsp;Prize&nbsp;是每年举办的竞赛活动，在全球硬件开发者中享有盛誉，吸引了来自世界各地的数百名创新者参加角逐。<br>Supplyframe&nbsp;还运营有开放的设计实验室&nbsp;DesignLab，初衷是将发明者和企业家聚集在一起，探索硬件项目如何构建并推向市场，共创未来。该实验室是一个占地&nbsp;455&nbsp;平方米的研究和开发工作室，配有专业及工具，以促进在产品设计、制造、艺术和技术方面的合作。
+                                </p>
+                                <div class="logo-container-first-row">
+                                    <a class="inline-logo-4" href="https://hackaday.com" target="_blank"><img src="./assets/images/logo_Hackaday.png" alt=""></a>
+                                    <a class="inline-logo-4" href="https://www.tindie.com" target="_blank"><img src="./assets/images/logo_Tindie.png" alt=""></a>
+                                    <a class="inline-logo-4" href="https://supplyframe.com/designlab" target="_blank"><img src="./assets/images/logo_SupplyframeDesignLab.png" alt=""></a>
+                                    <a class="inline-logo-3" href="https://www.cirmall.com" target="_blank"><img src="./assets/images/logo_CIRMALL.png" alt=""></a>
+                                </div>
+                            </div><!--
+                            --><div class="common-half-module common-right-module product4-right-module product-image-module">
+                                <h4>为生活带来创意。</h4>
+                                <p><img src="./assets/images/product_4_illustration.png" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module-container clients-container animated fadeInUp wow" data-wow-delay="0.1s">
+                <div class="module-content-container">
+                    <div class="clients-left-side-container">
+                        <div class="clients-title">
+                            <h1 class="clients-main-title main-title">我们的客户</h1>
+                        </div>
+                    </div><!--
+                    --><div class="clients-right-side-container">
+                        <div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.3s">
+                            <img src="./assets/images/logo_TI.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.3s">
+                            <img src="./assets/images/logo_ANALOG.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.3s">
+                            <img src="./assets/images/logo_MICROCHIP.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.3s">
+                            <img src="./assets/images/logo_AVNET.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.6s">
+                            <img src="./assets/images/logo_ARROW.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.6s">
+                            <img src="./assets/images/logo_CIRRUS.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.6s">
+                            <img src="./assets/images/logo_FUJITSU.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.6s">
+                            <img src="./assets/images/logo_Honeywell.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.9s">
+                            <img src="./assets/images/logo_intel.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.9s">
+                            <img src="./assets/images/logo_Panasonic.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.9s">
+                            <img src="./assets/images/logo_Messe.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="0.9s">
+                            <img src="./assets/images/logo_TOSHIBA.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.2s">
+                            <img src="./assets/images/logo_Tektronix.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.2s">
+                            <img src="./assets/images/logo_ROHDESCHWARZ.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.2s">
+                            <img src="./assets/images/logo_LANTRONIX.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.2s">
+                            <img src="./assets/images/logo_Benchmark.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.5s">
+                            <img src="./assets/images/logo_Hewlett.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.5s">
+                            <img src="./assets/images/logo_DELL.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.5s">
+                            <img src="./assets/images/logo_RENESAS.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.5s">
+                            <img src="./assets/images/logo_JABIL.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.8s">
+                            <img src="./assets/images/logo_TELEDYNE.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.8s">
+                            <img src="./assets/images/logo_flex.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.8s">
+                            <img src="./assets/images/logo_tyco.png" alt="">
+                        </div><!--
+                        --><div class="singleclient-logo-container animated fadeInUp wow" data-wow-delay="1.8s">
+                            <img src="./assets/images/logo_MOUSER.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module-container footer-container">
+                <div class="module-content-container">
+                    <div class="footer-content">
+                        <div class="website-links-container common-footer-content-container">
+                            <h4>网站</h4>
+                            <p>
+                                <a href="https://www.bom2buy.com" target="_blank">bom2buy</a>
+                                <a href="https://www.eefocus.com" target="_blank">EEFocus</a>
+                                <a href="https://www.cirmall.com" target="_blank">Cirmall</a>
+                                <a href="https://www.moore8.com" target="_blank">Moore8</a>
+                            </p>
+                        </div><!--
+                        --><div class="phone-number-container common-footer-content-container">
+                            <h4>联系电话</h4>
+                            <p>+86&nbsp;(0512)&nbsp;80981663</p>
+                        </div><!--
+                        --><div class="our-address-container common-footer-content-container">
+                            <h4>Supplyframe&nbsp;China</h4>
+                            <p>苏州市工业园区新平街&nbsp;388&nbsp;号&nbsp;22&nbsp;幢&nbsp;7&nbsp;楼,&nbsp;215000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+</html>
