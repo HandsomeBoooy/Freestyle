@@ -1,0 +1,46 @@
+.common-header .navbar {
+    margin-bottom: 0;
+    padding-top: 15px;
+    min-height: 90px;
+}
+.common-header .navbar-brand.rohm-header-logo {
+    width: 130px;
+    height: 60px;
+    margin-left: 390px;
+    background: url('./assets/logo_rohm.png') no-repeat center center;
+}
+.common-header .navbar-nav li>a {
+    padding: 20px;
+    font-size: 20px;
+    color: #333333;
+}
+.common-header .sign-up-btn {
+    margin-left: 290px;
+}
+.banner-container {
+    background: url('./assets/bg_banner.png') no-repeat left top;
+}
+.banner-container .banner-title {
+    padding-top: 150px;
+    text-align: center;
+}
+.banner-container .banner-title .main-title {
+    margin-top: 10px;
+    font-size: 70px;
+    color: #ffffff;
+    line-height: 94px;
+    font-weight: 400;
+}
+.banner-container .banner-signup-btn {
+    text-align: center;
+}
+.banner-container .banner-signup-btn a {
+    display: inline-block;
+    margin: 50px auto 150px;
+    padding: 10px 70px;
+    border-radius: 45px;
+    background-color: #ffffff;
+    color: #008CCE;
+    font-size: 35px;
+    text-decoration: none;
+}
