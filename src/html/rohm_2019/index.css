@@ -18,7 +18,7 @@
     margin-left: 290px;
 }
 .banner-container {
-    background: url('./assets/bg_banner.png') no-repeat left top;
+    background: url('./assets/bg_banner.png') no-repeat center top;
 }
 .banner-container .banner-title {
     padding-top: 150px;
@@ -34,6 +34,16 @@
 .banner-container .banner-signup-btn {
     text-align: center;
 }
+.common-rohm-module.rohm-module1 .notification-container {
+    margin-top: 40px;
+    text-align: center;
+}
+.common-rohm-module.rohm-module1 .notification-container p {
+    width: auto;
+    display: inline-block;
+    background: url('./assets/icon-notification.png') no-repeat left center;
+    padding-left: 20px;
+}
 .banner-container .banner-signup-btn a {
     display: inline-block;
     margin: 50px auto 150px;
@@ -43,4 +53,65 @@
     color: #008CCE;
     font-size: 35px;
     text-decoration: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.common-rohm-module .module-title-container {
+    margin-top: 18px;
+    text-align: center;
+}
+.common-rohm-module .module-title-container .module-title {
+    padding: 36px 0 30px;
+    background: url('./assets/icon-module-title.png') no-repeat center top;
+    background-size: auto 100%;
+    color: #008CCE;
+    font-size: 36px;
+}
+.rohm-module2 {
+    background: url('./assets/bg-module2.png') no-repeat center bottom;
+    background-size: 100% auto;
+    padding-bottom: 87px;
+}
+.rohm-module2 .contest-introduction-container {
+    margin: 21px 0 31px;
+    text-align: center;
+}
+.rohm-module2 .contest-introduction-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+.rohm-module2 .contest-tendencies-container {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.rohm-module2 .contest-tendencies-container .single-trendency-container {
+    margin-right: 29px;
+    padding: 42px 97px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 1.6px #e5e5e5;
+    box-shadow: 0px 2px 24px 0px #e6e6e6;
+}
+.rohm-module2 .contest-tendencies-container .single-trendency-container:last-child {
+    margin-right: 0;
+}
+.rohm-module2 .contest-tendencies-container .single-trendency-container img {
+    display: inline-block;
+}
+.rohm-module2 .contest-tendencies-container .single-trendency-container h3 {
+    width: auto;
+    display: inline-block;
+    margin-top: 26px;
+    margin-bottom: 0;
 }
