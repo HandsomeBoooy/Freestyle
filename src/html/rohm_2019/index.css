@@ -115,3 +115,44 @@
     margin-top: 26px;
     margin-bottom: 0;
 }
+.rohm-module3 {
+    background: url('./assets/bg-module3.png') no-repeat center top;
+    margin-top: -32px;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+.rohm-module3 .module-title-container {
+    margin-top: 15px;
+}
+.rohm-module3 .module-title-container p {
+    display: inline-block;
+    margin: 0;
+}
+.rohm-module3 .contestant-group {
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+}
+.rohm-module3 .development-platform-image-container {
+    margin-top: 33px;
+    text-align: center;
+}
+.rohm-module3 .development-platform-link {
+    width: 304px;
+    height: 44px;
+    margin: 23px auto 0;
+    text-align: center;
+    border-radius: 32px;
+    background-color: #008CCE;
+}
+.rohm-module3 .development-platform-link a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 44px;
+}
+.rohm-module3 .development-platform-link img {
+    transform: rotate(90deg);
+}
