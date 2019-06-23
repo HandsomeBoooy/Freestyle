@@ -9,11 +9,16 @@
         content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.2.0/animate.min.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -115,20 +120,223 @@
         <div class="development-platform-image-container">
             <img src="./assets/content-development-platform.png" alt="">
         </div>
-        <div class="development-platform-link">
+        <div class="development-platform-link common-content-link">
             <a href="#" target="_blank">查看开发板平台&gt;&gt;</a>
         </div>
     </div>
 
-    <div class="common-rohm-module rohm-module4"></div>
+    <div class="common-rohm-module rohm-module4">
+        <div class="rohm-module4-1">
+            <div class="module-title-container">
+                <p class="module-title">
+                    大赛日程
+                </p>
+            </div>
+            <div class="schedule-module">
+                <img src="./assets/content-schedule.png" alt="">
+            </div>
+        </div>
+        <div class="rohm-module4-2">
+            <div class="module-title-container">
+                <p class="module-title">
+                    奖项设置
+                </p>
+            </div>
+            <div class="prizes-container">
+                <div class="single-prize-container">
+                    <p class="prize-icon-container"><img src="./assets/icon-gold.png" alt=""></p>
+                    <p class="prize-content">¥&nbsp;5,000</p>
+                    <p class="prize-amount">一等奖1名</p>
+                </div>
+                <div class="single-prize-container">
+                    <p class="prize-icon-container"><img src="./assets/icon-silver.png" alt=""></p>
+                    <p class="prize-content">¥&nbsp;3,000</p>
+                    <p class="prize-amount">二等奖1名</p>
+                </div>
+                <div class="single-prize-container">
+                    <p class="prize-icon-container"><img src="./assets/icon-bronze.png" alt=""></p>
+                    <p class="prize-content">¥&nbsp;2,000</p>
+                    <p class="prize-amount">三等奖1名</p>
+                </div>
+                <div class="single-prize-container">
+                    <p class="prize-icon-container"><img src="./assets/icon-creation.png" alt=""></p>
+                    <p class="prize-content">¥&nbsp;1,000</p>
+                    <p class="prize-amount">最佳创意奖10名</p>
+                </div>
+            </div>
+            <div class="module-title-container">
+                <p class="module-title">
+                    评选标准
+                </p>
+            </div>
+            <div class="judge-standards-container">
+                <div class="main-standard-container">
+                    <div class="main-standard single-standard-container">
+                        <p class="main-standard-icon">
+                            <img src="./assets/icon-60.png" alt="">
+                        </p>
+                        <!--
+                        -->
+                        <p class="main-standard-content">
+                            参赛所需提交内容<br>
+                            作品必须符合大赛的主题,包含罗姆的传感器<br>
+                            作品介绍——讲述您是如何设计这个项目，包含实物图或演示视频；<br>
+                            绘制原理图，包含详细外围电路的图片；<br>
+                            软件代码——包括运行代码和所有有价值的部分；<br>
+                            作品必须能简洁明了的阐述您的思路。
+                        </p>
+                    </div>
+                </div>
+                <div class="main-standard-container">
+                    <div class="sub-standard single-standard-container">
+                        <p class="sub-standard-icon">
+                            <img src="./assets/icon-20.png" alt="">
+                        </p>
+                        <!--
+                        -->
+                        <p class="sub-standard-content">
+                            项目最终是否达到方案的预期目标；<br>
+                            参赛项目的技术难度；
+                        </p>
+                    </div>
+                    <div class="sub-standard single-standard-container">
+                        <p class="sub-standard-icon">
+                            <img src="./assets/icon-20.png" alt="">
+                        </p>
+                        <!--
+                        -->
+                        <p class="sub-standard-content">
+                            项目最终是否达到方案的预期目标；<br>
+                            参赛项目的技术难度；
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="common-content-link more-flow-link">
+                <a href="#">查看完整作品流程示例</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-rohm-module rohm-module5">
+        <div class="module-title-container">
+            <p class="module-title">
+                大赛评委
+            </p>
+        </div>
+        <div class="common-silders-container reviewer-sliders-container">
+            <div class="reviewer-slider-container judge-wper">
+                <ul class="reviewer-slider">
+                    <li>
+                        <img src="./assets/reviewer_0.png" />
+                        <h4 class="reviewer-name">李骏</h4>
+                        <p class="reviewer-position">所长</p>
+                    </li>
+                    <li>
+                        <img src="./assets/reviewer_1.png" />
+                        <h4 class="reviewer-name">黄琳敏</h4>
+                        <p class="reviewer-position">经理</p>
+                    </li>
+                    <li>
+                        <img src="./assets/reviewer_2.png" />
+                        <h4 class="reviewer-name">刘明雷</h4>
+                        <p class="reviewer-position">经理</p>
+                    </li>
+                    <li>
+                        <img src="./assets/reviewer_3.png" />
+                        <h4 class="reviewer-name">孙彬</h4>
+                        <p class="reviewer-position">高级工程师</p>
+                    </li>
+                    <li>
+                        <img src="./assets/reviewer_4.png" />
+                        <h4 class="reviewer-name">孙龙</h4>
+                        <p class="reviewer-position">工程师</p>
+                    </li>
+                    <li>
+                        <img src="./assets/reviewer_5.png" />
+                        <h4 class="reviewer-name">张政新</h4>
+                        <p class="reviewer-position">助理经理</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-rohm-module rohm-module6">
+        <div class="module-title-container">
+            <p class="module-title">
+                参赛须知
+            </p>
+        </div>
+        <div class="contest-hints-container">
+            <p>
+                参与者承诺:<br>
+                必须保证上传作品或内容为原创，任何作品或内容知识产权方面的争议均与本次活动的举办单位无关。<br>
+                参与者一旦参加即承诺其递交的作品或内容应为原创，承诺该作品或内容不存在权利争议或侵犯第三方知识产权的行为，违反者自行承担相应责任；<br>
+                参与者所申请的开发板只能参与本次活动，不得用于其他商业用途，申请到开发板的参与者必须进行实际操作，否则主办方有追回开发板并要求赔偿的权利；<br>
+                全部作品或内容，知识产权归参与者所有；主办方及赞助商享有在社区论坛、微博、微信公众号等官方媒介对作品进行宣传、报道、展示的权利，并署名作者；<br>
+                本次活动的最终解释权归与非网所有。
+            </p>
+        </div>
+    </div>
+
+    <div class="common-rohm-module rohm-module7">
+        <div class="module-title-container">
+            <p class="module-title">
+                主办单位
+            </p>
+        </div>
+        <div class="main-host-logo-container">
+            <img src="./assets/logo-rohm-bottom.png" alt="">
+        </div>
+        <div class="module-title-container">
+            <p class="module-title">
+                协办单位
+            </p>
+        </div>
+    </div>
+
+    <div class="common-footer">
+        <div class="common-qrcode-container rohm-wechat-qrcode">
+            <p><img src="./assets/qrcode-wechat.png" alt=""></p>
+            <p>罗姆微信公众号</p>
+        </div>
+        <div class="common-qrcode-container rohm-microblog-qrcode">
+            <p><img src="./assets/qrcode-microblog.png" alt=""></p>
+            <p>罗姆新浪微博</p>
+        </div>
+        <div class="rohm-contest-contact">
+            <h3>大赛联系方式</h3>
+            <p>联系人：李申<img src="./assets/iconq-qq.png" alt=""></p>
+            <p>邮箱：shen.li@supplyframe.cn</p>
+            <p>电话：0512-80981663—8049</p>
+        </div>
+    </div>
 </body>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-</script>
 <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 <script>
     new WOW().init();
+    window.onload = function () {
+        // $('.reviewer-slider').bxSlider();
+
+        var mediaWidth = $(document).width();
+
+        // 轮播
+        if (mediaWidth > 768) {
+            $('.reviewer-slider').bxSlider({
+                minSlides: 1,
+                speed: 600,
+                auto: true,
+                autoHover: true, //鼠标移动内容上，是否暂停滑动
+                infiniteLoop: true, //循环滑动
+                slideWidth: 332, //设置每个滑块的宽度
+                maxSlides: 3,
+                pager: false, //是否显示分页
+                slideMargin: 30, //滑块之间的外间距
+                moveSlides: 1, //每次滑动的滑块数量
+            });
+        }
+    }
 </script>
 
 </html>
