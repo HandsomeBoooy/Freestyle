@@ -3,6 +3,8 @@
     padding-top: 15px;
     min-height: 90px;
     text-align: center;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .common-header .navbar .container-fluid {

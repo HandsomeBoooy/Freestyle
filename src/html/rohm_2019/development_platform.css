@@ -149,9 +149,17 @@
 }
 .development-video-links-container .development-single-video-container .video-title {
     margin-top: 28px;
-    left: 429px;
     line-height: 28px;
     color: rgba(51, 51, 51, 1);
     font-size: 20px;
     text-align: center;
+}
+.development-video-links-container .development-single-video-container .video-title a,
+.development-video-links-container .development-single-video-container .video-title a:hover,
+.development-video-links-container .development-single-video-container .video-title a:link,
+.development-video-links-container .development-single-video-container .video-title a:focus,
+.development-video-links-container .development-single-video-container .video-title a:visited {
+    line-height: 28px;
+    color: rgba(51, 51, 51, 1);
+    text-decoration: none;
 }
