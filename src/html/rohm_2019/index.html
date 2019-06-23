@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.2.0/animate.min.css">
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="./index.css">
@@ -202,19 +203,24 @@
                         <!--
                         -->
                         <p class="sub-standard-content">
-                            项目最终是否达到方案的预期目标；<br>
-                            参赛项目的技术难度；
+                            竞赛过程中参赛选手表现出来的创新性、计划性、探索能力、开发能力；
                         </p>
                     </div>
                 </div>
             </div>
             <div class="common-content-link more-flow-link">
-                <a href="#">查看完整作品流程示例</a>
+                <a>查看完整作品流程示例</a>
             </div>
         </div>
     </div>
 
     <div class="common-rohm-module rohm-module5">
+        <div class="module5-bg-image-left">
+            <img src="./assets/bg-module5-left.png" alt="">
+        </div>
+        <div class="module5-bg-image-right">
+            <img src="./assets/bg-module5-left.png" alt="">
+        </div>
         <div class="module-title-container">
             <div class="module-title">
                 <p class="animated fadeInUp wow" data-wow-delay="0.1s">大赛评委</p>
@@ -303,9 +309,35 @@
         </div>
         <div class="rohm-contest-contact">
             <h3>大赛联系方式</h3>
-            <p>联系人：李申<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1918856941&website=www.oicqzone.com"><img src="./assets/iconq-qq.png" alt=""></a></p>
+            <p>联系人：李申<a
+                    href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1918856941&website=www.oicqzone.com"><img
+                        src="./assets/iconq-qq.png" alt=""></a></p>
             <p>邮箱：shen.li@supplyframe.cn</p>
             <p>电话：0512-80981663—8049</p>
+        </div>
+    </div>
+
+    <div class="modal fade rohm-hint-modal" id="hintModal" tabindex="-1" role="dialog"
+        aria-labelledby="hintModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="hint-modal-body">
+                    <p class="hint-modal-content" id="hintModalContent">
+                        <p class="hint-title">
+                            完整作品流程 (以脉搏传感器为例)
+                        </p>
+                        <p class="hint-content hint-content-left">
+                            1.工程师利用脉搏传感器，与控制器mcu等器件设计一个智能可穿戴手表<br>
+                            2 手表的外形工程师可以自行设计开发	
+                        </p>
+                        <p class="hint-content">
+                            3 脉搏传感器采集到的数据，经过控制器mcu处理，发送至手机app上或者pc云端<br>
+                            4 可以在手机或者云端查看测量到的数据	
+                        </p>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -332,6 +364,10 @@
                 moveSlides: 1, //每次滑动的滑块数量
             });
         }
+
+        $('.more-flow-link a').click(function ($ev) {
+            $("#hintModal").modal('show');
+        });
     }
 </script>
 

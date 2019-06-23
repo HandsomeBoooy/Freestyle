@@ -1,0 +1,13 @@
+.apply-form-container {
+    width: 1140px;
+    min-height: 400px;
+    margin: 20px auto 0;
+    padding-top: 52px;
+    background-color: #EBECF0;
+}
+.apply-form-inner-container {
+    width: 737px;
+    min-height: 200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
