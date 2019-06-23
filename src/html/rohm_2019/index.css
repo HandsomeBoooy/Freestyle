@@ -348,6 +348,7 @@
 }
 
 .rohm-module5 {
+    padding-top: 42px;
     background: -webkit-linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
     background: -o-linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
     background: -moz-linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
