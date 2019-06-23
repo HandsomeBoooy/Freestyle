@@ -88,6 +88,12 @@
     user-select: none;
 }
 
+.banner-container .banner-signup-btn a:hover {
+    background-color: #D5D5D5;
+    transition: 300ms;
+    cursor: pointer;
+}
+
 .common-rohm-module .module-title-container {
     margin-top: 18px;
     text-align: center;
@@ -99,6 +105,10 @@
     background-size: auto 100%;
     color: #008CCE;
     font-size: 36px;
+}
+
+.common-rohm-module .module-title-container .module-title p {
+    margin: 0;
 }
 
 .rohm-module2 {
@@ -119,6 +129,7 @@
 }
 
 .rohm-module2 .contest-tendencies-container {
+    margin-top: 24px;
     display: flex;
     display: -ms-flexbox;
     flex-direction: row;
@@ -169,13 +180,14 @@
 }
 
 .rohm-module3 .contestant-group {
+    margin-top: 15px;
     color: #333333;
     font-size: 24px;
     text-align: center;
 }
 
 .rohm-module3 .development-platform-image-container {
-    margin-top: 33px;
+    margin-top: 3px;
     text-align: center;
 }
 
@@ -189,6 +201,12 @@
     text-align: center;
     border-radius: 32px;
     background-color: #008CCE;
+}
+
+.common-rohm-module .common-content-link:hover {
+    background-color: #0083C0;
+    transition: 300ms;
+    cursor: pointer;
 }
 
 .common-rohm-module .common-content-link a {
@@ -272,6 +290,7 @@
 .rohm-module4-2 .main-standard-container {
     width: 555px;
     display: inline-block;
+    text-align: left;
 }
 
 .rohm-module4-2 .main-standard-container:first-child {
@@ -300,8 +319,7 @@
 }
 
 .rohm-module4-2 .sub-standard {
-    padding: 25px 41px;
-    ;
+    padding: 31px 41px;
 }
 
 .rohm-module4-2 .sub-standard:last-child {
@@ -310,11 +328,14 @@
 
 .rohm-module4-2 .sub-standard .sub-standard-icon {
     float: left;
+    margin: 0;
 }
 
 .rohm-module4-2 .sub-standard .sub-standard-content {
-    margin-left: 30px;
+    display: inline-block;
+    margin: 0 0 0 30px;
     padding: 10px 0;
+    text-align: left;
 }
 
 .rohm-module4 .more-flow-link {
