@@ -524,3 +524,13 @@
     width: 555px;
     margin-right: 14px;
 }
+.rohm-module7 .support-host-logo-container {
+    padding-top: 21px;
+    text-align: center;
+}
+.rohm-module7 .support-host-logo-container img {
+    width: 216px;
+}
+.rohm-module7 .support-host-logo-container img.eefocus-logo {
+    margin-right: 91px;
+}

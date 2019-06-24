@@ -1,3 +1,22 @@
+.apply-banner-container {
+    width: 1140px;
+    margin: 23px auto 0;
+    border: 1px solid rgba(192, 200, 201, 0.6);
+}
+.apply-banner-container img {
+    display: inline-block;
+}
+.apply-banner-container .apply-banner-title {
+    width: 564px;
+    padding: 23px 55px;
+    float: right;
+    font-size: 16px;
+    line-height: 27px;
+    color: #383b41;
+}
+.apply-banner-container .apply-banner-title a {
+    color: #DA1F3D;
+}
 .apply-form-container {
     width: 1140px;
     min-height: 400px;
