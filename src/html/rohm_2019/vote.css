@@ -1,0 +1,35 @@
+.vote-banner-container {
+  width: 1140px;
+  margin: 23px auto 0;
+  border: 1px solid rgba(192, 200, 201, 0.6);
+}
+.vote-banner-container img {
+  display: inline-block;
+}
+.vote-banner-container .vote-banner-title {
+  width: 564px;
+  padding: 20px 55px 15px 38px;
+  float: right;
+  font-size: 14px;
+  line-height: 27px;
+  color: rgba(51, 51, 51, 1);
+}
+.vote-banner-container .vote-banner-title a {
+  color: #DA1F3D;
+}
+.vote-unavailable {
+  width: 1140px;
+  min-height: 560px;
+  margin: 0 auto;
+  padding: 61px 0;
+  text-align: center;
+}
+.vote-unavailable-text {
+  display: inline-block;
+  width: auto;
+  margin: auto;
+  text-align: center;
+  line-height: 27px;
+  color: rgba(56, 59, 65, 1);
+  font-size: 16px;
+}

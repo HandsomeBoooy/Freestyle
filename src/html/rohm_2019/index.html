@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css?v=1.1">
 </head>
 
 <body>
@@ -320,6 +320,24 @@
         </div>
     </div>
 
+    <div class="common-side-bar">
+        <div class="common-side-bar-btn global-sign-up-btn">
+            <a href="//rohm.eefocus.com/activity/rohm2019/apply"><img src="./assets/icon-edit.png" alt=""></a>
+        </div>
+        <div class="common-side-bar-btn sign-up-btn-hover">
+            <a href="//rohm.eefocus.com/activity/rohm2019/apply">立即报名<img src="./assets/icon-edit.png" alt=""></a>
+        </div>
+        <div class="common-side-bar-btn global-consult-btn">
+            <img src="./assets/icon-consult.png" alt="">
+        </div>
+        <div class="common-side-bar-btn consult-btn-hover">
+            问题求助<img src="./assets/icon-consult.png" alt="">
+        </div>
+        <div class="common-side-bar-btn global-scroll-to-top-btn">
+            <img src="./assets/icon-arrow.png" alt="">
+        </div>
+    </div>
+
     <div class="modal fade rohm-hint-modal" id="hintModal" tabindex="-1" role="dialog"
         aria-labelledby="hintModalLabel">
         <div class="modal-dialog" role="document">
@@ -348,11 +366,8 @@
 <script>
     new WOW().init();
     window.onload = function () {
-        // $('.reviewer-slider').bxSlider();
-
         var mediaWidth = $(document).width();
 
-        // 轮播
         if (mediaWidth > 768) {
             $('.reviewer-slider').bxSlider({
                 minSlides: 1,
@@ -370,6 +385,42 @@
 
         $('.more-flow-link a').click(function ($ev) {
             $("#hintModal").modal('show');
+        });
+
+        $('.global-sign-up-btn').mouseover(function($ev) {
+            $('.global-sign-up-btn').css({ backgroundColor: '#008CCE' });
+            $('.global-sign-up-btn').animate({ width: '120px', left: '-75px' }, 150);
+            setTimeout(function() {
+                $('.sign-up-btn-hover').show();
+                $('.global-sign-up-btn').hide();
+            }, 150);
+        });
+
+        $('.sign-up-btn-hover').mouseleave(function($ev) {
+            $('.global-sign-up-btn').show();
+            $('.global-sign-up-btn').animate({ width: '45px', left: '0px' }, 150);
+            $('.sign-up-btn-hover').hide();
+            setTimeout(function() {
+                $('.global-sign-up-btn').css({ backgroundColor: '#666666' });
+            }, 150);
+        });
+
+        $('.global-consult-btn').mouseover(function($ev) {
+            $('.global-consult-btn').css({ backgroundColor: '#008CCE' });
+            $('.global-consult-btn').animate({ width: '120px', left: '-75px' }, 150);
+            setTimeout(function() {
+                $('.consult-btn-hover').show();
+                $('.global-consult-btn').hide();
+            }, 150);
+        });
+
+        $('.consult-btn-hover').mouseleave(function($ev) {
+            $('.global-consult-btn').show();
+            $('.global-consult-btn').animate({ width: '45px', left: '0px' }, 150);
+            $('.consult-btn-hover').hide();
+            setTimeout(function() {
+                $('.global-consult-btn').css({ backgroundColor: '#666666' });
+            }, 150);
         });
     }
 </script>

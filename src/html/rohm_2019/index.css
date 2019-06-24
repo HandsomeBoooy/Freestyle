@@ -534,3 +534,64 @@
 .rohm-module7 .support-host-logo-container img.eefocus-logo {
     margin-right: 91px;
 }
+.common-side-bar {
+    display: inline-block;
+    position: fixed;
+    top: 60vh;
+    right: 10vw;
+}
+.common-side-bar-btn {
+    width: 45px;
+    height: 45px;
+    padding: 11px;
+    text-align: right;
+    background-color: #666666;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.common-side-bar-btn img {
+    width: 23px;
+    height: 23px;
+}
+.sign-up-btn-hover, .consult-btn-hover {
+    width: 120px;
+    color: #ffffff;
+    background-color: #008CCE;
+    overflow: hidden;
+    display: none;
+}
+.sign-up-btn-hover a, .sign-up-btn-hover a:hover, .sign-up-btn-hover a:visited, .sign-up-btn-hover a:focus,
+.consult-btn-hover a, .consult-btn-hover a:hover, .consult-btn-hover a:visited, .consult-btn-hover a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+.sign-up-btn-hover img, .consult-btn-hover img {
+    margin-left: 12px;
+}
+.global-sign-up-btn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.sign-up-btn-hover {
+    position: absolute;
+    top: 0px;
+    left: -75px;
+    display: none;
+}
+.global-consult-btn {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+.consult-btn-hover {
+    position: absolute;
+    top: 60px;
+    left: -75px;
+    display: none;
+}
+.global-scroll-to-top-btn {
+    position: absolute;
+    top: 183px;
+    left: 0px;
+}
