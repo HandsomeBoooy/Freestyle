@@ -2,12 +2,100 @@
     width: 1140px;
     min-height: 400px;
     margin: 20px auto 0;
-    padding-top: 52px;
+    padding: 52px 0 77px;
     background-color: #EBECF0;
 }
 .apply-form-inner-container {
     width: 737px;
     min-height: 200px;
     margin: 0 auto;
+    padding: 39px 53px;
     background-color: #FFFFFF;
+}
+.apply-form-inner-container .form-group {
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+.apply-form-inner-container .form-group label {
+    line-height: 16px;
+    color: rgba(61, 80, 90, 1);
+    font-size: 12px;
+    text-align: left;
+    font-weight: 400;
+}
+.apply-form-inner-container .form-group label .necessary-mark {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #D90013;
+}
+.apply-form-inner-container .form-group input {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(193, 199, 208, 1);
+}
+.apply-form-inner-container .form-group textarea.large-input {
+    height: 98px;
+}
+.apply-form-inner-container .form-group input.file-upload {
+    width: 88px;
+    height: 80px;
+    border: none;
+    box-shadow: none;
+    opacity: 0;
+}
+.apply-form-inner-container .form-group .warning-text {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #D90013;
+}
+.apply-form-inner-container .form-group.file-upload-container {
+    position: relative;
+}
+.apply-form-inner-container .form-group.file-upload-container label {
+    margin-bottom: 11px;
+}
+.apply-form-inner-container .file-upload-container .file-upload-icon {
+    position: absolute;
+    top: 30px;
+}
+.apply-form-inner-container .apply-form-divider {
+    margin: 43px 0 40px;
+    border-top: 1px dotted #979797;
+}
+.apply-form-inner-container .pcb-options-container label {
+    margin-bottom: 16px;
+}
+.apply-form-inner-container .pcb-options-container .single-option-container {
+    width: 200px;
+    margin-bottom: 23px;
+    display: inline-block;
+    vertical-align: text-top;
+}
+.apply-form-inner-container .pcb-options-container .pcb-options {
+    padding-bottom: 8px;
+}
+.apply-form-inner-container .single-option-container input {
+    height: auto;
+    float: left;
+}
+.apply-form-inner-container .single-option-container span {
+    max-width: 170px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.apply-form-inner-container .apply-submit-btn-container {
+    margin-top: 52px;
+}
+.apply-form-inner-container .apply-submit-btn {
+    width: 125px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgba(218, 31, 61, 1);
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 23px;
+    border: none;
+    outline: none;
 }
