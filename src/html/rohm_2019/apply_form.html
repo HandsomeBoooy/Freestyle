@@ -148,14 +148,14 @@
             </div>
             <div class="form-group file-upload-container">
                 <label title="项目系统框架图">项目系统框架图（请上传压缩文件.zip .rar）</label>
-                <input type="file" class="form-control file-upload" id="fileUploadInput" placeholder="">
+                <input type="file" class="form-control file-upload" id="fileUploadInput" placeholder="" accept="application/zip, application/rar">
                 <div class="file-upload-icon">
                     <img src="./assets/icon-upload.png" alt="">
                 </div>
-                <p class="uploaded-file-name"></p>
+                <p class="uploaded-file-name">&nbsp;</p>
             </div>
             <div class="form-group apply-submit-btn-container">
-                <p class="warning-text">&nbsp;</p>
+                <p class="warning-text" id="allInputCheckedWarning">请确保所有必填项内容已经填写</p>
                 <button class="apply-submit-btn">提交</button>
             </div>
         </div>
@@ -186,20 +186,16 @@
             $('#fileUploadInput').click();
         });
 
-        $('.apply-form-inner-container .form-control[data-necessary=true]').blur(function ($ev) {
-            var inputTitle = $($ev.target).parent('.form-group').children('label').attr('title');
-            var warningContainer = $($ev.target).parent('.form-group').children('.warning-text');
-            warningContainer.html('&nbsp;');
-            if ($ev.target.nodeName.toLowerCase() == 'input' && $($ev.target).val() === '') {
-                warningContainer.html('请填写' + inputTitle);
-            }
-            if ($ev.target.nodeName.toLowerCase() == 'textarea' && $($ev.target).html() === '') {
-                warningContainer.html('请填写' + inputTitle);
+        $('#fileUploadInput').change(function($ev) {
+            var files = $('#fileUploadInput').get(0).files;
+            if (files.length > 0) {
+                $('.uploaded-file-name').html(files[0].name);
             }
         });
 
         $('.apply-submit-btn').click(function ($ev) {
             if (validateInputValue()) {
+                $('#allInputCheckedWarning').css({visibility: 'hidden'});
                 var data = {
                     name: $('#nameInput').val(),
                     phone: $('#phoneInput').val(),
@@ -227,6 +223,8 @@
                         console.log(err);
                     }
                 })
+            } else {
+                $('#allInputCheckedWarning').css({visibility: 'visible'});
             }
         });
     }
@@ -254,14 +252,16 @@
             company: $('#companyInput').val(),
             address: $('#addressInput').val(),
             prj_name: $('#projectNameInput').val(),
-            pri_summary: $('#projectDescriptionInput').html(),
-            pri_desc: $('#projectFunctionInput').html(),
+            pri_summary: $('#projectDescriptionInput').val(),
+            pri_desc: $('#projectFunctionInput').val(),
         }
         for (var key in _data) {
+            console.log(_data[key]);
             if (!_data[key]) {
                 allInputValueValidFlag = false;
             }
         }
+        console.log(allInputValueValidFlag);
         if (!allInputValueValidFlag) {
             checkAllInputFilled();
         }
@@ -308,12 +308,8 @@
         $.each(allInputElements, function (index, input) {
             var inputTitle = $(input).parent('.form-group').children('label').attr('title');
             var warningContainer = $(input).parent('.form-group').children('.warning-text');
-            warningContainer.html('&nbsp;');
-            if (input.nodeName.toLowerCase() == 'input' && $(input).val() === '') {
-                warningContainer.html('请填写' + inputTitle);
-            }
-            if (input.nodeName.toLowerCase() == 'textarea' && $(input).html() === '') {
-                warningContainer.html('请填写' + inputTitle);
+            if ((input.nodeName.toLowerCase() == 'input' && $(input).val() === '') || (input.nodeName.toLowerCase() == 'textarea' && $(input).html() === '')) {
+                $('#allInputCheckedWarning').css({visibility: 'visible'});
             }
         });
     }

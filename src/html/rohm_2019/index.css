@@ -452,6 +452,8 @@
 }
 
 .common-footer {
+    width: 1140px;
+    margin: auto;
     padding: 52px 0 55px;
 }
 
@@ -460,14 +462,14 @@
     text-align: center;
 }
 
-.common-footer .common-qrcode-container p {
+.common-footer .common-qrcode-container .qrcode-container {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .common-footer .rohm-wechat-qrcode {
-    float: left;
-    margin-left: 392px;
+    /* float: left; */
+    /* margin-left: 392px; */
 }
 
 .common-footer .rohm-microblog-qrcode {
@@ -477,7 +479,6 @@
 
 .common-footer .rohm-contest-contact {
     float: right;
-    margin-right: 391px;
 }
 
 .common-footer .rohm-contest-contact h3 {

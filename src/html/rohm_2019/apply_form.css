@@ -54,6 +54,7 @@
 }
 .apply-form-inner-container .form-group textarea.large-input {
     height: 98px;
+    resize: none;
 }
 .apply-form-inner-container .form-group input.file-upload {
     width: 88px;
@@ -68,6 +69,10 @@
     font-size: 12px;
     line-height: 16px;
     color: #D90013;
+}
+.apply-form-inner-container .form-group .warning-text#allInputCheckedWarning {
+    margin-bottom: 16px;
+    visibility: hidden;
 }
 .apply-form-inner-container .form-group.file-upload-container {
     position: relative;
@@ -91,6 +96,11 @@
     margin-bottom: 23px;
     display: inline-block;
     vertical-align: text-top;
+}
+.apply-form-inner-container .uploaded-file-name {
+    margin-top: 18px;
+    color: rgba(61, 80, 90, 1);
+    font-size: 12px;
 }
 .apply-form-inner-container .pcb-options-container .pcb-options {
     padding-bottom: 8px;
