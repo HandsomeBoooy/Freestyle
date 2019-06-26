@@ -551,7 +551,6 @@
 }
 .common-side-bar-btn img {
     width: 23px;
-    height: 23px;
 }
 .sign-up-btn-hover, .consult-btn-hover {
     width: 120px;
@@ -594,4 +593,8 @@
     position: absolute;
     top: 183px;
     left: 0px;
+    display: none;
+}
+.global-scroll-to-top-btn:hover {
+    background-color: #008CCE;
 }
