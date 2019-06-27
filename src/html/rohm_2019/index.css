@@ -599,3 +599,109 @@
 .global-scroll-to-top-btn:hover {
     background-color: #008CCE;
 }
+@media screen and (max-width: 1215px) {
+    .common-header .navbar .container-fluid .navbar-collapse {
+        padding-left: 0;
+    }
+    .common-header .navbar-brand.rohm-header-logo {
+        padding-right: 0;
+        padding-left: 8px;
+    }
+    .common-header .navbar-nav li>a {
+        padding: 20px 10px;
+    }
+    .common-header li.sign-up-btn>a {
+        padding: 11px 0;
+    }
+    .common-header .sign-up-btn {
+        margin-left: 70px;
+    }
+    .banner-container .banner-title {
+        padding-top: 90px;
+    }
+    .banner-container .banner-title img {
+        width: 94%;
+        margin: auto;
+    }
+    .banner-container .banner-signup-btn a {
+        margin: 20px 0 40px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .common-header .navbar .container-fluid {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .common-header .navbar .container-fluid .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .common-header .navbar-nav li>a {
+        padding: 20px 6px;
+    }
+    .common-header li.sign-up-btn>a {
+        padding: 11px 0;
+    }
+    .common-header .sign-up-btn {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .common-header .navbar .container-fluid {
+        display: block;
+        width: 100%;
+    }
+    .banner-container .banner-title .main-title {
+        font-size: 48px;
+    }
+    .banner-container .banner-signup-btn a {
+        padding: 8px 48px;
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .banner-container .banner-title .main-title {
+        font-size: 32px;
+    }
+    .banner-container .banner-signup-btn a {
+        padding: 6px 40px;
+        font-size: 20px;
+    }
+    .common-rohm-module .module-title-container .module-title {
+        font-size: 24px;
+    }
+    .common-rohm-module {
+        padding: 0 12px;
+    }
+    .common-rohm-module.rohm-module1 {
+        padding: 0 0;
+    }
+    .common-rohm-module.rohm-module2 {
+        padding-bottom: 40px;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container {
+        width: 267px;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .rohm-module3 {
+        margin-top: 0;
+        padding-top: 57px;
+        padding-bottom: 57px;
+    }
+    .rohm-module3 .development-platform-image-container img {
+        width: 94%;
+        margin: auto;
+    }
+    .rohm-module3 .development-platform-link {
+        width: auto;
+        padding: 0 60px;
+    }
+    .common-rohm-module .common-content-link a {
+        font-size: 20px;
+    }
+    .rohm-module4 .schedule-module img {
+        width: 94%;
+        margin: auto;
+    }
+}
