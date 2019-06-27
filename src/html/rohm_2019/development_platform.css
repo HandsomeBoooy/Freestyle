@@ -124,7 +124,7 @@
     background-color: rgba(0, 140, 206, 0.85);
 }
 .development-content-container .development-single-pcb-card .development-pcb-link:hover {
-    background-color: #0083C0;
+    /* background-color: #0083C0; */
 }
 .development-content-container .development-single-pcb-card .development-pcb-link a {
     width: 85px;
