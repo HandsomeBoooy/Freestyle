@@ -128,3 +128,21 @@
     border: none;
     outline: none;
 }
+@media screen and (max-width: 500px) {
+    .apply-banner-container,
+    .apply-form-container,
+    .apply-form-inner-container {
+        width: 100%;
+    }
+    .apply-banner-container {
+        border-left: none;
+        border-right: none;
+    }
+    .apply-banner-container .apply-banner-title {
+        width: 100%;
+        float: none;
+    }
+    .apply-form-container {
+        padding-top: 0;
+    }
+}

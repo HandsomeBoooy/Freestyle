@@ -33,3 +33,21 @@
   color: rgba(56, 59, 65, 1);
   font-size: 16px;
 }
+@media screen and (max-width: 500px) {
+  .vote-banner-container,
+  .vote-banner-container .vote-banner-title,
+  .vote-banner-container img,
+  .vote-unavailable {
+    width: 100%;
+  }
+  .vote-banner-container {
+    border-right: none;
+    border-left: none;
+  }
+  .vote-banner-container .vote-banner-title {
+    float: none;
+  }
+  .vote-unavailable {
+    min-height: 240px;
+  }
+}

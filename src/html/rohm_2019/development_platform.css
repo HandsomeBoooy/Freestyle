@@ -197,6 +197,8 @@
     .development-content-container .development-pcb-left-sidebar {
         margin: auto;
         width: 100%;
+        border-right: none;
+        border-left: none;
     }
     .development-content-container .development-pcb-cards-container {
         flex-direction: column;
