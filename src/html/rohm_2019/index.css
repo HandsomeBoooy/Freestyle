@@ -399,7 +399,11 @@
     border: none;
     background: none;
 }
-
+.rohm-module5 .reviewer-slider-container .bx-wrapper .bx-viewport {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
 .rohm-module5 .reviewer-slider-container .reviewer-slider li {
     padding: 36px 37px;
     border-radius: 5px;
@@ -460,7 +464,10 @@
     margin: auto;
     padding: 52px 0 55px;
 }
-
+.common-footer .qrcode-group-container {
+    display: inline-block;
+    width: auto;
+}
 .common-footer .common-qrcode-container {
     display: inline-block;
     text-align: center;
@@ -603,6 +610,12 @@
 .global-scroll-to-top-btn:hover {
     background-color: #008CCE;
 }
+.rohm-module5 .reviewer-sliders-container .reviewer-slider li {
+    display: inline-block;
+}
+.rohm-module5 .reviewer-sliders-container .reviewer-slider img {
+    width: 257px;
+}
 @media screen and (max-width: 1281px) {
     .common-header .navbar .container-fluid .navbar-collapse {
         padding-left: 0;
@@ -643,7 +656,27 @@
         margin: auto;
     }
     .rohm-module4-2 .judge-standards-container {
-        width: 
+        width: 100%;
+        text-align: center;
+    }
+    .rohm-module4-2 .main-standard-container:first-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .rohm-module4-2 .main-standard-container {
+        width: 100%;
+        text-align: center;
+    }
+    .rohm-module4-2 .main-standard {
+        width: 555px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .common-footer {
+        width: 100%;
     }
 }
 @media screen and (max-width: 990px) {
@@ -694,6 +727,57 @@
         margin-right: 45px;
     }
 }
+@media screen and (max-width: 600px) {
+    div.common-rohm-module {
+        overflow-x: hidden;
+    }
+    .rohm-module4-2 .main-standard-container {
+        padding: 12px;
+    }
+    .rohm-module4-2 .main-standard {
+        width: 100%;
+        margin: auto;
+    }
+    .rohm-module4-2 .main-standard .main-standard-icon,
+    .rohm-module4-2 .sub-standard .sub-standard-icon {
+        float: none;
+    }
+    .rohm-module4-2 .sub-standard .sub-standard-icon {
+        text-align: center;
+    }
+    .rohm-module4-2 .main-standard .main-standard-content {
+        width: auto;
+    }
+    .rohm-module4-2 .sub-standard .sub-standard-content {
+        max-width: none;
+        width: auto;
+    }
+    .rohm-module5 .module5-bg-image-left {
+        left: 0;
+    }
+    .rohm-module5 .module5-bg-image-right {
+        right: 0;
+    }
+    .rohm-module5 .module5-bg-image-left img,
+    .rohm-module5 .module5-bg-image-right img {
+        width: 30vw;
+    }
+    .rohm-module5 .reviewer-slider-container .bx-controls-direction {
+        display: none;
+    }
+    .rohm-module6 .contest-hints-container {
+        padding: 0 12px;
+    }
+    .support-host-logo-container a {
+        display: block;
+        width: 100%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .rohm-module7 .support-host-logo-container img.eefocus-logo {
+        margin-right: 0;
+    }
+}
 @media screen and (max-width: 500px) {
     .banner-container .banner-title .main-title {
         font-size: 32px;
@@ -738,5 +822,38 @@
     .rohm-module4 .schedule-module img {
         width: 94%;
         margin: auto;
+    }
+    .rohm-module4 .more-flow-link {
+        width: 100%;
+        background-position-x: calc(50% + 120px);
+    }
+    .rohm-module5 .reviewer-slider-container .reviewer-slider li {
+        padding: 24px 0;
+    }
+    .rohm-module5 .reviewer-sliders-container .reviewer-slider img {
+        width: 220px;
+        margin: auto;
+    }
+    .rohm-module7 .support-host-logo-container {
+        padding-bottom: 32px;
+    }
+    .common-footer .qrcode-group-container {
+        margin-left: 12px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .common-footer .rohm-microblog-qrcode {
+        margin-left: 80px;
+    }
+    .common-footer .rohm-contest-contact {
+        float: none;
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .common-side-bar {
+        left: calc(100vw - 48px);
+        right: auto;
     }
 }
