@@ -32,15 +32,16 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand rohm-header-logo" href="#"></a>
+                    <a class="navbar-brand rohm-header-apply mobile-show sign-up-header-btn" href="./apply_form.html" target="_blank">立即报名</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">大赛首页</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">开发平台</a></li>
+                        <li><a href="./index.html" target="_blank" rel="noopener noreferrer">大赛首页</a></li>
+                        <li><a href="./development_platform.html" target="_blank" rel="noopener noreferrer">开发平台</a></li>
                         <li><a href="#" target="_blank" rel="noopener noreferrer">大赛论坛</a></li>
                         <li><a href="#" target="_blank" rel="noopener noreferrer">项目提交</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">项目投票</a></li>
-                        <li class="sign-up-btn"><a href="#" target="_blank" rel="noopener noreferrer">立即报名</a></li>
+                        <li><a href="./vote.html" target="_blank" rel="noopener noreferrer">项目投票</a></li>
+                        <li class="sign-up-btn"><a href="./apply_form.html" target="_blank" rel="noopener noreferrer">立即报名</a></li>
                     </ul>
                 </div>
             </div>
@@ -126,7 +127,6 @@
                         <span>支持Arduino的扩展板（无传感器评估板）</span>
                     </div>
                 </div>
-                <p class="warning-text">&nbsp;</p>
             </div>
             <hr class="apply-form-divider">
             <div class="apply-form-title">
@@ -143,7 +143,7 @@
                     data-necessary="true"></textarea>
                 <p class="warning-text">&nbsp;</p>
             </div>
-            <div class="form-group">
+            <div class="form-group project-function-description">
                 <label title="功能描述">功能描述<span class="necessary-mark">*</span></label>
                 <textarea class="form-control large-input" id="projectFunctionInput" placeholder=""
                     data-necessary="true"></textarea>
@@ -165,17 +165,20 @@
     </div>
 
     <div class="common-footer">
-        <div class="common-qrcode-container rohm-wechat-qrcode">
-            <p><img src="./assets/qrcode-wechat.png" alt=""></p>
-            <p>罗姆微信公众号</p>
-        </div>
-        <div class="common-qrcode-container rohm-microblog-qrcode">
-            <p><img src="./assets/qrcode-microblog.png" alt=""></p>
-            <p>罗姆新浪微博</p>
+        <div class="qrcode-group-container">
+            <div class="common-qrcode-container rohm-wechat-qrcode">
+                <p class="qrcode-container"><img src="./assets/qrcode-wechat.png" alt=""></p>
+                <p>罗姆微信公众号</p>
+            </div>
+            <div class="common-qrcode-container rohm-microblog-qrcode">
+                <p class="qrcode-container"><img src="./assets/qrcode-microblog.png" alt=""></p>
+                <p>罗姆新浪微博</p>
+            </div>
         </div>
         <div class="rohm-contest-contact">
             <h3>大赛联系方式</h3>
-            <p>联系人：李申<img src="./assets/iconq-qq.png" alt=""></p>
+            <p>联系人：李申<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1170894008"><img
+                        src="./assets/iconq-qq.png" alt=""></a></p>
             <p>邮箱：shen.li@supplyframe.cn</p>
             <p>电话：0512-80981663—8049</p>
         </div>

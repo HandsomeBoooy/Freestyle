@@ -1,3 +1,12 @@
+.mobile-show {
+    display: none;
+}
+.pc-show {
+    display: block;
+}
+.rohm-contest-contact .pc-show {
+    display: inline;
+}
 .common-header .navbar {
     margin-bottom: 0;
     padding-top: 15px;
@@ -6,9 +15,27 @@
     background-color: transparent;
     border-color: transparent;
 }
-
+.common-header .navbar-toggle {
+    margin-top: 12px;
+}
+.common-header a.rohm-header-apply.sign-up-header-btn {
+    height: 30px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: rgba(218, 31, 61, 1);
+    border-radius: 35px;
+}
 .common-header .navbar .container-fluid {
     display: inline-block;
+}
+.common-header .navbar .container-fluid>.navbar-header {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .common-header .navbar .container-fluid .navbar-collapse {
@@ -16,7 +43,7 @@
 }
 
 .common-header .navbar-brand.rohm-header-logo {
-    width: 130px;
+    width: 100px;
     height: 60px;
     background: url('./assets/logo_rohm.png') no-repeat center center;
 }
@@ -666,7 +693,6 @@
         margin-bottom: 15px;
     }
     .rohm-module4-2 .main-standard-container {
-        width: 100%;
         text-align: center;
     }
     .rohm-module4-2 .main-standard {
@@ -711,9 +737,34 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .mobile-show {
+        display: inline-block;
+    }
     .common-header .navbar .container-fluid {
         display: block;
         width: 100%;
+    }
+    .common-header .navbar .container-fluid .navbar-collapse {
+        float: none;
+        border-top: none;
+        width: 100%;
+        margin: auto;
+    }
+    .common-header .navbar-collapse .navbar-nav {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        display: inline-block;
+    }
+    .common-header .navbar-nav li,
+    .common-header .navbar-nav li>a {
+        width: 100%;
+    }
+    .common-header .navbar-nav li>a {
+        text-align: left;
+    }
+    .common-header li.sign-up-btn {
+        display: none;
     }
     .banner-container .banner-title .main-title {
         font-size: 48px;
@@ -728,29 +779,62 @@
     }
 }
 @media screen and (max-width: 600px) {
-    div.common-rohm-module {
+    body {
         overflow-x: hidden;
     }
+    .pc-show {
+        display: none;
+    }
+    .rohm-contest-contact .pc-show {
+        display: none;
+    }
+    div.common-rohm-module {
+        width: 100vw;
+        overflow: hidden;
+    }
+    .common-header .navbar-brand.rohm-header-logo {
+        width: 90px;
+        height: 50px;
+        margin-top: 5px;
+    }
+    .rohm-module2 .contest-introduction-container {
+        text-align: left;
+    }
     .rohm-module4-2 .main-standard-container {
+        width: 100%;
         padding: 12px;
+    }
+    .rohm-module4-2 .main-standard-container:first-child {
+        margin-bottom: 0;
     }
     .rohm-module4-2 .main-standard {
         width: 100%;
         margin: auto;
+        padding: 18px;
+    }
+    .rohm-module4-2 .main-standard .main-standard-icon {
+        padding: 0 0 10px;
+    }
+    .rohm-module4-2 .sub-standard {
+        padding: 18px;
+    }
+    .rohm-module4-2 .sub-standard:last-child {
+        margin-top: 24px;
     }
     .rohm-module4-2 .main-standard .main-standard-icon,
     .rohm-module4-2 .sub-standard .sub-standard-icon {
         float: none;
-    }
-    .rohm-module4-2 .sub-standard .sub-standard-icon {
+        padding: 0 0 10px;
         text-align: center;
     }
     .rohm-module4-2 .main-standard .main-standard-content {
         width: auto;
+        margin-left: 0;
     }
     .rohm-module4-2 .sub-standard .sub-standard-content {
         max-width: none;
-        width: auto;
+        width: 100%;
+        margin-left: 0;
     }
     .rohm-module5 .module5-bg-image-left {
         left: 0;
@@ -762,11 +846,9 @@
     .rohm-module5 .module5-bg-image-right img {
         width: 30vw;
     }
-    .rohm-module5 .reviewer-slider-container .bx-controls-direction {
-        display: none;
-    }
     .rohm-module6 .contest-hints-container {
         padding: 0 12px;
+        text-align: left;
     }
     .support-host-logo-container a {
         display: block;
@@ -780,7 +862,9 @@
 }
 @media screen and (max-width: 500px) {
     .banner-container .banner-title .main-title {
+        margin: 0;
         font-size: 32px;
+        line-height: 70px;
     }
     .banner-container .banner-signup-btn a {
         padding: 6px 40px;
@@ -828,7 +912,7 @@
         background-position-x: calc(50% + 120px);
     }
     .rohm-module5 .reviewer-slider-container .reviewer-slider li {
-        padding: 24px 0;
+        padding: 10px 0;
     }
     .rohm-module5 .reviewer-sliders-container .reviewer-slider img {
         width: 220px;

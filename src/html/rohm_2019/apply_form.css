@@ -128,11 +128,21 @@
     border: none;
     outline: none;
 }
+.apply-form-inner-container  .form-group.project-function-description {
+    display: none;
+}
 @media screen and (max-width: 500px) {
     .apply-banner-container,
     .apply-form-container,
     .apply-form-inner-container {
         width: 100%;
+    }
+    .apply-banner-container img {
+        width: 100%;
+    }
+    .apply-form-inner-container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
     .apply-banner-container {
         border-left: none;
