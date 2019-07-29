@@ -1,0 +1,27 @@
+form.entrance-search {
+    float: left;
+}
+.video-card-container {
+    display: inline-block;
+    margin-right: 20px;
+}
+.video-card-container:last-child {
+    margin-right: 0;
+}
+.video-cover,
+.desc.video-title {
+    width: auto;
+}
+.video-cover {
+    position: relative;
+}
+.video-play-btn {
+    position: absolute;
+    top: calc((100% - 40px) / 2);
+    left: calc((100% - 40px) / 2);
+    transform: rotate(180deg);
+}
+.chip-description-container .chip-description {
+    width: 40%;
+    margin-right: 20px;
+}

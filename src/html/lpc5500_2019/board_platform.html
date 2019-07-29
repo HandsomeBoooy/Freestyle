@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>强劲双核板卡-LPC54110 - 页面 - 恩智浦技术社区</title>
+
+    <meta name="author" content="与非网,eefocus.com">
+    <meta name="generator" content="与非网,eefocus.com">
+    <meta name="description" content="恩智浦LPC Cortex-M4/M0+系列开发板，采用LQFP64封装的LPC54114MCU，Arduino板型架构，板载调试器和常用外设扩展，通常可直接利用LPC54110开发对MCU性能进行评估和软件开发。">
+    <meta name="keywords" content="LPC,恩智浦,双核,音频,汽车电子">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link href="https://www.nxpic.org/asset/custom/image/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="//www.eefocus.com/asset/theme-default/css/article-mobile-community.css?20170307">
+    <link href="https://www.nxpic.org/public/vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://www.nxpic.org/public/vendor/bootstrap/css/bootstrap.min.css?1532762811" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://www.nxpic.org/asset/theme-demoboard/css/front.css?1558405099" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://www.nxpic.org/asset/theme-demoboard/css/topernew.css?1558405099" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://www.nxpic.org/asset/theme-demoboard/css/demoboard.css?1558405099" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/board_platform.css">
+    
+    <style>
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            line-height: 0;
+            content: "";
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #999;
+        }
+
+        :-moz-placeholder {
+            color: #999;
+        }
+
+        ::-moz-placeholder {
+            color: #999;
+        }
+
+        :-ms-input-placeholder {
+            color: #999;
+        }
+
+        .entrance-search-m {
+            margin: 10px auto 10px;
+            border: 1px solid #e1e0e0;
+            height: 32px;
+            width: 94%;
+            border-radius: 5px !important;
+            background-color: #fff;
+        }
+
+        @media (min-width: 770px) {
+            .entrance-search-m {
+                display: none;
+            }
+        }
+
+        .entrance-ser-inputm {
+            border: 0 !important;
+            outline: 0 !important;
+            height: 30px !important;
+            line-height: 20px !important;
+            box-shadow: none !important;
+            width: 86%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-left: 2% !important;
+            padding-right: 1% !important;
+            color: #999 !important;
+            font-size: 14px !important;
+            border-radius: 5px !important;
+        }
+
+        .ser-imgm {
+            background: url("//asset.semidata.info/new.eefocus.com/theme-channel/image/search-phone.png") center center no-repeat;
+            cursor: pointer;
+            width: 8%;
+            height: 30px;
+            border: 0;
+            float: left;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://static.semidata.info/sns.eefocus.com/freescale/vendor/jquery/jquery.min.js?1405601052"></script>
+    <script type="text/javascript" src="https://www.nxpic.org/public/vendor/bootstrap/js/bootstrap.min.js?1532762811">
+    </script>
+
+
+</head>
+
+<body id="pi-page" class="zh-cn">
+    <!--[if lt IE 9]><link href="https://www.nxpic.org/public/vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet"><![endif]-->
+
+    <!-- Header: brand, slogan, user bar -->
+    <div class="navbar navbar-inverse navbar-header-ef hidden-pid" role="navigation">
+        <div class="container">
+            <div class="entrance-brand">
+                <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eefocus&amp;utm_term=eefocus"
+                    class="nav-module-link active" title="看行业资讯，观技术交流" target="_blank"><span
+                        class="svglogo logoeefocus"></span>与非网</a>
+                <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=cirmall&amp;utm_term=cirmall"
+                    class="nav-module-link" title="看别人设计、晒自己方案" target="_blank"><span
+                        class="svglogo logocirmall"></span>电路城</a>
+                <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=moore8&amp;utm_term=moore8"
+                    class="nav-module-link" title="做行业名师、学专业技能" target="_blank"><span
+                        class="svglogo logomoore8"></span>摩尔吧</a>
+
+                <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eda&amp;utm_term=bom2buy"
+                    class="nav-module-link" title="比供应报价，推荐最优方案" target="_blank"><span
+                        class="svglogo logobom2buy"></span>买芯片</a>
+                <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=datasheet5&amp;utm_term=datasheet5"
+                    class="nav-module-link" title="查器件信息，下数据手册" target="_blank"><span
+                        class="svglogo logod5"></span>元件库</a>
+                <!-- Search -->
+                <form id="form1" action="//search.eefocus.com/s" name="form1" class="entrance-search" target="_blank">
+                    <input type="hidden" name="app_id" value="17">
+                    <input style="overflow: hidden; text-indent: -9999em;" class="ser-img" type="submit" name="sub"
+                        value="1">
+                    <input id="Text2" class="ser_input entrance-ser-input" type="text" gtbfieldid="2" autocomplete="off"
+                        name="q" value="" maxlength="100" placeholder="输入关键词        搜资讯查资料        找开发板寻电路方案">
+                </form>
+            </div>
+            <div class="nav-modules-container" id="nav-modules-container"></div>
+            <ul class="nav navbar-nav navbar-right" id="userBarAnonymous" style="display: none;">
+                <li>
+                    <a href="/saml/index/login/?redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Fdemoboard-LPC54110">
+                        登录 </a>
+                </li>
+                <li>
+                    <a
+                        href="https://account.eefocus.com/user/register?app=2&redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Fdemoboard-LPC54110">
+                        注册 </a>
+                </li>
+            </ul>
+            <div class="login-wper" id="userBarMember" style="display: none">
+
+                <!--User-->
+                <div class="member-wper">
+                    <a class="member-card-item" id="memberCard" href="#"></a>
+                    <div class="member-card-wper" id="memberProfile">
+                        <i class="drop-icon"></i>
+                        <span class="card-item">
+                            <a id="memberName" href="#">
+                                Name </a>
+                        </span>
+                        <span class="card-item">
+                            <a id="member-logout"
+                                href="/saml/index/logout/?redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Fdemoboard-LPC54110">
+                                退出 </a>
+                        </span>
+                    </div>
+                </div>
+                <!--Msg-->
+                <div class="msg-wper">
+                    <a id="memberMsg" class="msg-place" href="//account.eefocus.com/message">
+                        <span class="msg-bell"></span>
+                        <span class="msg-point"></span>
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                $(function () {
+                    $.getJSON("https://www.nxpic.org/system/index/user/?" + new Date().getTime(), function (
+                        user) {
+                        var ela = $('#userBarAnonymous');
+                        var elm = $('#userBarMember');
+                        if (user.uid > 0) {
+                            ela.hide();
+                            elm.show();
+                            $('#memberMsg').attr('href', user.message);
+                            $('#memberCard').attr('href', user.profile).html(user.avatar);
+                            $('#memberName').attr('href', user.profile).html(user.name);
+
+                            /*show message number*/
+                            $.ajax({
+                                type: "GET",
+                                url: "//account.eefocus.com/message/index/count",
+                                dataType: "jsonp",
+                                success: function (data) {
+                                    if (data.status == 1 && data.data > 0) {
+                                        $('#memberMsg').children('.msg-point').show();
+                                    } else {
+                                        $('#memberMsg').children('.msg-point').hide();
+                                    }
+                                }
+                            });
+                        } else {
+                            ela.show();
+                            elm.hide();
+                        }
+
+                    });
+
+                    //PC or Mobile
+                    var isMobile = false;
+                    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+                        isMobile = true;
+                    } else {
+                        isMobile = false;
+                    }
+
+                    var cardTimer = null;
+                    var $mCard = $('#memberCard');
+                    var $mProfile = $('#memberProfile');
+
+                    $mCard.on('mouseover', function () {
+                        clearCardTime();
+                    }).on('mouseout', function () {
+                        cardTime();
+                    });
+
+                    $mProfile.on('mouseover', function () {
+                        clearCardTime();
+                    }).on('mouseout', function () {
+                        cardTime();
+                    });
+
+                    if (isMobile) {
+                        $mCard.click(function (e) {
+                            return false;
+                        });
+                    }
+
+                    function cardTime() {
+                        cardTimer = setTimeout(function () {
+                            $mCard.css('borderColor', 'transparent');
+                            $mProfile.hide();
+                        }, 400);
+                    }
+
+                    function clearCardTime() {
+                        clearTimeout(cardTimer);
+                        $mCard.css('borderColor', '#d80d1f');
+                        $mProfile.show();
+                    }
+                })
+            </script>
+        </div>
+    </div>
+    <div class="entrance-brand1 entrance-header show-pid">
+        <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eefocus&amp;utm_term=eefocus"
+            class="nav-module-link1" title="看行业资讯，观技术交流" target="_blank"><span class="svglogo1 logoeefocus"></span></a>
+        <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=cirmall&amp;utm_term=cirmall"
+            class="nav-module-link1" title="看别人设计、晒自己方案" target="_blank"><span class="svglogo1 logocirmall"></span></a>
+        <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=moore8&amp;utm_term=moore8"
+            class="nav-module-link1" title="做行业名师、学专业技能" target="_blank"><span class="svglogo1 logomoore8"></span></a>
+        <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eda&amp;utm_term=bom2buy"
+            class="nav-module-link1" title="比供应报价，推荐最优方案" target="_blank"><span class="svglogo1 logobom2buy"></span></a>
+        <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=datasheet5&amp;utm_term=datasheet5"
+            class="nav-module-link1" title="查器件信息，下数据手册" target="_blank"><span class="svglogo1 logod5"></span></a>
+    </div>
+    <form id="form2" action="//search.eefocus.com/s" name="form1" class="entrance-search-m clearfix" target="_blank">
+        <input type="hidden" name="app_id" value="17">
+        <input style="overflow: hidden; text-indent: -9999em;" class="ser-imgm" type="submit" name="sub" value="1">
+        <input id="Text2" class="ser_input entrance-ser-inputm" type="text" gtbfieldid="2" autocomplete="off" name="q"
+            value="" maxlength="100" placeholder="资讯   电路方案   开发板   数据手册   部件采购     ...">
+    </form>
+
+    <!-- Page main content: blocks and module content -->
+    <!-- Top head zone -->
+    <div class="pi-zone-0">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="banner">
+                    <img src="./assets/images/banner.png" /></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="dev-intro">
+                                恩智浦LPC
+                                Cortex-M4/M0+系列开发板，采用LQFP64封装的LPC54114MCU，Arduino板型架构，板载调试器和常用外设扩展，通常可直接利用LPC54110开发板对MCU性能进行评估和软件开发。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pi-main-container">
+
+        <div class="row">
+            <!-- Left zone -->
+            <div class="pi-zone-1 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="dev-nav">
+                            <ul>
+                                <li class="dev-item-1">
+                                    <a href="#board_info">板卡介绍</a></li>
+                                <li class="dev-item-2">
+                                    <a href="#ship_info">主控芯片介绍</a></li>
+                                <li class="dev-item-3">
+                                    <a href="#ship_info">板卡资源</a></li>
+                                <li class="dev-item-4">
+                                    <a href="#datagram">官方资料包</a></li>
+                                <li class="dev-item-5">
+                                    <a href="#application">应用场景介绍</a></li>
+                                <li class="dev-item-6">
+                                    <a href="#project_share">经验项目分享</a></li>
+                                <li class="dev-item-7">
+                                    <a href="#board_buy">板卡购买</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="bbs">
+                            <a href="https://www.nxpic.org/module/forum/forum-1326-1.html" target="_blank">交流专区</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="dev-down dev-nav">
+                            <ul>
+                                <li class="dev-item"
+                                    style="padding-top: 15px;padding-bottom: 15px;font-size: 14px;border-bottom: 1px solid #e6e6e6;">
+                                    官方资料下载</li>
+                                <li>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14518"
+                                        target="_blank">LPC5411x 用户手册</a></li>
+                                <li>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14516"
+                                        target="_blank">LPC5411x 数据手册</a></li>
+                                <li>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14513"
+                                        target="_blank">LPC5411X USB音频应用</a></li>
+                                <li>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14514"
+                                        target="_blank">LPC5411x语音检测和识别</a></li>
+                                <li>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14520"
+                                        target="_blank">LPC54114音频和语音识别套件</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="bbs">
+                            <a href="https://www.nxpic.org/page/demoboard/list" target="_blank">返回</a></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="dev-touch dev-down dev-nav">
+                            <ul>
+                                <li class="dev-item">
+                                    联系方式</li>
+                                <li>
+                                    LPC技术交流群: 543798146</li>
+                                <li>
+                                    email: nxpic<span>@</span>eefocus.com</li>
+                            </ul>
+                        </div>
+                        <p>
+                            &nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <!-- Center top zone -->
+                <div class="pi-zone-2 dev-content st-dev-content">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="info-1">
+                                <h4 id="board_info">
+                                    <span class="tit-1">板卡介绍</span></h4>
+                                <hr />
+                                <p class="desc">
+                                    LPCXpresso55S69开发板为评估和开发基于Arm® Cortex®-M33架构的LPC55S6x MCU提供了一个理想的平台。该电路板包括一个高性能板载调试器、音频子系统和加速度传感器，提供多个选项，可为网络、传感器、显示器和其他接口添加现成的附加板。
+                                    <br><br>
+                                    Cortex-M4/M0+系列开发板，采用LQFP64封装的LPC54114MCU，Arduino板型架构，板载调试器和常用外设扩展，通常可直接利用LPC54110开发板对MCU性能进行LPCXpresso55S69由MCUXpresso工具套件提供完备的支持，该套件提供设备驱动程序、中间件和示例，以实现快速开发，另外还提供配置工具和可选的免费IDE。MCUXpresso软件与主流工具供应商(如Arm和IAR)的开源MCU操作系统FreeRTOS工具兼容，LPCXpresso55S69也可与SEGGER和P＆E Micro提供的主流硬件调试器一起使用。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="info-2">
+                                <h4 id="ship_info">
+                                    <span class="tit-2">主控芯片介绍</span>
+                                </h4>
+                                <hr />
+                                <div class="video-cover-container">
+                                    <div class="video-card-container">
+                                        <div class="video-cover">
+                                            <img src="./assets/images/video-1.png" alt="">
+                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                        </div>
+                                        <p class="desc video-title">
+                                            LPC5500性能效率的秘密
+                                        </p>
+                                    </div>
+                                    <div class="video-card-container">
+                                        <div class="video-cover">
+                                            <img src="./assets/images/video-2.png" alt="">
+                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                        </div>
+                                        <p class="desc video-title">
+                                            LPC5500为未来创新护航
+                                        </p>
+                                    </div>
+                                    <div class="video-card-container">
+                                        <div class="video-cover">
+                                            <img src="./assets/images/video-3.png" alt="">
+                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                        </div>
+                                        <p class="desc video-title">
+                                            LPC5500开发者生态系统有多强大
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="chip-description-container">
+                                    <div class="pull-left chip-description">
+                                        <h3 class="chip-description-title">概述</h3>
+                                        <p class="chip-description-content"> 
+                                            LPC55S6x MCU家族基于全球首款基于通用Cortex-M33的微控制器，随LPC5500系列推出。该高效率MCU家族采用Armv8-M架构，性能和高级安全功能达到新水平，包括TrustZone-M和协处理器扩展。LPC55S6x家族支持协处理器扩展型号，并利用其大大提高信号处理效率，采用专有DSP加速器，使时钟周期减少了10倍。可选择使用第二个Cortex-M33内核，支持灵活地平衡高性能与功率效率。
+                                            <br><br>
+                                            此外，LPC55S6x MCU家族依托基于40nm NVM的处理技术，具备成本效益优势，提供广泛的可扩展封装和存储器选项，并提供强大的支持，包括MCUXpresso软件和工具生态系统及低成本开发板。
+                                                
+                                        </p>
+                                    </div>
+                                    <div class="chip-features-container">
+                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingOne">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                            Arm Cortex-M33内核
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                    <div class="panel-body">
+                                                        <ul>
+                                                            <li>Arm Cortex-M33处理器，运行频率高达100 MHz</li>
+                                                            <li>TrustZone,浮点运算单元(FPU)和存储器保护单元(MPU)</li>
+                                                            <li>ARM Cortex-M33内置可嵌套向量中断控制器(NVIC)</li>
+                                                            <li>非屏蔽中断(NMI)输入，多种中断源可供选择</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingTwo">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Collapsible Group Item #2
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingThree">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Collapsible Group Item #3
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <style type="text/css">
+                                .info-3 ul li a:hover {
+                                    color: #666 !important;
+                                }
+                            </style>
+                            <div class="info-3">
+                                <h4 id="board_source">
+                                    <span class="tit-3">板卡资源</span></h4>
+                                <hr />
+                                <ul>
+                                    <li>
+                                        <a>LPC54114J256BD64 Cortex-M4/M0+ 双核MCU </a></li>
+                                    <li>
+                                        <a>ISP多启动选项跳线，支持3.3V/1.8V工作电压选择，板载32.768KHz振荡器</a></li>
+                                    <li>
+                                        <a>4个用户定义按键和一个复位按键</a></li>
+                                    <li>
+                                        <a>9个发光二极管，其中4个低电平驱动(绿色)，4个高电平驱动(红色)，一个电源指示</a></li>
+                                    <li>
+                                        <a>一个电位器模拟输入</a></li>
+                                    <li>
+                                        <a>一个Micro USB接口连接到LPC54114的USB口</a></li>
+                                    <li>
+                                        <a>一个Micro USB接口连接到板载调试器</a></li>
+                                    <li>
+                                        <a>一个单线SPI方式TF卡接口和一个SPI Flash存储器</a></li>
+                                    <li>
+                                        <a>一个支持I2S音频输入/输出接口(WM8904)</a></li>
+                                    <li>
+                                        <a>一个I2C 温度传感器(PCT2075DP)</a></li>
+                                    <li>
+                                        <a>一个PDM数字麦克风(SPH0641LM4H)</a></li>
+                                    <li>
+                                        <a>多个欧姆跳线电阻使能板载外部设备</a></li>
+                                    <li>
+                                        <a>板载调试器及支持外部仿真器的10芯1.27mm SWD仿真插座</a></li>
+                                    <li>
+                                        <a>Arduino扩展接口</a></li>
+                                    <li>
+                                        <a>支持Keil/EWARM集成开发环境</a></li>
+                                </ul>
+                            </div>
+                            <p>
+                                &nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="info-4 info-3">
+                                <h4 id="datagram">
+                                    <span class="tit-4">官方资料包</span></h4>
+                                <hr />
+                                <ul>
+                                    <li>
+                                        <img alt=""
+                                            src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/data-01.png" /><a
+                                            href="https://www.nxpic.org/module/forum/thread-611555-1-1.html"
+                                            target="_blank"><span class="circle">&nbsp;</span>官方LPC54114(lite)功能实现代码</a>
+                                    </li>
+                                    <li>
+                                        <img alt=""
+                                            src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/data-02.png" /><a
+                                            href="https://www.nxpic.org/module/forum/thread-611453-1-1.html"
+                                            target="_blank"><span class="circle">&nbsp;</span>LPC54114双核使用指南中文版</a></li>
+                                    <li>
+                                        <img alt=""
+                                            src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/data-01.png" /><a
+                                            href="https://www.nxpic.org/module/forum/thread-611810-1-1.html"
+                                            target="_blank"><span
+                                                class="circle">&nbsp;</span>[开源][LPC54114][MPU9250]SPI支持9轴传感器</a></li>
+                                </ul>
+                            </div>
+                            <p>
+                                &nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="info-5">
+                                <h4 id="application">
+                                    <span class="tit-5">应用场景</span></h4>
+                                <hr />
+                                <div class="app-wper">
+                                    <div class="app-left">
+                                        <img alt="" src="https://www.nxpic.org/images/freescale/banners/296--198.jpg" />
+                                    </div>
+                                    <div class="app-right info-3">
+                                        <ul>
+                                            <li>
+                                                便携式健身和活动可穿戴产品</li>
+                                            <li>
+                                                健康与保健监测、手机和平板电脑</li>
+                                            <li>
+                                                智能传感和运动追踪</li>
+                                            <li>
+                                                家庭和楼宇自动化</li>
+                                            <li>
+                                                工业/商用传感器节点</li>
+                                            <li>
+                                                车队管理和资产追踪</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                &nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="info-6 info-3">
+                                <h4 id="project_share">
+                                    <span class="tit-6">项目经验分享</span></h4>
+                                <hr />
+                                <h5>
+                                    分享</h5>
+                                <ul class="share-ull">
+                                    <li>
+                                        <a href="https://www.nxpic.org/module/forum/thread-609958-1-1.html"
+                                            target="_blank">基于LPC54114 的学习/项目经验分享集<img class="arrows"
+                                                src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.nxpic.org/module/forum/thread-611472-1-1.html"
+                                            target="_blank">LPC54110双核任务作品集<img class="arrows"
+                                                src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="widget-media-list">
+                                <h5>项目</h5>
+                                <ul class="project-ull" id="projectUll">
+                                    <li>
+                                        <a href="https://www.nxpic.org/module/forum/thread-611594-1-1.html"
+                                            target="_blank">
+                                            <div class="pro-pic"><img
+                                                    src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/5a3724be815d8.png"
+                                                    alt="标准化考试的语音进程提示装置"></div>
+                                            <div class="pro-desc">标准化考试的语音进程提示装置</div>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.nxpic.org/module/forum/thread-611711-1-1.html"
+                                            target="_blank">
+                                            <div class="pro-pic"><img
+                                                    src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/5a533d4e728e3.jpg"
+                                                    alt="【LPC54114最终任务】简单的语音识别"></div>
+                                            <div class="pro-desc">【LPC54114最终任务】简单的语音识别</div>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.nxpic.org/双音频发生器与音乐播放器" target="_blank">
+                                            <div class="pro-pic"><img
+                                                    src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/5a58523095ff6.jpg"
+                                                    alt="双音频发生器与音乐播放器"></div>
+                                            <div class="pro-desc">双音频发生器与音乐播放器</div>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.nxpic.org/module/forum/thread-610018-1-1.html"
+                                            target="_blank">
+                                            <div class="pro-pic"><img
+                                                    src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/5a5852a56a583.jpg"
+                                                    alt="基于LPC54110的魔方还原机器"></div>
+                                            <div class="pro-desc">基于LPC54110的魔方还原机器</div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module zone -->
+                <!-- Center bottom zone -->
+            </div>
+
+            <!-- Right zone -->
+        </div>
+        <!-- Bottom foot zone -->
+    </div>
+    </div>
+    <!-- Footer: sitelink -->
+    <div class="pi-footer" title="0.2363s">
+        <div class="container pi-footer-container">
+            <div class="text-center" style="margin-bottom: 5px;">
+                <a rel="license" href="/" title="恩智浦技术社区">&copy;恩智浦技术社区</a>
+                <a title="关于我们" target="_blank" href="/page/about-us/">关于我们</a>
+                <a title="法律及版权声明" target="_blank" href="/page/law">法律及版权声明</a>
+                <a title="网站地图" target="_blank" href="/page/sitemap">网站地图</a>
+                <a title="Archiver" target="_blank" href="/module/forum/archiver">Archiver</a>
+            </div>
+            <div class="text-center">
+                Email:
+                <a href="mailto:nxpic@supplyframe.cn">nxpic@supplyframe.cn</a> Tel: 0512-80981663
+            </div>
+            <div class="text-center">
+                ICP经营许可证&nbsp;&nbsp;苏B2-20140176&nbsp;&nbsp;<a
+                    href="http://www.miibeian.gov.cn">苏ICP备14012660号-3</a>&nbsp;&nbsp;苏州灵动帧格网络科技有限公司 版权所有.
+            </div>
+            <div
+                style="text-align: center;width: 100%;margin:0 auto; padding:20px 0;background: #333;      /* border-top: 2px solid #f86d2a; */      color: #fff;left: 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001043"
+                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                        src='https://upload.semidata.info/sns.eefocus.com/freescale/article/media/2016/04/12/331491.png'
+                        lazysrc="" style="float:left;" />
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">苏公网安备
+                        32059002001043号</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.ser_input').keyup(function (e) {
+            var curKey = e.which;
+            if (curKey == 13) {
+                $(this).closest('form').submit();
+            }
+        });
+        $('body').data('config', {
+            joinMemberUrl: '/member/join/joinButton/'
+        });
+        $(function () {
+            // 价格增减功能
+            var $buyItem = $('#buyWper').children();
+            $buyItem.on('click', '.reduce', function (e) {
+                var $num = $(this).next().val();
+                if ($num <= 1) {
+                    $(this).next().val(1);
+                } else {
+                    $(this).next().val(parseInt($num) - 1);
+                }
+
+            }).on('click', '.add', function (e) {
+                var $num = $(this).prev().val();
+                $(this).prev().val(parseInt($num) + 1);
+
+            });
+
+            // 购买
+            $buyItem.on('click', '.tab-buy > a', function () {
+                var $this = $(this);
+                var $id = $this.data('id');
+                var $url = '//www.eeboard.com/shop';
+                var $num = $this.parent().prev().children('.input-num').val();
+                $url += '?c=products&a=view&id=' + $id + '&num=' + $num;
+                window.open($url);
+                return false;
+            });
+
+            // 项目字段截取
+            $ullItem = $('#projectUll').find('.pro-desc');
+            $ullItem.each(function () {
+                var str = $(this).text();
+                var len = str.length;
+                var maxWidth = 22;
+                if (len > maxWidth) {
+                    $(this).text($(this).text().substring(0, maxWidth));
+                }
+                $(this).html($(this).html() +
+                    '<img class="arrows" src="//upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" alt="" />'
+                    );
+            });
+
+        })
+    </script>
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol +
+            "hm.baidu.com/h.js%3F9f88fb5f9218b33597caa6c10680df85' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <img src="https://analytics.eefocus.com/impression/eefocus/" style="display:none">
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol +
+            "hm.baidu.com/h.js%3F2b47071c0bf0dcfe3a4fa09e870c2edd' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost +
+            "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-1502657-8");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+        var pageTracker2 = _gat._getTracker("UA-25533899-8");
+        pageTracker2._initData();
+        pageTracker2._trackPageview();
+    </script>
+    <script>
+        // Baidu Zhanzhang
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <!-- Google Tag Manager -->
+
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+
+        })(window, document, 'script', 'dataLayer', 'GTM-WKF5CJ6');
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKF5CJ6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <script>
+        /*sf tracking */
+        (function () {
+            var ZONE_PREFIX = 'EEnxp';
+            var TRACK_URL =
+                "https://analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&zone={Zone_name}";
+            var suffix = '_other';
+            var path = window.location.pathname;
+            if (/\/video\//.test(path)) {
+                suffix = '_video'
+            } else if (/\/document\//.test(path)) {
+                suffix = '_doc'
+            } else if (/\/article\//.test(path)) {
+                suffix = '_article'
+            } else if (/\/search\//.test(path)) {
+                suffix = '_search'
+            } else if (/\/activity\//.test(path)) {
+                suffix = '_activity'
+            } else if (/\/page\/product\//.test(path)) {
+                suffix = '_product'
+            } else if (/\/page\/teardown\//.test(path)) {
+                suffix = '_teardown'
+            } else if (/\/techarticle\//.test(path)) {
+                suffix = '_techarticle'
+            } else if (/\/page\/nxp-mcu\//.test(path)) {
+                suffix = '_mcu'
+            } else if (path == '/') {
+                suffix = '_home'
+            }
+            zone = ZONE_PREFIX + suffix;
+            var img = document.createElement("img");
+            img.src = TRACK_URL.replace('{Zone_name}', zone);
+            img.style.display = "none";
+            document.body.appendChild(img);
+        })();
+    </script>
+    <script type="text/javascript" src="https://www.nxpic.org/asset/theme-demoboard/js/front.js?1558405099"></script>
+
+</body>
+
+</html>
