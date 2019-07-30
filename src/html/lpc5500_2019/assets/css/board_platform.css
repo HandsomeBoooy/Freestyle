@@ -21,7 +21,61 @@ form.entrance-search {
     left: calc((100% - 40px) / 2);
     transform: rotate(180deg);
 }
+.chip-description-container .chip-features-title {
+    padding: 10px 0;
+}
 .chip-description-container .chip-description {
     width: 40%;
     margin-right: 20px;
+}
+.chip-features-container .panel-default>.panel-heading {
+    padding: 16px 15px;
+    background-color: transparent;
+}
+.dev-content .chip-features-container h4,
+.dev-content .board-resource-table-container h4 {
+    margin-top: 0;
+}
+.chip-features-container .panel-group .panel-heading+.panel-collapse .panel-body {
+    border-top: none;
+}
+.chip-features-container .chip-feature-container {
+    border-top: solid 1px #dddddd;
+}
+.chip-features-container .chip-feature-container a.chip-feature {
+    padding-left: 18px;
+    background: url('../images/icon-triangle.png') no-repeat left center;
+}
+.chip-features-container .panel-collapse .panel-body ul {
+    padding: 0 20px;
+}
+.chip-features-container .panel-collapse .panel-body ul li {
+    list-style: inside;
+}
+.info-3 ul.board-resource-table li:before {
+    display: none;
+}
+.board-resource-table-container,
+.board-resource-table-container .board-resource-title,
+.board-resource-table-container .board-resource-title h4,
+.board-resource-table-container .board-resource-content,
+.board-resource-table-container .board-resource-content p,
+.board-resource-table-container .board-resource-content p a {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 2;
+}
+.board-resource-table-container .board-resource-title,
+.board-resource-table-container .board-resource-content {
+    margin-bottom: 12px;
+}
+.board-resource-table-container .board-resource-title {
+    padding-left: 12px;
+    background: url('../images/icon-list-item.png') no-repeat left center;
+}
+.board-resource-table-container .board-resource-content p a {
+    cursor: pointer;
+}
+.suit-condition-container .app-right {
+    margin-left: 0;
 }
