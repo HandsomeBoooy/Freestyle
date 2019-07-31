@@ -28,6 +28,10 @@ form.entrance-search {
     width: 40%;
     margin-right: 20px;
 }
+.chip-features-container {
+    width: calc(60% - 20px);
+    margin-left: calc(40% + 20px);
+}
 .chip-features-container .panel-default>.panel-heading {
     padding: 16px 15px;
     background-color: transparent;
@@ -78,4 +82,7 @@ form.entrance-search {
 }
 .suit-condition-container .app-right {
     margin-left: 0;
+}
+.offical-resources-container ul li a {
+    padding-left: 0;
 }
