@@ -1,19 +1,51 @@
+.nav-wrapp {
+    background-color: #666666 !important;
+}
+.navbar-collapse {
+    box-shadow: none;
+}
+.nav-wrapp .nav > li > a:hover, .nav-wrapp .nav > li.active > a {
+    background-color: transparent !important;
+    color: #f78c00;
+}
+.navbar .container-fluid .signup {
+    cursor: pointer;
+}
+.lpc2019-font-green,
+a.lpc2019-font-green,
+.nav-wrapp .navbar-nav > li > a.lpc2019-font-green {
+    color: #6FFA13;
+}
 form.entrance-search {
     float: left;
 }
 .video-card-container {
     display: inline-block;
     margin-right: 20px;
+    border: solid 1px #dddddd;
 }
 .video-card-container:last-child {
     margin-right: 0;
 }
+.dev-content .desc {
+    font-size: 16px;
+    line-height: 36px;
+}
 .video-cover,
 .desc.video-title {
     width: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.desc.video-title {
+    font-size: 12px;
 }
 .video-cover {
+    margin-top: 0px;
     position: relative;
+}
+.video-cover>img {
+    margin-top: 0;
 }
 .video-play-btn {
     position: absolute;
@@ -21,12 +53,36 @@ form.entrance-search {
     left: calc((100% - 40px) / 2);
     transform: rotate(180deg);
 }
-.chip-description-container .chip-features-title {
-    padding: 10px 0;
+.description-container-collapsed {
+    height: 400px;
+    overflow: hidden;
+}
+.chip-description-container {
+    margin-top: 10px;
+}
+.chip-description-container h3 {
+    margin: 20px 0;
+}
+h3.chip-features-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 0;
 }
 .chip-description-container .chip-description {
     width: 40%;
     margin-right: 20px;
+}
+.chip-description-container .chip-description p {
+    font-size: 16px;
+    line-height: 28px;
+}
+.description-collapse-btn {
+    margin-top: 17px;
+    padding-top: 14px;
+    border-top: dotted 1px #c8c8c8;
+}
+.chip-features-container .chip-feature-container h4 {
+    color: #333333;
 }
 .chip-features-container {
     width: calc(60% - 20px);
@@ -48,7 +104,7 @@ form.entrance-search {
 }
 .chip-features-container .chip-feature-container a.chip-feature {
     padding-left: 18px;
-    background: url('../images/icon-triangle.png') no-repeat left center;
+    background: url('https://www.nxpic.org/asset/theme-demoboard/image/icon-triangle.png') no-repeat left center;
 }
 .chip-features-container .panel-collapse .panel-body ul {
     padding: 0 20px;
@@ -66,23 +122,186 @@ form.entrance-search {
 .board-resource-table-container .board-resource-content p,
 .board-resource-table-container .board-resource-content p a {
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 2;
 }
 .board-resource-table-container .board-resource-title,
 .board-resource-table-container .board-resource-content {
     margin-bottom: 12px;
 }
-.board-resource-table-container .board-resource-title {
+.board-resource-title {
     padding-left: 12px;
-    background: url('../images/icon-list-item.png') no-repeat left center;
+    background: url('https://www.nxpic.org/asset/theme-demoboard/image/icon-list-item.png') no-repeat left center;
 }
-.board-resource-table-container .board-resource-content p a {
-    cursor: pointer;
+.board-resource-table-container .board-resource-content p a,
+.board-resource-table-container .board-resource-content p a:hover {
+    cursor: text;
+    color: #333333;
 }
 .suit-condition-container .app-right {
     margin-left: 0;
 }
 .offical-resources-container ul li a {
     padding-left: 0;
+}
+.description-collapse-btn p {
+    width: auto;
+    display: inline-block;
+    padding-right: 16px;
+    font-size: 14px;
+    color: #30B8EC;
+    cursor: pointer;
+}
+.description-collapse-btn.more-info p {
+    background: url('https://www.nxpic.org/asset/theme-demoboard/image/icon-display-more.png') no-repeat right center;
+}
+.description-collapse-btn.collapse-up p {
+    background: url('https://www.nxpic.org/asset/theme-demoboard/image/icon-collapse.png') no-repeat right center;
+}
+.nav-list dd.exploration {
+    padding-top: 3px;
+    background-color: #59CC0D;
+}
+.exploration .list-current {
+    width: 100%;
+    height: auto;
+    background: none;
+    font-size: 12px;
+    color: #ffffff;
+}
+.exploration p {
+    height: 0;
+}
+.qcode .qq-wper img {
+    max-width: 140px;
+    max-height: 140px;
+    margin: 0;
+}
+.dev-nav ul li a {
+    color: #333333;
+}
+.app-right ul li,
+.info-3 ul li a {
+    font-size: 16px;
+    color: #333333;
+}
+.app-right ul li::before,
+ul.share-ull li::before {
+    display: none;
+}
+.dev-touch .dev-item:before {
+    margin-right: 6px;
+    background-image: url('../images/icon-contact.png');
+}
+.dev-touch ul li {
+    padding-left: 34px;
+}
+.single-lesson-container {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+    border: solid 1px #eeeeee;
+}
+.single-lesson-container:last-child {
+    margin-bottom: 0;
+}
+.lesson-cover {
+    float: left;
+}
+.lesson-cover img {
+    width: 244px;
+    height: auto;
+    margin: 0;
+}
+.lesson-info-container {
+    width: calc(100% - 244px);
+    margin-left: 244px;
+    padding: 10px 12px 10px 30px;
+}
+.lesson-title {
+    margin: 0;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lesson-summary {
+    margin-top: 7px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -ms-overflow-style: auto;
+}
+.lesson-date {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 24px;
+}
+.lesson-date .lesson-lecturer {
+    float: right;
+}
+.lesson-link-container {
+    margin-top: 8px;
+    height: auto;
+}
+.lesson-link-container a {
+    padding: 7px 28px;
+    background-color: #06A6FA;
+    color: #ffffff;
+    border-radius: 5px;
+}
+@media screen and (max-width: 1200px) {
+    .video-card-container {
+        margin-bottom: 20px;
+    }
+    .video-card-container:last-child {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 960px) {
+    .container-fluid>.navbar-collapse {
+        padding: 0;
+    }
+    .nav-wrapp .navbar-nav > li > a {
+        padding: 18px 10px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .lesson-cover {
+        float: none;
+        display: block;
+        padding: 8px 30px 0;
+        /* text-align: center; */
+    }
+    .lesson-cover img {
+        width: 100%;
+    }
+    .lesson-info-container {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 30px;
+    }
+    .lesson-date .lesson-lecturer {
+        float: none;
+        display: block;
+    }
+}
+@media screen and (max-width: 320px) {
+    .lesson-cover {
+        padding-left: 0;
+    }
+    .lesson-info-container {
+        padding-left: 14px;
+    }
 }

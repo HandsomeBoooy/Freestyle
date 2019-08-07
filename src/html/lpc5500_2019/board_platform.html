@@ -1,58 +1,44 @@
 <!DOCTYPE HTML>
-
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>强劲双核板卡-LPC54110 - 页面 - 恩智浦技术社区</title>
-
-    <meta name="author" content="与非网,eefocus.com">
-    <meta name="generator" content="与非网,eefocus.com">
-    <meta name="description" content="恩智浦LPC Cortex-M4/M0+系列开发板，采用LQFP64封装的LPC54114MCU，Arduino板型架构，板载调试器和常用外设扩展，通常可直接利用LPC54110开发对MCU性能进行评估和软件开发。">
-    <meta name="keywords" content="LPC,恩智浦,双核,音频,汽车电子">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-    <link href="https://www.nxpic.org/asset/custom/image/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="//www.eefocus.com/asset/theme-default/css/article-mobile-community.css?20170307">
+    <!--[if gte IE 9]><!-->
     <link href="https://www.nxpic.org/public/vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://www.nxpic.org/public/vendor/bootstrap/css/bootstrap.min.css?1532762811" media="screen" rel="stylesheet" type="text/css">
-    <link href="https://www.nxpic.org/asset/theme-demoboard/css/front.css?1558405099" media="screen" rel="stylesheet" type="text/css">
-    <link href="https://www.nxpic.org/asset/theme-demoboard/css/topernew.css?1558405099" media="screen" rel="stylesheet" type="text/css">
-    <link href="https://www.nxpic.org/asset/theme-demoboard/css/demoboard.css?1558405099" media="screen" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./assets/css/board_platform.css">
-
+    <!--><![endif]-->
     <style>
         .clearfix {
             *zoom: 1;
         }
-        
+
         .clearfix:before,
         .clearfix:after {
             display: table;
             line-height: 0;
             content: "";
         }
-        
+
         .clearfix:after {
             clear: both;
         }
-        
-         ::-webkit-input-placeholder {
+
+        ::-webkit-input-placeholder {
             color: #999;
         }
-        
-         :-moz-placeholder {
+
+        :-moz-placeholder {
             color: #999;
         }
-        
-         ::-moz-placeholder {
+
+        ::-moz-placeholder {
             color: #999;
         }
-        
-         :-ms-input-placeholder {
+
+        :-ms-input-placeholder {
             color: #999;
         }
-        
+
         .entrance-search-m {
             margin: 10px auto 10px;
             border: 1px solid #e1e0e0;
@@ -61,13 +47,13 @@
             border-radius: 5px !important;
             background-color: #fff;
         }
-        
+
         @media (min-width: 770px) {
             .entrance-search-m {
                 display: none;
             }
         }
-        
+
         .entrance-ser-inputm {
             border: 0 !important;
             outline: 0 !important;
@@ -84,7 +70,7 @@
             font-size: 14px !important;
             border-radius: 5px !important;
         }
-        
+
         .ser-imgm {
             background: url("//asset.semidata.info/new.eefocus.com/theme-channel/image/search-phone.png") center center no-repeat;
             cursor: pointer;
@@ -95,46 +81,75 @@
         }
     </style>
 
-    <script type="text/javascript" src="https://static.semidata.info/sns.eefocus.com/freescale/vendor/jquery/jquery.min.js?1405601052"></script>
-    <script type="text/javascript" src="https://www.nxpic.org/public/vendor/bootstrap/js/bootstrap.min.js?1532762811">
-    </script>
+    <title>页面 - 恩智浦技术社区 - 与非网-恩智浦技术论坛-NXP论坛-恩智浦公司为汽车、手机、网络等应用推出各种先进的嵌入式半导体解决方案，从而推动世界的进步。</title>
+
+    <meta name="author" content="与非网,eefocus.com">
+    <meta name="generator" content="与非网,eefocus.com">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link href="https://www.nxpic.org/public/vendor/bootstrap/css/bootstrap.min.css?1561361999" media="screen"
+        rel="stylesheet" type="text/css">
+    <link href="https://www.nxpic.org/asset/theme-demoboard/css/front.css?1564814371" media="screen" rel="stylesheet"
+        type="text/css">
+    <link href="https://www.nxpic.org/asset/theme-demoboard/css/topernew.css?1564814371" media="screen" rel="stylesheet"
+        type="text/css">
+    <link href="https://www.nxpic.org/asset/theme-demoboard/css/demoboard.css?1564814371" media="screen"
+        rel="stylesheet" type="text/css">
+    <link href="./assets/css/board_platform.css" media="screen"
+        rel="stylesheet" type="text/css">
+    <link href="https://www.nxpic.org/asset/custom/image/favicon.ico" rel="shortcut icon">
+
+
+    <script type="text/javascript"
+        src="https://static.semidata.info/sns.eefocus.com/freescale/vendor/jquery/jquery.min.js?1405601052"></script>
+    <script type="text/javascript"
+        src="https://www.nxpic.org/public/vendor/bootstrap/js/bootstrap.min.js?1561361999"></script>
 
 
 </head>
 
 <body id="pi-page" class="zh-cn">
-    <!--[if lt IE 9]><link href="https://www.nxpic.org/public/vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet"><![endif]-->
 
     <!-- Header: brand, slogan, user bar -->
     <div class="navbar navbar-inverse navbar-header-ef hidden-pid" role="navigation">
         <div class="container">
             <div class="entrance-brand">
-                <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eefocus&amp;utm_term=eefocus" class="nav-module-link active" title="看行业资讯，观技术交流" target="_blank"><span
+                <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eefocus&amp;utm_term=eefocus"
+                    class="nav-module-link active" title="看行业资讯，观技术交流" target="_blank"><span
                         class="svglogo logoeefocus"></span>与非网</a>
-                <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=cirmall&amp;utm_term=cirmall" class="nav-module-link" title="看别人设计、晒自己方案" target="_blank"><span
+                <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=cirmall&amp;utm_term=cirmall"
+                    class="nav-module-link" title="看别人设计、晒自己方案" target="_blank"><span
                         class="svglogo logocirmall"></span>电路城</a>
-                <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=moore8&amp;utm_term=moore8" class="nav-module-link" title="做行业名师、学专业技能" target="_blank"><span
+                <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=moore8&amp;utm_term=moore8"
+                    class="nav-module-link" title="做行业名师、学专业技能" target="_blank"><span
                         class="svglogo logomoore8"></span>摩尔吧</a>
 
-                <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eda&amp;utm_term=bom2buy" class="nav-module-link" title="比供应报价，推荐最优方案" target="_blank"><span
+                <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eda&amp;utm_term=bom2buy"
+                    class="nav-module-link" title="比供应报价，推荐最优方案" target="_blank"><span
                         class="svglogo logobom2buy"></span>买芯片</a>
-                <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=datasheet5&amp;utm_term=datasheet5" class="nav-module-link" title="查器件信息，下数据手册" target="_blank"><span
+                <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=datasheet5&amp;utm_term=datasheet5"
+                    class="nav-module-link" title="查器件信息，下数据手册" target="_blank"><span
                         class="svglogo logod5"></span>元件库</a>
                 <!-- Search -->
                 <form id="form1" action="//search.eefocus.com/s" name="form1" class="entrance-search" target="_blank">
                     <input type="hidden" name="app_id" value="17">
-                    <input style="overflow: hidden; text-indent: -9999em;" class="ser-img" type="submit" name="sub" value="1">
-                    <input id="Text2" class="ser_input entrance-ser-input" type="text" gtbfieldid="2" autocomplete="off" name="q" value="" maxlength="100" placeholder="输入关键词        搜资讯查资料        找开发板寻电路方案">
+                    <input style="overflow: hidden; text-indent: -9999em;" class="ser-img" type="submit" name="sub"
+                        value="1">
+                    <input id="Text2" class="ser_input entrance-ser-input" type="text" gtbfieldid="2" autocomplete="off"
+                        name="q" value="" maxlength="100" placeholder="输入关键词        搜资讯查资料        找开发板寻电路方案">
                 </form>
             </div>
             <div class="nav-modules-container" id="nav-modules-container"></div>
             <ul class="nav navbar-nav navbar-right" id="userBarAnonymous" style="display: none;">
                 <li>
-                    <a href="/saml/index/login/?redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Fdemoboard-LPC54110">
+                    <a href="/saml/index/login/?redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Flpc5500">
                         登录 </a>
                 </li>
                 <li>
-                    <a href="https://account.eefocus.com/user/register?app=2&redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Fdemoboard-LPC54110">
+                    <a
+                        href="https://account.eefocus.com/user/register?app=2&redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Flpc5500">
                         注册 </a>
                 </li>
             </ul>
@@ -151,7 +166,7 @@
                         </span>
                         <span class="card-item">
                             <a id="member-logout"
-                                href="/saml/index/logout/?redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Fdemoboard-LPC54110">
+                                href="/saml/index/logout/?redirect=https%3A%2F%2Fwww.nxpic.org%2Fpage%2Flpc5500">
                                 退出 </a>
                         </span>
                     </div>
@@ -166,9 +181,9 @@
             </div>
 
             <script>
-                $(function() {
-                    $.getJSON("https://www.nxpic.org/system/index/user/?" + new Date().getTime(), function(
-                        user) {
+
+                $(function () {
+                    $.getJSON("https://www.nxpic.org/system/index/user/?" + new Date().getTime(), function (user) {
                         var ela = $('#userBarAnonymous');
                         var elm = $('#userBarMember');
                         if (user.uid > 0) {
@@ -183,7 +198,7 @@
                                 type: "GET",
                                 url: "//account.eefocus.com/message/index/count",
                                 dataType: "jsonp",
-                                success: function(data) {
+                                success: function (data) {
                                     if (data.status == 1 && data.data > 0) {
                                         $('#memberMsg').children('.msg-point').show();
                                     } else {
@@ -210,26 +225,26 @@
                     var $mCard = $('#memberCard');
                     var $mProfile = $('#memberProfile');
 
-                    $mCard.on('mouseover', function() {
+                    $mCard.on('mouseover', function () {
                         clearCardTime();
-                    }).on('mouseout', function() {
+                    }).on('mouseout', function () {
                         cardTime();
                     });
 
-                    $mProfile.on('mouseover', function() {
+                    $mProfile.on('mouseover', function () {
                         clearCardTime();
-                    }).on('mouseout', function() {
+                    }).on('mouseout', function () {
                         cardTime();
                     });
 
                     if (isMobile) {
-                        $mCard.click(function(e) {
+                        $mCard.click(function (e) {
                             return false;
                         });
                     }
 
                     function cardTime() {
-                        cardTimer = setTimeout(function() {
+                        cardTimer = setTimeout(function () {
                             $mCard.css('borderColor', 'transparent');
                             $mProfile.hide();
                         }, 400);
@@ -245,35 +260,71 @@
         </div>
     </div>
     <div class="entrance-brand1 entrance-header show-pid">
-        <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eefocus&amp;utm_term=eefocus" class="nav-module-link1" title="看行业资讯，观技术交流" target="_blank"><span class="svglogo1 logoeefocus"></span></a>
-        <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=cirmall&amp;utm_term=cirmall" class="nav-module-link1" title="看别人设计、晒自己方案" target="_blank"><span class="svglogo1 logocirmall"></span></a>
-        <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=moore8&amp;utm_term=moore8" class="nav-module-link1" title="做行业名师、学专业技能" target="_blank"><span class="svglogo1 logomoore8"></span></a>
-        <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eda&amp;utm_term=bom2buy" class="nav-module-link1" title="比供应报价，推荐最优方案" target="_blank"><span class="svglogo1 logobom2buy"></span></a>
-        <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=datasheet5&amp;utm_term=datasheet5" class="nav-module-link1" title="查器件信息，下数据手册" target="_blank"><span class="svglogo1 logod5"></span></a>
+        <a href="//www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eefocus&amp;utm_term=eefocus"
+            class="nav-module-link1" title="看行业资讯，观技术交流" target="_blank"><span class="svglogo1 logoeefocus"></span></a>
+        <a href="//www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=cirmall&amp;utm_term=cirmall"
+            class="nav-module-link1" title="看别人设计、晒自己方案" target="_blank"><span class="svglogo1 logocirmall"></span></a>
+        <a href="//www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=moore8&amp;utm_term=moore8"
+            class="nav-module-link1" title="做行业名师、学专业技能" target="_blank"><span class="svglogo1 logomoore8"></span></a>
+        <a href="//www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=eda&amp;utm_term=bom2buy"
+            class="nav-module-link1" title="比供应报价，推荐最优方案" target="_blank"><span class="svglogo1 logobom2buy"></span></a>
+        <a href="//www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=nxpic&amp;utm_content=datasheet5&amp;utm_term=datasheet5"
+            class="nav-module-link1" title="查器件信息，下数据手册" target="_blank"><span class="svglogo1 logod5"></span></a>
     </div>
     <form id="form2" action="//search.eefocus.com/s" name="form1" class="entrance-search-m clearfix" target="_blank">
         <input type="hidden" name="app_id" value="17">
         <input style="overflow: hidden; text-indent: -9999em;" class="ser-imgm" type="submit" name="sub" value="1">
-        <input id="Text2" class="ser_input entrance-ser-inputm" type="text" gtbfieldid="2" autocomplete="off" name="q" value="" maxlength="100" placeholder="资讯   电路方案   开发板   数据手册   部件采购     ...">
+        <input id="Text2" class="ser_input entrance-ser-inputm" type="text" gtbfieldid="2" autocomplete="off" name="q"
+            value="" maxlength="100" placeholder="资讯   电路方案   开发板   数据手册   部件采购     ...">
     </form>
+
+    <div class="nav-wrapp" id="navLists">
+        <nav class="navbar" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="javascript:;">大赛首页</a></li>
+                        <li><a href="//www.nxpic.org//page/lpc5500" target="_blank">开发平台</a></li>
+                        <li><a href="//www.nxpic.org/module/forum/forum.php?mod=forumdisplay&fid=1344&filter=typeid&typeid=227"
+                                target="_blank">大赛论坛</a></li>
+                        <li><a href="//www.nxpic.org/module/forum/thread-613467-1-1.html" target="_blank">项目提交</a></li>
+                        <li><a href="/activity/LPCcontest/vote">项目投票</a></li>
+                        <li><a href="https://www.nxpic.org/page/lpc5500#courses" class="lpc2019-font-green">在线研讨会</a></li>
+                    </ul>
+                </div>
+                <a class="signup" id="signupBtn" href="/activity/LPC2019/signup">立即报名</a>
+            </div>
+        </nav>
+    </div>
 
     <!-- Page main content: blocks and module content -->
     <!-- Top head zone -->
     <div class="pi-zone-0">
         <div class="panel panel-default">
             <div class="panel-body">
+                <p>
+                    <!--Banneer-->
+                </p>
                 <div class="banner">
-                    <img src="./assets/images/banner.png" /></div>
+                    <a href="/activity/LPC2019/signup" target="_blank"><img
+                            src="https://www.nxpic.org/asset/theme-demoboard/image/banner-2019.png" /></a></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <!-- <p class="dev-intro">
-                                恩智浦LPC
-                                Cortex-M4/M0+系列开发板，采用LQFP64封装的LPC54114MCU，Arduino板型架构，板载调试器和常用外设扩展，通常可直接利用LPC54110开发板对MCU性能进行评估和软件开发。
-                            </p> -->
-                        </div>
+                            &nbsp;</div>
                     </div>
                 </div>
+                <p>
+                    &nbsp;</p>
             </div>
         </div>
     </div>
@@ -291,61 +342,60 @@
                                 <li class="dev-item-2">
                                     <a href="#ship_info">主控芯片介绍</a></li>
                                 <li class="dev-item-3">
-                                    <a href="#ship_info">板卡资源</a></li>
+                                    <a href="#board_source">板卡资源</a></li>
                                 <li class="dev-item-5">
                                     <a href="#application">应用场景介绍</a></li>
-                                <li class="dev-item-6">
-                                    <a href="#project_share">经验项目分享</a></li>
-                                <li class="dev-item-7">
-                                    <a href="#board_buy">在线培训</a></li>
+                                <li class="dev-item-6"><a href="#project_share">经验项目分享</a></li>
+                                <li class="dev-item-5">
+                                    <a href="#courses">在线培训</a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="bbs">
-                            <a href="http://www.nxpic.org/module/forum/forum-1326-1.html" target="_blank">交流专区</a>
-                        </div>
+                            <a href="http://www.nxpic.org/module/forum/forum-1326-1.html" target="_blank">交流专区</a></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="dev-down dev-nav offical-resources-container">
                             <ul>
-                                <li class="dev-item" style="padding-top: 15px;padding-bottom: 15px;font-size: 14px;border-bottom: 1px solid #e6e6e6;">
+                                <li class="dev-item"
+                                    style="padding-top: 15px;padding-bottom: 15px;font-size: 14px;border-bottom: 1px solid #e6e6e6;">
                                     官方资料下载
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14998" target="_blank">LPC55S6x用户指南</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14998"
+                                        target="_blank">LPC55S6x用户指南</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14982" target="_blank">LPC55S6x数据手册</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14982"
+                                        target="_blank">LPC55S6x数据手册</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14997" target="_blank">LPC55S6x勘误表</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14997"
+                                        target="_blank">LPC55S6x勘误表</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14993" target="_blank">LPC55Sxx安全启动</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14993"
+                                        target="_blank">LPC55Sxx安全启动</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14992" target="_blank">LPC55S6x安全通用I/O口及其使用</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14992"
+                                        target="_blank">LPC55S6x安全通用I/O口及其使用</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14991" target="_blank">LPC55xx/LPC55Sxx双核间的通信</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14991"
+                                        target="_blank">LPC55xx/LPC55Sxx双核间的通信</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.nxpic.org/document/detail/index/id-14984" target="_blank">采用LPC5500的PowerQuad进行数字信号处理</a>
+                                    <a href="https://www.nxpic.org/document/detail/index/id-14984"
+                                        target="_blank">采用LPC5500的PowerQuad进行数字信号处理</a>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="bbs">
-                            <a href="https://www.nxpic.org/page/demoboard/list" target="_blank">返回</a></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -357,11 +407,9 @@
                                 <li>
                                     LPC技术交流群: 543798146</li>
                                 <li>
-                                    email: nxpic<span>@</span>supplyframe.cn</li>
+                                    邮箱: nxpic<span>@</span>supplyframe.cn</li>
                             </ul>
                         </div>
-                        <p>
-                            &nbsp;</p>
                     </div>
                 </div>
             </div>
@@ -375,10 +423,16 @@
                                     <span class="tit-1">板卡介绍</span></h4>
                                 <hr />
                                 <p class="desc">
-                                    LPCXpresso55S69开发板为评估和开发基于Arm® Cortex®-M33架构的LPC55S6x MCU提供了一个理想的平台。该电路板包括一个高性能板载调试器、音频子系统和加速度传感器，提供多个选项，可为网络、传感器、显示器和其他接口添加现成的附加板。
-                                    <br><br> Cortex-M4/M0+系列开发板，采用LQFP64封装的LPC54114MCU，Arduino板型架构，板载调试器和常用外设扩展，通常可直接利用LPC54110开发板对MCU性能进行LPCXpresso55S69由MCUXpresso工具套件提供完备的支持，该套件提供设备驱动程序、中间件和示例，以实现快速开发，另外还提供配置工具和可选的免费IDE。MCUXpresso软件与主流工具供应商(如Arm和IAR)的开源MCU操作系统FreeRTOS工具兼容，LPCXpresso55S69也可与SEGGER和P＆E
-                                    Micro提供的主流硬件调试器一起使用。
+                                    LPCXpresso55S69 开发板为评估和开发基于 Arm® Cortex®-M33 架构的 LPC55S6x MCU
+                                    提供了一个理想的平台。该电路板包括一个高性能板载调试器、音频子系统和加速度传感器，提供提供多种扩展接口，可以灵活添加用于网络通信，传感器，显示及其他各种接口的子板。
                                 </p>
+                                <p>
+                                    &nbsp;</p>
+                                <p class="desc">
+                                    LPCXpresso55S69 由 MCUXpresso
+                                    工具套件提供完备的支持，该套件提供设备驱动程序、中间件和示例，以实现快速开发，另外还提供配置工具和可选的免费IDE。MCUXpresso 软件与主流工具供应商 (如
+                                    Arm和 IAR) 的开源 MCU 操作系统 FreeRTOS 工具兼容，LPCXpresso55S69 也可与 SEGGER 和 P＆E Micro
+                                    提供的主流硬件调试器一起使用。</p>
                             </div>
                         </div>
                     </div>
@@ -386,280 +440,387 @@
                         <div class="panel-body">
                             <div class="info-2">
                                 <h4 id="ship_info">
-                                    <span class="tit-2">主控芯片介绍</span>
-                                </h4>
+                                    <span class="tit-2">主控芯片介绍</span></h4>
                                 <hr />
                                 <div class="video-cover-container">
-                                    <a class="video-card-container" href="https://www.nxpic.org/video/index/detail/id-4358" target="_blank">
+                                    <a class="video-card-container" href="https://www.nxpic.org/video/index/detail/id-4357" target="_blank">
                                         <div class="video-cover">
-                                            <img src="./assets/images/video-1.png" alt="">
-                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                            <img src="https://www.nxpic.org/asset/theme-demoboard/image/video-1.png"
+                                                alt="">
+                                            <img class="video-play-btn"
+                                                src="https://www.nxpic.org/asset/theme-demoboard/image/icon-video-player.png"
+                                                alt="">
                                         </div>
                                         <p class="desc video-title">
                                             LPC5500性能效率的秘密
                                         </p>
                                     </a>
-                                    <a class="video-card-container" href="https://www.nxpic.org/video/index/detail/id-4357" target="_blank">
+                                    <a class="video-card-container" href="https://www.nxpic.org/video/index/detail/id-4358" target="_blank">
                                         <div class="video-cover">
-                                            <img src="./assets/images/video-2.png" alt="">
-                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                            <img src="https://www.nxpic.org/asset/theme-demoboard/image/video-2.png"
+                                                alt="">
+                                            <img class="video-play-btn"
+                                                src="https://www.nxpic.org/asset/theme-demoboard/image/icon-video-player.png"
+                                                alt="">
                                         </div>
                                         <p class="desc video-title">
                                             LPC5500为未来创新护航
                                         </p>
                                     </a>
-                                    <a class="video-card-container" href="https://www.nxpic.org/video/index/detail/id-4356" target="_blank">
+                                    <a class="video-card-container"
+                                        href="https://www.nxpic.org/video/index/detail/id-4356" target="_blank">
                                         <div class="video-cover">
-                                            <img src="./assets/images/video-3.png" alt="">
-                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                            <img src="https://www.nxpic.org/asset/theme-demoboard/image/video-3.png"
+                                                alt="">
+                                            <img class="video-play-btn"
+                                                src="https://www.nxpic.org/asset/theme-demoboard/image/icon-video-player.png"
+                                                alt="">
                                         </div>
                                         <p class="desc video-title">
                                             LPC5500开发者生态系统有多强大
                                         </p>
                                     </a>
                                 </div>
-                                <div class="chip-description-container">
+                                <div class="chip-description-container description-container-collapsed">
                                     <div class="pull-left chip-description">
-                                        <h3 class="chip-description-title">概述</h3>
+                                        <h3 class="chip-description-title">
+                                            概述</h3>
                                         <p class="chip-description-content">
-                                            LPC55S6x MCU家族基于全球首款基于通用Cortex-M33的微控制器，随LPC5500系列推出。该高效率MCU家族采用Armv8-M架构，性能和高级安全功能达到新水平，包括TrustZone-M和协处理器扩展。LPC55S6x家族支持协处理器扩展型号，并利用其大大提高信号处理效率，采用专有DSP加速器，使时钟周期减少了10倍。可选择使用第二个Cortex-M33内核，支持灵活地平衡高性能与功率效率。
-                                            <br><br> 此外，LPC55S6x MCU家族依托基于40nm NVM的处理技术，具备成本效益优势，提供广泛的可扩展封装和存储器选项，并提供强大的支持，包括MCUXpresso软件和工具生态系统及低成本开发板。
-
+                                            LPC55S6x
+                                            MCU家族基于全球首款基于通用Cortex-M33的微控制器，随LPC5500系列推出。该高效率MCU家族采用Armv8-M架构，性能和高级安全功能达到新水平，包括TrustZone-M和协处理器扩展。LPC55S6x家族支持协处理器扩展型号，并利用其大大提高信号处理效率，采用专有DSP加速器，使时钟周期减少了10倍。可选择使用第二个Cortex-M33内核，支持灵活地平衡高性能与功率效率。
+                                        </p>
+                                        <p class="chip-description-content">
+                                            此外，LPC55S6x MCU家族依托基于40nm
+                                            NVM的处理技术，具备成本效益优势，提供广泛的可扩展封装和存储器选项，并提供强大的支持，包括MCUXpresso软件和工具生态系统及低成本开发板。
                                         </p>
                                     </div>
                                     <div class="chip-features-container">
-                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                            <h3 class="chip-features-title">芯片特性</h3>
+                                        <div aria-multiselectable="true" class="panel-group" id="accordion"
+                                            role="tablist">
+                                            <h3 class="chip-features-title">
+                                                芯片特性</h3>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingOne">
+                                                <div class="panel-heading  chip-feature-container" id="headingOne"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                            Arm Cortex-M33内核
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseOne" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseOne" role="button">Arm Cortex-M33内核 </a></h4>
                                                 </div>
-                                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div aria-labelledby="headingOne" class="panel-collapse collapse"
+                                                    id="collapseOne" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>Arm Cortex-M33处理器，运行频率高达100 MHz</li>
-                                                            <li>TrustZone,浮点运算单元(FPU)和存储器保护单元(MPU)</li>
-                                                            <li>ARM Cortex-M33内置可嵌套向量中断控制器(NVIC)</li>
-                                                            <li>非屏蔽中断(NMI)输入，多种中断源可供选择</li>
+                                                            <li>
+                                                                Arm Cortex-M33处理器，运行频率高达100 MHz</li>
+                                                            <li>
+                                                                TrustZone,浮点运算单元(FPU)和存储器保护单元(MPU)</li>
+                                                            <li>
+                                                                ARM Cortex-M33内置可嵌套向量中断控制器(NVIC)</li>
+                                                            <li>
+                                                                非屏蔽中断(NMI)输入，多种中断源可供选择</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingTwo">
+                                                <div class="panel-heading  chip-feature-container" id="headingTwo"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                            协处理器
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseTwo" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseTwo" role="button">协处理器 </a></h4>
                                                 </div>
-                                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div aria-labelledby="headingTwo" class="panel-collapse collapse"
+                                                    id="collapseTwo" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>Arm Cortex-M33协处理器</li>
-                                                            <li>运行频率高达100 MHz</li>
-                                                            <li>这个处理器的配置不包括MPU、FPU、DSP、ETM和TrustZone</li>
-                                                            <li>系统节拍定时器</li>
-                                                            <li>CASPER加解密协处理器，提供对非对称加密算法的硬件加速</li>
-                                                            <li>PowerQuad提供对DSP计算(定点和浮点) 的加速</li>
+                                                            <li>
+                                                                Arm Cortex-M33协处理器
+                                                                <ul class="secondary-level-list">
+                                                                    <li>
+                                                                        运行频率高达150&nbsp;Mhz</li>
+                                                                    <li>
+                                                                        这个处理器的配置不包括MPU、FPU、DSP、ETM和TrustZone</li>
+                                                                    <li>
+                                                                        系统节拍定时器</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                CASPER加解密协处理器，提供对非对称加密算法的硬件加速</li>
+                                                            <li>
+                                                                PowerQuad提供对DSP计算(定点和浮点) 的加速</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingThree">
+                                                <div class="panel-heading  chip-feature-container" id="headingThree"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                            片上处理器
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseThree" role="button">片上处理器 </a></h4>
                                                 </div>
-                                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div aria-labelledby="headingThree" class="panel-collapse collapse"
+                                                    id="collapseThree" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>多达640 KB片上闪存程序存储器，带闪存加速器和256字节页擦写功能</li>
-                                                            <li>SRAM高达320 KB，其中系统总线上有288 KB，内核总线有32 KB</li>
+                                                            <li>
+                                                                多达640 KB片上闪存程序存储器，带闪存加速器和256字节页擦写功能</li>
+                                                            <li>
+                                                                SRAM高达320 KB，其中系统总线上有288 KB，内核总线有32 KB</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingFour">
+                                                <div class="panel-heading  chip-feature-container" id="headingFour"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                                            安全特性
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseFour" role="button">安全特性 </a></h4>
                                                 </div>
-                                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                <div aria-labelledby="headingFour" class="panel-collapse collapse"
+                                                    id="collapseFour" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>启用Arm TrustZone</li>
-                                                            <li>PRINCE模块对写入到片上闪存的数据进行实时加密，在读取加密闪存数据时进行解密，以保护代码</li>
-                                                            <li>AES-256加密/解密引擎</li>
-                                                            <li>安全散列算法 (SHA1/SHA2) 模块支持通过专用DMA控制器的安全引导。</li>
-                                                            <li>通过专用SRAM上的芯片指纹，提供物理不可克隆功能(PUF); PUF可以生成、存储和重建从64到4096位长度不等的密钥。包括用于密钥提取的硬件</li>
-                                                            <li>随机数生成器(RNG)</li>
-                                                            <li>唯一的128位设备识别序列号(UUID)</li>
-                                                            <li>安全通用IO</li>
+                                                            <li>
+                                                                启用Arm TrustZone</li>
+                                                            <li>
+                                                                PRINCE模块对写入到片上闪存的数据进行实时加密，在读取加密闪存数据时进行解密，以保护代码</li>
+                                                            <li>
+                                                                AES-256加密/解密引擎</li>
+                                                            <li>
+                                                                安全散列算法 (SHA1/SHA2) 模块支持通过专用DMA控制器的安全引导</li>
+                                                            <li>
+                                                                通过专用SRAM上的芯片指纹，提供物理不可克隆功能(PUF);
+                                                                PUF可以生成、存储和重建从64到4096位长度不等的密钥。包括用于密钥提取的硬件</li>
+                                                            <li>
+                                                                随机数生成器(RNG)</li>
+                                                            <li>
+                                                                唯一的128位设备识别序列号(UUID)</li>
+                                                            <li>
+                                                                安全通用IO</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingFive">
+                                                <div class="panel-heading  chip-feature-container" id="headingFive"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                                            串行接口
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseFive" role="button">串行接口 </a></h4>
                                                 </div>
-                                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                                <div aria-labelledby="headingFive" class="panel-collapse collapse"
+                                                    id="collapseFive" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>Flexcomm接口包含9个串行外设。每个Flexcomm接口可通过软件选择作为USART、SPI、I2C或I2S接口</li>
-                                                            <li>nI2C总线接口，支持Fast-Mode和Fast-Mode Plus，数据传输率高达1 Mbit/s，具有多种地址识别和监测模式。</li>
-                                                            <li>nUSB 2.0全速主机/设备控制器，带片上PHY和专用DMA控制器，在设备模式下支持无晶振工作</li>
-                                                            <li>USB 2.0高速主机/设备控制器，带片上高速PHY</li>
+                                                            <li>
+                                                                Flexcomm接口包含9个串行外设。每个Flexcomm接口可通过软件选择作为USART、SPI、I2C或I2S接口
+                                                            </li>
+                                                            <li>
+                                                                nI2C总线接口，支持Fast-Mode和Fast-Mode Plus，数据传输率高达1
+                                                                Mbit/s，具有多种地址识别和监测模式</li>
+                                                            <li>
+                                                                nUSB 2.0全速主机/设备控制器，带片上PHY和专用DMA控制器，在设备模式下支持无晶振工作</li>
+                                                            <li>
+                                                                USB 2.0高速主机/设备控制器，带片上高速PHY</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingSix">
+                                                <div class="panel-heading  chip-feature-container" id="headingSix"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                                            数字外设
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseSix" role="button">数字外设 </a></h4>
                                                 </div>
-                                                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                                <div aria-labelledby="headingSix" class="panel-collapse collapse"
+                                                    id="collapseSix" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>DMA0控制器，具有23个通道和多达22个可编程触发器，能够访问所有存储器和支持DMA的外设</li>
-                                                            <li>DMA1控制器，具有10个通道和16个可编程触发器，能够访问所有存储器和支持DMA的外设</li>
-                                                            <li>安全的数字输入输出(SD/MMC 和 SDIO)卡接口，支持DMA SDIO支持两个卡。支持的卡类型为MMC、SDIO和CE-ATA。支持SD2.0和SR25</li>
-                                                            <li>CRC引擎模块可使用支持DMA的3个标准多项式中的一个计算所提供数据的CRC</li>
-                                                            <li>多达64个通用输入/输出(GPIO)引脚</li>
-                                                            <li>通用IO寄存器位于AHB上，以支持快速存取。DMA支持通用IO端口</li>
-                                                            <li>最多8个通用IO可选为引脚中断(PINT)，由上升沿、下降沿或两种输入沿触发</li>
-                                                            <li>两组通用IO中断(GINT)支持基于输入状态逻辑(AND/OR)组合的中断</li>
-                                                            <li>I/O引脚配置，支持16个函数选项</li>
-                                                            <li>可编程逻辑单元(PLU)用于创建小型组合和/或顺序逻辑网络，包括状态机</li>
+                                                            <li>
+                                                                DMA0控制器，具有23个通道和多达22个可编程触发器，能够访问所有存储器和支持DMA的外设</li>
+                                                            <li>
+                                                                DMA1控制器，具有10个通道和16个可编程触发器，能够访问所有存储器和支持DMA的外设</li>
+                                                            <li>
+                                                                安全的数字输入输出(SD/MMC 和 SDIO)卡接口，支持DMA
+                                                                SDIO支持两个卡。支持的卡类型为MMC、SDIO和CE-ATA。支持SD2.0和SR25</li>
+                                                            <li>
+                                                                CRC引擎模块可使用支持DMA的3个标准多项式中的一个计算所提供数据的CRC</li>
+                                                            <li>
+                                                                多达64个通用输入/输出(GPIO)引脚</li>
+                                                            <li>
+                                                                通用IO寄存器位于AHB上，以支持快速存取。DMA支持通用IO端口</li>
+                                                            <li>
+                                                                最多8个通用IO可选为引脚中断(PINT)，由上升沿、下降沿或两种输入沿触发</li>
+                                                            <li>
+                                                                两组通用IO中断(GINT)支持基于输入状态逻辑(AND/OR)组合的中断</li>
+                                                            <li>
+                                                                I/O引脚配置，支持16个函数选项</li>
+                                                            <li>
+                                                                可编程逻辑单元(PLU)用于创建小型组合和/或顺序逻辑网络，包括状态机</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingSeven">
+                                                <div class="panel-heading  chip-feature-container" id="headingSeven"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
-                                                            模拟外设
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseSeven" role="button">模拟外设 </a></h4>
                                                 </div>
-                                                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                                <div aria-labelledby="headingSeven" class="panel-collapse collapse"
+                                                    id="collapseSeven" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>16位ADC，具有5个差分通道对(或10个单端通道)以及多个内部和外部触发器输入，采样速率高达1.0 M采样/秒。ADC支持两个独立的转换序列</li>
-                                                            <li>连接至ADC的内置温度传感器</li>
-                                                            <li>具有五个输入引脚和外部或内部基准电压的比较器</li>
+                                                            <li>
+                                                                16位ADC，具有5个差分通道对(或10个单端通道)以及多个内部和外部触发器输入，采样速率高达1.0
+                                                                M采样/秒。ADC支持两个独立的转换序列</li>
+                                                            <li>
+                                                                连接至ADC的内置温度传感器</li>
+                                                            <li>
+                                                                具有五个输入引脚和外部或内部基准电压的比较器</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingEight">
+                                                <div class="panel-heading  chip-feature-container" id="headingEight"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
-                                                            定时器
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseEight" role="button">定时器 </a></h4>
                                                 </div>
-                                                <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                                                <div aria-labelledby="headingEight" class="panel-collapse collapse"
+                                                    id="collapseEight" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>5个32位标准通用异步定时器/计数器，支持多达4个采集输入和4个比较输出。可选择特定的定时器事件生成DMA请求</li>
-                                                            <li>一个SCTimer/PWM，具有8个输入和10个输出函数(包括捕获和匹配)。输入和输出可引至或引自外部引脚，内部引至或引自所选外设。在内部，SCTimer/PWM支持16个捕获/匹配，16个事件和32个状态</li>
-                                                            <li>32位实时时钟(RTC)，以1秒分辨率在始终开启的电源域内运行。RTC中的定时器可用于唤醒所有低功耗模式(包括深度节电模式)，具有1 ms分辨率</li>
-                                                            <li>多通道多速率24位定时器(MRT)，用于在多达4种可编程固定速率下重复生成中断</li>
-                                                            <li>窗口看门狗定时器 (WWDT)，使用1MHz的FRO作为时钟源</li>
-                                                            <li>微节拍定时器，通过看门狗振荡器运行，可用于将器件从睡眠和深度睡眠模式中唤醒</li>
-                                                            <li>42位自运行OS定时器作为系统的连续时基，适用于任何低功耗的模式</li>
+                                                            <li>
+                                                                5个32位标准通用异步定时器/计数器，支持多达4个采集输入和4个比较输出。可选择特定的定时器事件生成DMA请求
+                                                            </li>
+                                                            <li>
+                                                                一个SCTimer/PWM，具有8个输入和10个输出函数(包括捕获和匹配)。输入和输出可引至或引自外部引脚，内部引至或引自所选外设。在内部，SCTimer/PWM支持16个捕获/匹配，16个事件和32个状态
+                                                            </li>
+                                                            <li>
+                                                                32位实时时钟(RTC)，以1秒分辨率在始终开启的电源域内运行。RTC中的定时器可用于唤醒所有低功耗模式(包括深度节电模式)，具有1
+                                                                ms分辨率</li>
+                                                            <li>
+                                                                多通道多速率24位定时器(MRT)，用于在多达4种可编程固定速率下重复生成中断</li>
+                                                            <li>
+                                                                窗口看门狗定时器 (WWDT)，使用1MHz的FRO作为时钟源</li>
+                                                            <li>
+                                                                微节拍定时器，通过看门狗振荡器运行，可用于将器件从睡眠和深度睡眠模式中唤醒</li>
+                                                            <li>
+                                                                42位自运行OS定时器作为系统的连续时基，适用于任何低功耗的模式</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingNine">
+                                                <div class="panel-heading  chip-feature-container" id="headingNine"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
-                                                            时钟生成
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseNine" role="button">时钟生成 </a></h4>
                                                 </div>
-                                                <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                                                <div aria-labelledby="headingNine" class="panel-collapse collapse"
+                                                    id="collapseNine" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>内部自运行振荡器(FRO)。该振荡器可提供96MHz输出，以及一个可用作系统时钟的12MHz输出(从所选的较高频率中分频)。FRO在整个电压和温度范围内调校为±1 %精确度</li>
-                                                            <li>32 kHz内部自运行振荡器(FRO)。FRO在整个电压和温度范围内调校为±1 %精确度</li>
-                                                            <li>内部低功耗振荡器(FRO 1 MHz)</li>
-                                                            <li>晶体振荡器，工作频率范围：1 MHz到25 MHz。高达25 MHz的外部时钟输入(旁路模式)时钟频率选项</li>
-                                                            <li>晶体振荡器，工作频率为32.768 kHz</li>
-                                                            <li>PLL0和PLL1可让CPU以允许的最高速率运行，无需高频外部时钟</li>
-                                                            <li>带分频器的时钟输出功能，监测内部时钟</li>
-                                                            <li>用于测量片上和片外时钟信号频率的频率测量单元</li>
+                                                            <li>
+                                                                内部自运行振荡器(FRO)。该振荡器可提供96MHz输出，以及一个可用作系统时钟的12MHz输出(从所选的较高频率中分频)。FRO在整个电压和温度范围内调校为&plusmn;1
+                                                                %精确度</li>
+                                                            <li>
+                                                                32 kHz内部自运行振荡器(FRO)。FRO在整个电压和温度范围内调校为&plusmn;1 %精确度</li>
+                                                            <li>
+                                                                内部低功耗振荡器(FRO 1 MHz)</li>
+                                                            <li>
+                                                                晶体振荡器，工作频率范围：1 MHz到25 MHz。高达25 MHz的外部时钟输入(旁路模式)时钟频率选项
+                                                            </li>
+                                                            <li>
+                                                                晶体振荡器，工作频率为32.768 kHz</li>
+                                                            <li>
+                                                                PLL0和PLL1可让CPU以允许的最高速率运行，无需高频外部时钟</li>
+                                                            <li>
+                                                                带分频器的时钟输出功能，监测内部时钟</li>
+                                                            <li>
+                                                                用于测量片上和片外时钟信号频率的频率测量单元</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingTen">
+                                                <div class="panel-heading  chip-feature-container" id="headingTen"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                                            节电模式
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseTen" role="button">节电模式 </a></h4>
                                                 </div>
-                                                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                                                <div aria-labelledby="headingTen" class="panel-collapse collapse"
+                                                    id="collapseTen" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>最大限度降低功耗的集成式PMU(电源管理单元)</li>
-                                                            <li>低功耗模式：保留RAM的睡眠、深度睡眠，保留RAM和CPU0的掉电模式和深度掉电模式</li>
-                                                            <li>可配置从外设中断唤醒</li>
-                                                            <li>Micro-Tick定时器通过看门狗振荡器运行，实时时钟(RTC)通过32.678 kHz时钟运行，可用于在睡眠和深度睡眠模式下唤醒系统</li>
-                                                            <li>上电复位(POR)</li>
-                                                            <li>带独立阈值的欠压检测(BOD)，用于产生中断和强制复位</li>
+                                                            <li>
+                                                                最大限度降低功耗的集成式PMU(电源管理单元)</li>
+                                                            <li>
+                                                                低功耗模式：保留RAM的睡眠、深度睡眠，保留RAM和CPU0的掉电模式和深度掉电模式</li>
+                                                            <li>
+                                                                可配置从外设中断唤醒</li>
+                                                            <li>
+                                                                Micro-Tick定时器通过看门狗振荡器运行，实时时钟(RTC)通过32.678
+                                                                kHz时钟运行，可用于在睡眠和深度睡眠模式下唤醒系统</li>
+                                                            <li>
+                                                                上电复位(POR)</li>
+                                                            <li>
+                                                                带独立阈值的欠压检测(BOD)，用于产生中断和强制复位</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-heading  chip-feature-container" role="tab" id="headingEleven">
+                                                <div class="panel-heading  chip-feature-container" id="headingEleven"
+                                                    role="tab">
                                                     <h4 class="panel-title">
-                                                        <a class="collapsed chip-feature" role="button" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                                            更多信息
-                                                        </a>
-                                                    </h4>
+                                                        <a aria-controls="collapseThree" aria-expanded="false"
+                                                            class="collapsed chip-feature" data-toggle="collapse"
+                                                            href="#collapseEleven" role="button">更多信息 </a></h4>
                                                 </div>
-                                                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                                                <div aria-labelledby="headingEleven" class="panel-collapse collapse"
+                                                    id="collapseEleven" role="tabpanel">
                                                     <div class="panel-body">
                                                         <ul>
-                                                            <li>通过内部DC-DC转换器为系统供电</li>
-                                                            <li>单一外部供电：1.8V至3.6V</li>
-                                                            <li>支持JTAG边界扫描</li>
-                                                            <li>工作温度范围：-40 °C至+105 °C</li>
-                                                            <li>提供HLQFP100、VFBGA98和HTQFP64封装</li>
+                                                            <li>
+                                                                通过内部DC-DC转换器为系统供电</li>
+                                                            <li>
+                                                                单一外部供电：1.8V至3.6V</li>
+                                                            <li>
+                                                                支持JTAG边界扫描</li>
+                                                            <li>
+                                                                工作温度范围：-40 &deg;C至+105 &deg;C</li>
+                                                            <li>
+                                                                提供HLQFP100、VFBGA98和HTQFP64封装</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="description-collapse-btn more-info">
+                                    <p>
+                                        更多</p>
                                 </div>
                             </div>
                         </div>
@@ -681,7 +842,8 @@
                                             <h4>微控制器:&nbsp;</h4>
                                         </div>
                                         <div class="col-xs-10 board-resource-content">
-                                            <p><a>LPC55S69&nbsp;双核&nbsp;Arm&nbsp;Cortex-M33&nbsp;微控制器运行频率高达&nbsp;150&nbsp;MHz</a></p>
+                                            <p><a>LPC55S69&nbsp;双核&nbsp;Arm&nbsp;Cortex-M33&nbsp;微控制器运行频率高达&nbsp;150&nbsp;MHz</a>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="board-resource-row">
@@ -697,8 +859,10 @@
                                             <h4>连接:&nbsp;</h4>
                                         </div>
                                         <div class="col-xs-10 board-resource-content">
-                                            <p><a>板载高速&nbsp;USB、Link2&nbsp;硬件调试前, 支持&nbsp;CMSIS-DAP&nbsp;和&nbsp;SEGGER&nbsp;J-Link&nbsp;协议</a></p>
-                                            <p><a>UART&nbsp;和&nbsp;SPI&nbsp;端口通过板载硬件调试器将目标&nbsp;LPC55S69&nbsp;和&nbsp;USB&nbsp;桥接起来</a></p>
+                                            <p><a>板载高速&nbsp;USB、Link2&nbsp;硬件调试前,
+                                                    支持&nbsp;CMSIS-DAP&nbsp;和&nbsp;SEGGER&nbsp;J-Link&nbsp;协议</a></p>
+                                            <p><a>UART&nbsp;和&nbsp;SPI&nbsp;端口通过板载硬件调试器将目标&nbsp;LPC55S69&nbsp;和&nbsp;USB&nbsp;桥接起来</a>
+                                            </p>
                                             <p><a>高速和全速&nbsp;USB&nbsp;端口, 具有主机或设备功能可用的微型&nbsp;A/B&nbsp;连接器</a></p>
                                         </div>
                                     </div>
@@ -754,33 +918,27 @@
                         <div class="panel-body">
                             <div class="info-5 suit-condition-container">
                                 <h4 id="application">
-                                    <span class="tit-5">应用场景</span></h4>
+                                    <span class="tit-6">应用场景介绍</span></h4>
                                 <hr />
                                 <div class="app-wper">
                                     <div class="app-right info-3 col-xs-6">
                                         <ul>
-                                            <li>
-                                                便携式健身和活动可穿戴产品
-                                            </li>
-                                            <li>
-                                                健康与保健监测、手机和平板电脑
-                                            </li>
-                                            <li>
-                                                智能传感和运动追踪
-                                            </li>
+                                            <li class="board-resource-title">
+                                                楼宇控制和自动化</li>
+                                            <li class="board-resource-title">
+                                                消费类电子产品</li>
+                                            <li class="board-resource-title">
+                                                诊断设备</li>
                                         </ul>
                                     </div>
                                     <div class="app-right info-3 col-xs-6">
                                         <ul>
-                                            <li>
-                                                家庭和楼宇自动化
-                                            </li>
-                                            <li>
-                                                工业/商用传感器节点
-                                            </li>
-                                            <li>
-                                                车队管理和资产追踪
-                                            </li>
+                                            <li class="board-resource-title">
+                                                工业物联网</li>
+                                            <li class="board-resource-title">
+                                                机器学习</li>
+                                            <li class="board-resource-title">
+                                                安全应用</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -791,20 +949,31 @@
                         <div class="panel-body">
                             <div class="info-6 info-3">
                                 <h4 id="project_share">
-                                    <span class="tit-6">项目经验分享</span></h4>
+                                    <span class="tit-6">经验项目分享</span></h4>
                                 <hr />
-                                <h5>分享</h5>
+                                <h5>
+                                    分享</h5>
                                 <ul class="share-ull">
-                                    <li>
-                                        <a href="http://www.nxpic.org/module/forum/thread-616883-1-1.html" target="_blank">基于LPC55S69双核ARM-M33的FFT傅利叶频谱仪<img class="arrows"
+                                    <li class="board-resource-title">
+                                        <a href="https://www.nxpic.org/uniqueeefocus178683/blog/19-07/87_fac4b.html"
+                                            target="_blank">基于&nbsp;LPC55S69&nbsp;开发板的姿态传感器实例<img class="arrows"
                                                 src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" /></a>
                                     </li>
-                                    <li>
-                                        <a href="http://www.nxpic.org/module/forum/thread-616882-1-1.html" target="_blank">基于LPC55S69双核ARM-M33的真有效值三相交流电压表<img class="arrows"
+                                    <li class="board-resource-title">
+                                        <a href="http://www.nxpic.org/module/forum/thread-616882-1-1.html"
+                                            target="_blank">基于&nbsp;LPC55S69&nbsp;双核&nbsp;ARM-M33&nbsp;的真有效值三相交流电压表<img
+                                                class="arrows"
                                                 src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" /></a>
                                     </li>
-                                    <li>
-                                        <a href="https://www.nxpic.org/jamieyuan/blog/19-06/83_145a9.html" target="_blank">基于LPC55S69开发板的智能锁实例<img class="arrows"
+                                    <li class="board-resource-title">
+                                        <a href="https://www.nxpic.org/jamieyuan/blog/19-06/83_145a9.html"
+                                            target="_blank">基于&nbsp;LPC55S69&nbsp;开发板的智能锁实例<img class="arrows"
+                                                src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" /></a>
+                                    </li>
+                                    <li class="board-resource-title">
+                                        <a href="http://www.nxpic.org/module/forum/thread-616883-1-1.html"
+                                            target="_blank">基于&nbsp;LPC55S69&nbsp;双核&nbsp;ARM-M33&nbsp;的&nbsp;FFT&nbsp;傅利叶频谱仪<img
+                                                class="arrows"
                                                 src="https://upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" /></a>
                                     </li>
                                 </ul>
@@ -813,44 +982,113 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div class="widget-media-list">
-                                <h4 id="ship_info">
-                                    <span class="tit-5">在线培训</span>
-                                </h4>
+                            <div class="info-5">
+                                <h4 id="courses">
+                                    <span class="tit-5">在线培训</span></h4>
                                 <hr />
-                                <div class="video-cover-container">
-                                    <div class="video-card-container">
-                                        <div class="video-cover">
-                                            <img src="./assets/images/video-1.png" alt="">
-                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                <div class="lesson-list-container">
+                                    <div class="single-lesson-container">
+                                        <div class="lesson-cover">
+                                            <img src="./assets/images/online-course-cover.png" alt="">
                                         </div>
-                                        <p class="desc video-title">
-                                            LPC5500性能效率的秘密
-                                        </p>
+                                        <div class="lesson-info-container">
+                                            <p class="lesson-title">LPC5500&nbsp;系列简介及双核应用</p>
+                                            <p class="lesson-summary">
+                                                本次培训先从&nbsp;LPC5500&nbsp;系列整体的介绍开始，从内核，外设，功耗，性能，安全和应用六个角度审视这颗高性能低功耗高安全级别的通用&nbsp;MCU。同时我们会通过从&nbsp;Cortex-M4F&nbsp;内核的代码快速移植到&nbsp;Cortex-M33&nbsp;平台的介绍，来展示&nbsp;LPC5500&nbsp;内核&nbsp;Cortex-M33&nbsp;的易用性和通用性。最后重点介绍&nbsp;LPC5500&nbsp;系列极具特色的双核功能和应用方法。
+                                            </p>
+                                            <p class="lesson-date">
+                                                <span class="lesson-date-time">直播时间：2019年8月22日  上午10:00</span>
+                                                <span class="lesson-lecturer">演讲人：牛晓东</span>
+                                            </p>
+                                            <p class="lesson-link-container">
+                                                <a href="javascript:;">立即观看</a>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="video-card-container">
-                                        <div class="video-cover">
-                                            <img src="./assets/images/video-2.png" alt="">
-                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                    <div class="single-lesson-container">
+                                        <div class="lesson-cover">
+                                            <img src="./assets/images/online-course-cover.png" alt="">
                                         </div>
-                                        <p class="desc video-title">
-                                            LPC5500为未来创新护航
-                                        </p>
+                                        <div class="lesson-info-container">
+                                            <p class="lesson-title">PowerQaud&nbsp;数学加速协处理器简介及基本用法</p>
+                                            <p class="lesson-summary">
+                                                本教程将介绍&nbsp;LPC5500&nbsp;系列微控制器片上集成的&nbsp;PowerQuad&nbsp;数学运算加速协处理器及其基本用法. 在本教程中, 将会简要介绍&nbsp;PowerQuad&nbsp;的硬件概况, 然后从实用的角度对&nbsp;PowerQuad&nbsp;的几个计算引擎的用法进行说明, 最后将&nbsp;PowerQuad&nbsp;硬件实现加速的计算函数同纯软件的&nbsp;CMSIS-DSP&nbsp;进行比较, 让学员对&nbsp;PowerQuad&nbsp;的功能和性能有更具体的了解. 本教程以实用为主要目标, 力图让学员尽快上手&nbsp;PowerQuad&nbsp;并用到实际项目中, 部分关于&nbsp;PowerQuad&nbsp;深入和高级的话题未包含在本教程中, 感兴趣的学员可以进一步关注&nbsp;NXP&nbsp;官网的&nbsp;LPC5500&nbsp;产品主页, 获取更多手册, 应用笔记及样例代码。
+                                            </p>
+                                            <p class="lesson-date">
+                                                <span class="lesson-date-time">直播时间：2019年8月27日  上午10:00</span>
+                                                <span class="lesson-lecturer">演讲人：苏勇</span>
+                                            </p>
+                                            <p class="lesson-link-container">
+                                                <a href="javascript:;">立即观看</a>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="video-card-container">
-                                        <div class="video-cover">
-                                            <img src="./assets/images/video-3.png" alt="">
-                                            <img class="video-play-btn" src="./assets/images/icon-video-player.png" alt="">
+                                    <div class="single-lesson-container">
+                                        <div class="lesson-cover">
+                                            <img src="./assets/images/online-course-cover.png" alt="">
                                         </div>
-                                        <p class="desc video-title">
-                                            LPC5500开发者生态系统有多强大
-                                        </p>
+                                        <div class="lesson-info-container">
+                                            <p class="lesson-title">使用&nbsp;PowerQaud&nbsp;数学加速协处理器加速人工神经网络的计算</p>
+                                            <p class="lesson-summary">
+                                                本教程结合人工神经网络的应用, 介绍了一种基于&nbsp;PowerQuad&nbsp;硬件计算引擎的部署人工神经网络的开发方法, 并同基于&nbsp;CMSIS-DSP&nbsp;的实现进行比较, 从而能实际看出&nbsp;PowerQuad&nbsp;硬件加速相对于纯软件计算的加速效果. 在本教程的样例中, 使用&nbsp;pytorch&nbsp;框架在上位机训练模型, 得到训练参数后, 导入到&nbsp;LPC5500&nbsp;微控制器的工程中, 在&nbsp;LPC5500&nbsp;上部署模型进行推导计算。
+                                            </p>
+                                            <p class="lesson-date">
+                                                <span class="lesson-date-time">直播时间：2019年8月29日  上午10:00</span>
+                                                <span class="lesson-lecturer">演讲人：苏勇</span>
+                                            </p>
+                                            <p class="lesson-link-container">
+                                                <a href="javascript:;">立即观看</a>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>
+                                <link href="https://www.nxpic.org/asset/module-activity/css/lpc2018.css"
+                                    rel="stylesheet" />
+                            </p>
+                            <div class="right-nav" id="rightNav">
+                                <dl class="nav-list">
+                                    <dt>
+                                        &nbsp;</dt>
+                                    <dd class="return">
+                                        <span class="list-current">&nbsp;</span>
+                                        <div class="list-sister">
+                                            <span class="list-word">返回顶部</span></div>
+                                    </dd>
+                                    <dd class="words">
+                                        <span class="list-current">&nbsp;</span>
+                                        <div class="list-sister">
+                                            <a href="/activity/LPC2019/signup" id="signupBtnRight"><span
+                                                    class="list-word">立即报名</span></a></div>
+                                    </dd>
+                                    <dd class="qcode">
+                                        <span class="list-current">&nbsp;</span>
+                                        <div class="list-sister">
+                                            <div class="qq-wper">
+                                                <div>
+                                                    <img
+                                                        src="https://www.nxpic.org/asset/module-activity/images/lpc2019/qrcode-qq-group.png" />
+                                                </div>
+                                                <p>
+                                                    扫码进大赛QQ群</p>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                    <dd class="exploration">
+                                        <a href="https://www.nxpic.org/page/lpc5500#courses" target="_blank"><span
+                                                class="list-current">在线 </span></a>
+                                        <p>
+                                            &nbsp;</p>
+                                        <a href="https://www.nxpic.org/page/lpc5500#courses" target="_blank"><span
+                                                class="list-current">研讨会</span> </a>
+                                    </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -865,7 +1103,7 @@
     </div>
     </div>
     <!-- Footer: sitelink -->
-    <div class="pi-footer" title="0.2363s">
+    <div class="pi-footer" title="0.1853s">
         <div class="container pi-footer-container">
             <div class="text-center" style="margin-bottom: 5px;">
                 <a rel="license" href="/" title="恩智浦技术社区">&copy;恩智浦技术社区</a>
@@ -876,21 +1114,31 @@
             </div>
             <div class="text-center">
                 Email:
-                <a href="mailto:nxpic@supplyframe.cn">nxpic@supplyframe.cn</a> Tel: 0512-80981663
+                <a href="mailto:nxpic@eefocus.com">nxpic@eefocus.com</a> Tel: 0512-80981663-8069
             </div>
             <div class="text-center">
-                ICP经营许可证&nbsp;&nbsp;苏B2-20140176&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn">苏ICP备14012660号-3</a>&nbsp;&nbsp;苏州灵动帧格网络科技有限公司 版权所有.
+                ICP经营许可证&nbsp;&nbsp;苏B2-20140176&nbsp;&nbsp;<a
+                    href="http://www.miibeian.gov.cn">苏ICP备14012660号-3</a>&nbsp;&nbsp;苏州灵动帧格网络科技有限公司 版权所有.
             </div>
-            <div style="text-align: center;width: 100%;margin:0 auto; padding:20px 0;background: #333;      /* border-top: 2px solid #f86d2a; */      color: #fff;left: 0;">
-                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001043" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src='https://upload.semidata.info/sns.eefocus.com/freescale/article/media/2016/04/12/331491.png' lazysrc="" style="float:left;" />
-                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">苏公网安备 32059002001043号
-                    </p>
+            <div
+                style="text-align: center;width: 100%;margin:0 auto; padding:20px 0;background: #333;      /* border-top: 2px solid #f86d2a; */      color: #fff;left: 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001043"
+                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                        src='https://upload.semidata.info/sns.eefocus.com/freescale/article/media/2016/04/12/331491.png'
+                        lazysrc="" style="float:left;" />
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">苏公网安备
+                        32059002001043号</p>
                 </a>
             </div>
+            <script>
+                var $piNavbarNav = $('.pi-navbar-nav li');
+                var $navPic = '<img src="//www.nxpic.org/asset/theme-freescale/image/ico_new2.gif" style="position: absolute;top: 5px;right: -14px;">';
+                $piNavbarNav.eq(-1).append($navPic);
+            </script>
         </div>
     </div>
     <script>
-        $('.ser_input').keyup(function(e) {
+        $('.ser_input').keyup(function (e) {
             var curKey = e.which;
             if (curKey == 13) {
                 $(this).closest('form').submit();
@@ -899,10 +1147,10 @@
         $('body').data('config', {
             joinMemberUrl: '/member/join/joinButton/'
         });
-        $(function() {
+        $(function () {
             // 价格增减功能
             var $buyItem = $('#buyWper').children();
-            $buyItem.on('click', '.reduce', function(e) {
+            $buyItem.on('click', '.reduce', function (e) {
                 var $num = $(this).next().val();
                 if ($num <= 1) {
                     $(this).next().val(1);
@@ -910,14 +1158,14 @@
                     $(this).next().val(parseInt($num) - 1);
                 }
 
-            }).on('click', '.add', function(e) {
+            }).on('click', '.add', function (e) {
                 var $num = $(this).prev().val();
                 $(this).prev().val(parseInt($num) + 1);
 
             });
 
             // 购买
-            $buyItem.on('click', '.tab-buy > a', function() {
+            $buyItem.on('click', '.tab-buy > a', function () {
                 var $this = $(this);
                 var $id = $this.data('id');
                 var $url = '//www.eeboard.com/shop';
@@ -929,39 +1177,90 @@
 
             // 项目字段截取
             $ullItem = $('#projectUll').find('.pro-desc');
-            $ullItem.each(function() {
+            $ullItem.each(function () {
                 var str = $(this).text();
                 var len = str.length;
                 var maxWidth = 22;
                 if (len > maxWidth) {
                     $(this).text($(this).text().substring(0, maxWidth));
                 }
-                $(this).html($(this).html() +
-                    '<img class="arrows" src="//upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" alt="" />'
-                );
+                $(this).html($(this).html() + '<img class="arrows" src="//upload.semidata.info/sns.eefocus.com/freescale/widget/para-icon.png" alt="" />');
+            });
+
+            $('.description-collapse-btn p').click(function ($ev) {
+                if ($ev.target.innerHTML.trim() === '更多') {
+                    $('.chip-description-container').removeClass('description-container-collapsed');
+                    $('.description-collapse-btn').removeClass('more-info');
+                    $ev.target.innerHTML = '收起';
+                    $('.description-collapse-btn').addClass('collapse-up');
+                } else if ($ev.target.innerHTML.trim() === '收起') {
+                    $('.chip-description-container').addClass('description-container-collapsed');
+                    $('.description-collapse-btn').removeClass('collapse-up');
+                    $('.description-collapse-btn').addClass('more-info');
+                    $ev.target.innerHTML = '更多';
+                }
+            });
+
+            $('.chip-feature-container').click(function ($ev) {
+                $('.chip-description-container').removeClass('description-container-collapsed');
+                $('.description-collapse-btn').removeClass('more-info');
+                $('.description-collapse-btn p').html('收起');
+                $('.description-collapse-btn').addClass('collapse-up');
+            });
+
+            $('.return .list-sister').click(function ($ev) {
+                gotoTop();
             });
 
         })
+
+        function gotoTop(acceleration, stime) {
+            acceleration = acceleration || 0.1;
+            stime = stime || 10;
+            var x1 = 0;
+            var y1 = 0;
+            var x2 = 0;
+            var y2 = 0;
+            var x3 = 0;
+            var y3 = 0;
+            if (document.documentElement) {
+                x1 = document.documentElement.scrollLeft || 0;
+                y1 = document.documentElement.scrollTop || 0;
+            }
+            if (document.body) {
+                x2 = document.body.scrollLeft || 0;
+                y2 = document.body.scrollTop || 0;
+            }
+            var x3 = window.scrollX || 0;
+            var y3 = window.scrollY || 0;
+            var x = Math.max(x1, Math.max(x2, x3));
+            var y = Math.max(y1, Math.max(y2, y3));
+            var speeding = 1 + acceleration;
+            window.scrollTo(Math.floor(x / speeding), Math.floor(y / speeding));
+
+            if (x > 0 || y > 0) {
+                var run = "gotoTop(" + acceleration + ", " + stime + ")";
+                window.setTimeout(run, stime);
+            }
+        }
+
     </script>
 
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol +
-            "hm.baidu.com/h.js%3F9f88fb5f9218b33597caa6c10680df85' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9f88fb5f9218b33597caa6c10680df85' type='text/javascript'%3E%3C/script%3E"));
     </script>
 
     <img src="https://analytics.eefocus.com/impression/eefocus/" style="display:none">
 
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol +
-            "hm.baidu.com/h.js%3F2b47071c0bf0dcfe3a4fa09e870c2edd' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2b47071c0bf0dcfe3a4fa09e870c2edd' type='text/javascript'%3E%3C/script%3E"));
     </script>
 
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost +
-            "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
     <script type="text/javascript">
         var pageTracker = _gat._getTracker("UA-1502657-8");
@@ -973,7 +1272,7 @@
     </script>
     <script>
         // Baidu Zhanzhang
-        (function() {
+        (function () {
             var bp = document.createElement('script');
             var curProtocol = window.location.protocol.split(':')[0];
             if (curProtocol === 'https') {
@@ -987,27 +1286,18 @@
     </script>
     <!-- Google Tag Manager -->
 
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
 
-                    new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
 
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
 
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
 
-        })(window, document, 'script', 'dataLayer', 'GTM-WKF5CJ6');
-    </script>
+        })(window, document, 'script', 'dataLayer', 'GTM-WKF5CJ6');</script>
 
     <!-- End Google Tag Manager -->
 
@@ -1023,41 +1313,13 @@
 
     <script>
         /*sf tracking */
-        (function() {
+        (function () {
             var ZONE_PREFIX = 'EEnxp';
-            var TRACK_URL =
-                "https://analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&zone={Zone_name}";
-            var suffix = '_other';
-            var path = window.location.pathname;
-            if (/\/video\//.test(path)) {
-                suffix = '_video'
-            } else if (/\/document\//.test(path)) {
-                suffix = '_doc'
-            } else if (/\/article\//.test(path)) {
-                suffix = '_article'
-            } else if (/\/search\//.test(path)) {
-                suffix = '_search'
-            } else if (/\/activity\//.test(path)) {
-                suffix = '_activity'
-            } else if (/\/page\/product\//.test(path)) {
-                suffix = '_product'
-            } else if (/\/page\/teardown\//.test(path)) {
-                suffix = '_teardown'
-            } else if (/\/techarticle\//.test(path)) {
-                suffix = '_techarticle'
-            } else if (/\/page\/nxp-mcu\//.test(path)) {
-                suffix = '_mcu'
-            } else if (path == '/') {
-                suffix = '_home'
-            }
-            zone = ZONE_PREFIX + suffix;
-            var img = document.createElement("img");
-            img.src = TRACK_URL.replace('{Zone_name}', zone);
-            img.style.display = "none";
-            document.body.appendChild(img);
+            var TRACK_URL = "https://analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&zone={Zone_name}";
+            var suffix = '_other'; var path = window.location.pathname; if (/\/video\//.test(path)) { suffix = '_video' } else if (/\/document\//.test(path)) { suffix = '_doc' } else if (/\/article\//.test(path)) { suffix = '_article' } else if (/\/search\//.test(path)) { suffix = '_search' } else if (/\/activity\//.test(path)) { suffix = '_activity' } else if (/\/page\/product\//.test(path)) { suffix = '_product' } else if (/\/page\/teardown\//.test(path)) { suffix = '_teardown' } else if (/\/techarticle\//.test(path)) { suffix = '_techarticle' } else if (/\/page\/nxp-mcu\//.test(path)) { suffix = '_mcu' } else if (path == '/') { suffix = '_home' } zone = ZONE_PREFIX + suffix; var img = document.createElement("img"); img.src = TRACK_URL.replace('{Zone_name}', zone); img.style.display = "none"; document.body.appendChild(img);
         })();
     </script>
-    <script type="text/javascript" src="https://www.nxpic.org/asset/theme-demoboard/js/front.js?1558405099"></script>
+    <script type="text/javascript" src="https://www.nxpic.org/asset/theme-demoboard/js/front.js?1564814371"></script>
 
 </body>
 
