@@ -5,9 +5,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var fs = require('fs');
+var ejs = require('ejs');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var bubbleTea = require('./routes/bubbleTea/index');
+
+var logFile = fs.createWriteStream('server.log', {flags: 'a'});
 
 var app = express();
 
@@ -26,6 +31,7 @@ app.use(favicon(path.join("./", 'public', 'favicon.ico')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/bubbleTea', bubbleTea);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

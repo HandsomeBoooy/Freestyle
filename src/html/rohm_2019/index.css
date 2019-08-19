@@ -1,0 +1,943 @@
+.mobile-show {
+    display: none;
+}
+.pc-show {
+    display: block;
+}
+.rohm-contest-contact .pc-show {
+    display: inline;
+}
+.common-header .navbar {
+    margin-bottom: 0;
+    padding-top: 15px;
+    min-height: 90px;
+    text-align: center;
+    background-color: transparent;
+    border-color: transparent;
+}
+.common-header .navbar-toggle {
+    margin-top: 12px;
+}
+.common-header a.rohm-header-apply.sign-up-header-btn {
+    height: 30px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: rgba(218, 31, 61, 1);
+    border-radius: 35px;
+}
+.common-header .navbar .container-fluid {
+    display: inline-block;
+}
+.common-header .navbar .container-fluid>.navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.common-header .navbar .container-fluid .navbar-collapse {
+    float: left;
+}
+
+.common-header .navbar-brand.rohm-header-logo {
+    width: 100px;
+    height: 60px;
+    background: url('./assets/logo_rohm.png') no-repeat center center;
+}
+
+.common-header .navbar-nav li>a {
+    padding: 20px;
+    font-size: 20px;
+    color: #333333;
+}
+
+.common-header .sign-up-btn {
+    margin-left: 290px;
+}
+
+.common-header li.sign-up-btn>a {
+    width: 132px;
+    height: 44px;
+    margin-top: 8px;
+    padding: 11px 0;
+    border-radius: 25px;
+    background-color: rgba(218, 31, 61, 1);
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.common-header li.sign-up-btn>a:hover, .common-header li.sign-up-btn>a:focus, .common-header li.sign-up-btn>a:visited, .common-header li.sign-up-btn>a:link {
+    background-color: rgba(218, 31, 61, 1);
+    color: #ffffff;
+}
+
+.banner-container {
+    background: url('./assets/bg_banner.png') no-repeat center top;
+}
+
+.banner-container .banner-title {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.banner-container .banner-title .main-title {
+    margin-top: 10px;
+    font-size: 70px;
+    color: #ffffff;
+    line-height: 94px;
+    font-weight: 400;
+}
+
+.banner-container .banner-signup-btn {
+    text-align: center;
+}
+
+.common-rohm-module.rohm-module1 .notification-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.common-rohm-module.rohm-module1 .notification-container p {
+    width: auto;
+    display: inline-block;
+    background: url('./assets/icon-notification.png') no-repeat left center;
+    padding-left: 20px;
+}
+
+.banner-container .banner-signup-btn a {
+    display: inline-block;
+    margin: 50px auto 150px;
+    padding: 10px 70px;
+    border-radius: 45px;
+    background-color: #ffffff;
+    color: #008CCE;
+    font-size: 35px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.banner-container .banner-signup-btn a:hover {
+    background-color: #D5D5D5;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.common-rohm-module .module-title-container {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.common-rohm-module .module-title-container .module-title {
+    padding: 36px 0 30px;
+    background: url('./assets/icon-module-title.png') no-repeat center top;
+    background-size: auto 100%;
+    color: #008CCE;
+    font-size: 36px;
+}
+
+.common-rohm-module .module-title-container .module-title p {
+    margin: 0;
+}
+
+.rohm-module2 {
+    background: url('./assets/bg-module2.png') no-repeat center bottom;
+    background-size: 100% auto;
+    padding-bottom: 87px;
+}
+
+.rohm-module2 .contest-introduction-container {
+    margin: 21px 0 31px;
+    text-align: center;
+}
+
+.rohm-module2 .contest-introduction-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.rohm-module2 .contest-tendencies-container {
+    margin-top: 24px;
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rohm-module2 .contest-tendencies-container .single-trendency-container {
+    width: 295px;
+    margin-right: 29px;
+    padding: 42px 97px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 1.6px #e5e5e5;
+    box-shadow: 0px 2px 24px 0px #e6e6e6;
+}
+
+.rohm-module2 .contest-tendencies-container .single-trendency-container:last-child {
+    margin-right: 0;
+}
+
+.rohm-module2 .contest-tendencies-container .single-trendency-container img {
+    display: inline-block;
+}
+
+.rohm-module2 .contest-tendencies-container .single-trendency-container h3 {
+    width: auto;
+    display: inline-block;
+    margin-top: 26px;
+    margin-bottom: 0;
+}
+
+.rohm-module3 {
+    background: url('./assets/bg-module3.png') no-repeat center top;
+    margin-top: -32px;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+
+.rohm-module3 .module-title-container {
+    margin-top: 15px;
+}
+
+.rohm-module3 .module-title-container p {
+    display: inline-block;
+    margin: 0;
+}
+
+.rohm-module3 .contestant-group {
+    margin-top: 15px;
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.rohm-module3 .development-platform-image-container {
+    margin-top: 3px;
+    text-align: center;
+}
+
+.rohm-module3 .development-platform-link {
+    width: 304px;
+    margin: 28px auto 0;
+}
+
+.common-rohm-module .common-content-link {
+    height: 44px;
+    text-align: center;
+    border-radius: 32px;
+    background-color: #008CCE;
+}
+
+.common-rohm-module .common-content-link:hover {
+    background-color: #0083C0;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.common-rohm-module .common-content-link a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 44px;
+}
+
+.rohm-module3 .development-platform-link img {
+    transform: rotate(90deg);
+}
+
+.rohm-module4 .rohm-module4-1 {
+    padding-top: 34px;
+    background: url('./assets/bg-module4-1.png') no-repeat center top;
+    text-align: center;
+}
+
+.rohm-module4 .schedule-module {
+    margin-top: 35px;
+    padding-bottom: 76px;
+    text-align: center;
+}
+
+.rohm-module4 .rohm-module4-2 {
+    padding-bottom: 111px;
+    background: url('./assets/bg-module4-2.png') no-repeat center bottom;
+    text-align: center;
+}
+
+.rohm-module4-2 .prizes-container {
+    margin: 27px auto 61px;
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.rohm-module4-2 .single-prize-outer-container {
+    width: 292px;
+    margin-bottom: 20px;
+    padding: 0 14.5px;
+}
+.rohm-module4-2 .single-prize-container {
+    width: 263px;
+    height: 411px;
+    padding-top: 68px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 24px 0px rgba(230, 230, 230, 1);
+}
+
+.rohm-module4-2 .single-prize-container:last-child {
+    margin-right: 0;
+}
+
+.rohm-module4-2 .single-prize-container .prize-content {
+    margin-top: 7px;
+    font-size: 42px;
+    color: #333333;
+}
+
+.rohm-module4-2 .single-prize-container .prize-amount {
+    font-size: 18px;
+    color: #333333;
+}
+
+.rohm-module4-2 .judge-standards-container {
+    margin: 28px auto;
+    width: 1140px;
+    text-align: center;
+}
+
+.rohm-module4-2 .single-standard-container {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.58);
+    box-shadow: 0px 2px 24px 0px rgba(230, 230, 230, 1);
+}
+
+.rohm-module4-2 .main-standard-container {
+    width: 555px;
+    display: inline-block;
+    text-align: left;
+}
+
+.rohm-module4-2 .main-standard-container:first-child {
+    float: left;
+    margin-right: 30px;
+}
+
+.rohm-module4-2 .main-standard {
+    padding: 58px 77px 57px 32px;
+}
+
+.rohm-module4-2 .main-standard .main-standard-icon {
+    padding: 31px 0;
+    margin-bottom: 0;
+    float: left;
+}
+
+.rohm-module4-2 .main-standard .main-standard-content {
+    width: 347px;
+    display: inline-block;
+    margin-left: 21px;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 14px;
+    color: #333333;
+}
+
+.rohm-module4-2 .sub-standard {
+    padding: 30px 41px;
+}
+
+.rohm-module4-2 .sub-standard:last-child {
+    margin-top: 15px;
+}
+
+.rohm-module4-2 .sub-standard .sub-standard-icon {
+    float: left;
+    margin: 0;
+}
+
+.rohm-module4-2 .sub-standard .sub-standard-content {
+    max-width: 336px;
+    display: inline-block;
+    margin: 0 0 0 30px;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.rohm-module4 .more-flow-link {
+    width: 344px;
+    margin: 35px auto 0;
+    background-image: url('./assets/icon-flow.png');
+    background-repeat: no-repeat;
+    background-position-x: 290px;
+    background-position-y: center;
+}
+
+.rohm-module5 {
+    padding-top: 42px;
+    position: relative;
+    background: -webkit-linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
+    background: -o-linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
+    background: -moz-linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
+    background: linear-gradient(rgba(229, 231, 232, 0.76), rgba(251, 251, 251, 1));
+}
+
+.rohm-module5 .module5-bg-image-left {
+    position: absolute;
+    left: 118px;
+    top: 0;
+}
+
+.rohm-module5 .module5-bg-image-right {
+    position: absolute;
+    right: 118px;
+    top: 0;
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+
+.rohm-module5 .reviewer-slider-container {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.rohm-module5 .reviewer-slider-container .bx-wrapper {
+    margin: 24px auto 0;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+.rohm-module5 .reviewer-slider-container .bx-wrapper .bx-viewport {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.rohm-module5 .reviewer-slider-container .reviewer-slider li {
+    padding: 36px 37px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(229, 229, 229, 1);
+}
+
+.rohm-module5 .reviewer-slider-container .reviewer-slider li .reviewer-name {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    text-align: center;
+}
+
+.rohm-module5 .reviewer-slider-container .reviewer-slider li .reviewer-position {
+    margin-top: 4px;
+    color: rgba(51, 51, 51, 1);
+    font-size: 18px;
+    text-align: center;
+}
+
+.bx-wrapper a.bx-prev {
+    left: -50px;
+}
+
+.bx-wrapper a.bx-next {
+    right: -50px;
+}
+
+.rohm-module6 {
+    background-color: #ffffff;
+}
+
+.rohm-module6 .contest-hints-container {
+    margin-top: 29px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.rohm-module7 {
+    padding: 32px 0 61px;
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(251, 251, 251, 1), rgba(229, 231, 232, 0.76));
+    background: -o-linear-gradient(rgba(251, 251, 251, 1), rgba(229, 231, 232, 0.76));
+    background: -moz-linear-gradient(rgba(251, 251, 251, 1), rgba(229, 231, 232, 0.76));
+    background: linear-gradient(rgba(251, 251, 251, 1), rgba(229, 231, 232, 0.76));
+}
+
+.rohm-module7 .main-host-logo-container {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.common-footer {
+    width: 1140px;
+    margin: auto;
+    padding: 52px 0 55px;
+}
+.common-footer .qrcode-group-container {
+    display: inline-block;
+    width: auto;
+}
+.common-footer .common-qrcode-container {
+    display: inline-block;
+    text-align: center;
+}
+
+.common-footer .common-qrcode-container .qrcode-container {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.common-footer .rohm-wechat-qrcode {
+    /* float: left; */
+    /* margin-left: 392px; */
+}
+
+.common-footer .rohm-microblog-qrcode {
+    margin-left: 59px;
+    padding-top: 2px;
+}
+
+.common-footer .rohm-contest-contact {
+    float: right;
+}
+
+.common-footer .rohm-contest-contact h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.common-footer .rohm-contest-contact p {
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.common-footer .rohm-contest-contact p img {
+    margin-top: -6px;
+    margin-left: 8px;
+}
+.rohm-hint-modal .modal-dialog {
+    width: 1140px;
+    margin-top: 40vh;
+}
+.rohm-hint-modal .modal-content .close {
+    position: absolute;
+    right: -30px;
+    color: #fff;
+    opacity: 0.8;
+}
+.rohm-hint-modal .modal-dialog .hint-modal-body {
+    padding: 37px 16px 39px;
+}
+.rohm-hint-modal .modal-dialog .hint-modal-body .hint-title {
+    color: rgba(0, 140, 206, 1);
+    font-size: 14px;
+}
+.rohm-hint-modal .modal-dialog .hint-modal-body .hint-content {
+    display: inline-block;
+    width: auto;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 1);
+    font-size: 14px;
+    text-align: left;
+}
+.rohm-hint-modal .modal-dialog .hint-modal-body .hint-content-left {
+    width: 555px;
+    margin-right: 14px;
+}
+.rohm-module7 .support-host-logo-container {
+    padding-top: 21px;
+    text-align: center;
+}
+.rohm-module7 .support-host-logo-container img {
+    width: 216px;
+}
+.rohm-module7 .support-host-logo-container img.eefocus-logo {
+    margin-right: 91px;
+}
+.common-side-bar {
+    display: inline-block;
+    position: fixed;
+    top: 60vh;
+    right: 10vw;
+}
+.common-side-bar-btn {
+    width: 45px;
+    height: 45px;
+    padding: 11px;
+    text-align: right;
+    background-color: #666666;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.common-side-bar-btn img {
+    width: 23px;
+}
+.sign-up-btn-hover, .consult-btn-hover {
+    width: 120px;
+    color: #ffffff;
+    background-color: #008CCE;
+    overflow: hidden;
+    display: none;
+}
+.sign-up-btn-hover a, .sign-up-btn-hover a:hover, .sign-up-btn-hover a:visited, .sign-up-btn-hover a:focus,
+.consult-btn-hover a, .consult-btn-hover a:hover, .consult-btn-hover a:visited, .consult-btn-hover a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+.sign-up-btn-hover img, .consult-btn-hover img {
+    margin-left: 12px;
+}
+.global-sign-up-btn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.sign-up-btn-hover {
+    position: absolute;
+    top: 0px;
+    left: -75px;
+    display: none;
+}
+.global-consult-btn {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+.consult-btn-hover {
+    position: absolute;
+    top: 60px;
+    left: -75px;
+    display: none;
+}
+.global-scroll-to-top-btn {
+    position: absolute;
+    top: 183px;
+    left: 0px;
+    display: none;
+}
+.global-scroll-to-top-btn:hover {
+    background-color: #008CCE;
+}
+.rohm-module5 .reviewer-sliders-container .reviewer-slider li {
+    display: inline-block;
+}
+.rohm-module5 .reviewer-sliders-container .reviewer-slider img {
+    width: 257px;
+}
+@media screen and (max-width: 1281px) {
+    .common-header .navbar .container-fluid .navbar-collapse {
+        padding-left: 0;
+    }
+    .common-header .navbar-brand.rohm-header-logo {
+        padding-right: 0;
+        padding-left: 8px;
+    }
+    .common-header .navbar-nav li>a {
+        padding: 20px 10px;
+    }
+    .common-header li.sign-up-btn>a {
+        padding: 11px 0;
+    }
+    .common-header .sign-up-btn {
+        margin-left: 70px;
+    }
+    .banner-container .banner-title {
+        padding-top: 20px;
+    }
+    .banner-container .banner-title img {
+        width: 94%;
+        margin: auto;
+    }
+    .banner-container .banner-signup-btn a {
+        margin: 0 0 20px;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container {
+        margin-right: 45px;
+        margin-bottom: 20px;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container:nth-child(4n+3) {
+        margin-right: 0;
+    }
+    .rohm-module4 .schedule-module img {
+        display: inline-block;
+        width: 94%;
+        margin: auto;
+    }
+    .rohm-module4-2 .judge-standards-container {
+        width: 100%;
+        text-align: center;
+    }
+    .rohm-module4-2 .main-standard-container:first-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .rohm-module4-2 .main-standard-container {
+        text-align: center;
+    }
+    .rohm-module4-2 .main-standard {
+        width: 555px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .common-footer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 990px) {
+    .rohm-module2 .contest-tendencies-container .single-trendency-container {
+        margin-left: 45px;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container:nth-child(4n+2),
+    .rohm-module2 .contest-tendencies-container .single-trendency-container:nth-child(4n+4) {
+        margin-right: 0;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container:nth-child(4n+3) {
+        margin-right: 45px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .common-header .navbar .container-fluid {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .common-header .navbar .container-fluid .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .common-header .navbar-nav li>a {
+        padding: 20px 6px;
+    }
+    .common-header li.sign-up-btn>a {
+        padding: 11px 0;
+    }
+    .common-header .sign-up-btn {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mobile-show {
+        display: inline-block;
+    }
+    .common-header .navbar .container-fluid {
+        display: block;
+        width: 100%;
+    }
+    .common-header .navbar .container-fluid .navbar-collapse {
+        float: none;
+        border-top: none;
+        width: 100%;
+        margin: auto;
+    }
+    .common-header .navbar-collapse .navbar-nav {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        display: inline-block;
+    }
+    .common-header .navbar-nav li,
+    .common-header .navbar-nav li>a {
+        width: 100%;
+    }
+    .common-header .navbar-nav li>a {
+        text-align: left;
+    }
+    .common-header li.sign-up-btn {
+        display: none;
+    }
+    .banner-container .banner-title .main-title {
+        font-size: 48px;
+    }
+    .banner-container .banner-signup-btn a {
+        padding: 8px 48px;
+        font-size: 24px;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container:nth-child(4n+2),
+    .rohm-module2 .contest-tendencies-container .single-trendency-container:nth-child(4n+4) {
+        margin-right: 45px;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .pc-show {
+        display: none;
+    }
+    .rohm-contest-contact .pc-show {
+        display: none;
+    }
+    div.common-rohm-module {
+        width: 100vw;
+        overflow: hidden;
+    }
+    .common-header .navbar-brand.rohm-header-logo {
+        width: 90px;
+        height: 50px;
+        margin-top: 5px;
+    }
+    .rohm-module2 .contest-introduction-container {
+        text-align: left;
+    }
+    .rohm-module4-2 .main-standard-container {
+        width: 100%;
+        padding: 12px;
+    }
+    .rohm-module4-2 .main-standard-container:first-child {
+        margin-bottom: 0;
+    }
+    .rohm-module4-2 .main-standard {
+        width: 100%;
+        margin: auto;
+        padding: 18px;
+    }
+    .rohm-module4-2 .main-standard .main-standard-icon {
+        padding: 0 0 10px;
+    }
+    .rohm-module4-2 .sub-standard {
+        padding: 18px;
+    }
+    .rohm-module4-2 .sub-standard:last-child {
+        margin-top: 24px;
+    }
+    .rohm-module4-2 .main-standard .main-standard-icon,
+    .rohm-module4-2 .sub-standard .sub-standard-icon {
+        float: none;
+        padding: 0 0 10px;
+        text-align: center;
+    }
+    .rohm-module4-2 .main-standard .main-standard-content {
+        width: auto;
+        margin-left: 0;
+    }
+    .rohm-module4-2 .sub-standard .sub-standard-content {
+        max-width: none;
+        width: 100%;
+        margin-left: 0;
+    }
+    .rohm-module5 .module5-bg-image-left {
+        left: 0;
+    }
+    .rohm-module5 .module5-bg-image-right {
+        right: 0;
+    }
+    .rohm-module5 .module5-bg-image-left img,
+    .rohm-module5 .module5-bg-image-right img {
+        width: 30vw;
+    }
+    .rohm-module6 .contest-hints-container {
+        padding: 0 12px;
+        text-align: left;
+    }
+    .support-host-logo-container a {
+        display: block;
+        width: 100%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .rohm-module7 .support-host-logo-container img.eefocus-logo {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .banner-container .banner-title .main-title {
+        margin: 0;
+        font-size: 32px;
+        line-height: 70px;
+    }
+    .banner-container .banner-signup-btn a {
+        padding: 6px 40px;
+        font-size: 20px;
+    }
+    .common-rohm-module .module-title-container .module-title {
+        font-size: 24px;
+    }
+    .common-rohm-module {
+        padding: 0 12px;
+    }
+    .common-rohm-module.rohm-module1 {
+        padding: 0 0;
+    }
+    .common-rohm-module.rohm-module2 {
+        padding-bottom: 40px;
+    }
+    .rohm-module2 .contest-tendencies-container .single-trendency-container {
+        width: 267px;
+        margin-right: 45px;
+        margin-bottom: 16px;
+    }
+    .rohm-module3 {
+        margin-top: 0;
+        padding-top: 57px;
+        padding-bottom: 57px;
+    }
+    .rohm-module3 .development-platform-image-container img {
+        width: 94%;
+        margin: auto;
+    }
+    .rohm-module3 .development-platform-link {
+        width: auto;
+        padding: 0 60px;
+    }
+    .common-rohm-module .common-content-link a {
+        font-size: 20px;
+    }
+    .rohm-module4 .schedule-module img {
+        width: 94%;
+        margin: auto;
+    }
+    .rohm-module4 .more-flow-link {
+        width: 100%;
+        background-position-x: calc(50% + 120px);
+    }
+    .rohm-module5 .reviewer-slider-container .reviewer-slider li {
+        padding: 10px 0;
+    }
+    .rohm-module5 .reviewer-sliders-container .reviewer-slider img {
+        width: 220px;
+        margin: auto;
+    }
+    .rohm-module7 .support-host-logo-container {
+        padding-bottom: 32px;
+    }
+    .common-footer .qrcode-group-container {
+        margin-left: 12px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .common-footer .rohm-microblog-qrcode {
+        margin-left: 80px;
+    }
+    .common-footer .rohm-contest-contact {
+        float: none;
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .common-side-bar {
+        left: calc(100vw - 48px);
+        right: auto;
+    }
+}

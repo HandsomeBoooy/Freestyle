@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rohm</title>
+    <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./apply_form.css">
+</head>
+
+<body>
+    <div class="common-header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand rohm-header-logo" href="#"></a>
+                    <a class="navbar-brand rohm-header-apply mobile-show sign-up-header-btn" href="./apply_form.html" target="_blank">立即报名</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./index.html" target="_blank" rel="noopener noreferrer">大赛首页</a></li>
+                        <li><a href="./development_platform.html" target="_blank" rel="noopener noreferrer">开发平台</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">大赛论坛</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">项目提交</a></li>
+                        <li><a href="./vote.html" target="_blank" rel="noopener noreferrer">项目投票</a></li>
+                        <li class="sign-up-btn"><a href="./apply_form.html" target="_blank" rel="noopener noreferrer">立即报名</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="apply-banner-container">
+        <img src="./assets/banner-apply.png" alt="">
+        <p class="apply-banner-title">
+            申请条件：申请者必须是与非网会员，如不是，请先&nbsp;<a href="http://rohm.eefocus.com/module/forum/member.php?mod=register"
+                target="_blank">注册</a><br>
+            操作步骤：按下面步骤填写报名信息</p>
+    </div>
+
+    <div class="apply-form-container">
+        <div class="apply-form-inner-container">
+            <div class="apply-form-title">
+                <p>个人信息</p>
+            </div>
+            <div class="form-group">
+                <label title="姓名">姓名<span class="necessary-mark">*</span></label>
+                <input type="text" class="form-control" id="nameInput" placeholder="" data-necessary="true">
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group">
+                <label title="手机号">手机号<span class="necessary-mark">*</span></label>
+                <input type="text" class="form-control" id="phoneInput" placeholder="" data-necessary="true">
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group">
+                <label title="邮箱">邮箱<span class="necessary-mark">*</span></label>
+                <input type="text" class="form-control" id="emailInput" placeholder="" data-necessary="true">
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group">
+                <label title="公司/学校">公司/学校<span class="necessary-mark">*</span></label>
+                <input type="text" class="form-control" id="companyInput" placeholder="" data-necessary="true">
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group">
+                <label title="联系地址">联系地址<span class="necessary-mark">*</span></label>
+                <input type="text" class="form-control" id="addressInput" placeholder="" data-necessary="true">
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <hr class="apply-form-divider">
+            <div class="form-group pcb-options-container">
+                <label>选择传感器评估板（请选择以下至少一种产品）（多选）<span class="necessary-mark">*</span></label>
+                <div class="pcb-options">
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="KX224-1053">
+                        <span>加速度传感KX224-1053</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="BM1383AGLV">
+                        <span>气压传感BM1383AGLV</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="BM1422AGMV">
+                        <span>地磁传感器BM1422AGMV</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="RPR-0521RS">
+                        <span>照度接近传感RPR-0521RS</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="BH1749NUC">
+                        <span>颜色传感器BH1749NUC</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="BD7411G">
+                        <span>霍尔传感器BD7411G</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="BD1020HFV">
+                        <span>温度传感器BD1020HFV</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="BH1790GLC">
+                        <span>脉搏传感器BH1790GLC</span>
+                    </div>
+                    <div class="single-option-container">
+                        <input type="checkbox" name="pcb" value="pcb-Arduino">
+                        <span>支持Arduino的扩展板（无传感器评估板）</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="apply-form-divider">
+            <div class="apply-form-title">
+                <p>参赛项目信息</p>
+            </div>
+            <div class="form-group">
+                <label title="项目名称">项目名称<span class="necessary-mark">*</span></label>
+                <input type="email" class="form-control" id="projectNameInput" placeholder="" data-necessary="true">
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group">
+                <label title="项目概述">项目概述<span class="necessary-mark">*</span></label>
+                <textarea class="form-control large-input" id="projectDescriptionInput" placeholder=""
+                    data-necessary="true"></textarea>
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group project-function-description">
+                <label title="功能描述">功能描述<span class="necessary-mark">*</span></label>
+                <textarea class="form-control large-input" id="projectFunctionInput" placeholder=""
+                    data-necessary="true"></textarea>
+                <p class="warning-text">&nbsp;</p>
+            </div>
+            <div class="form-group file-upload-container">
+                <label title="项目系统框架图">项目系统框架图（请上传压缩文件.zip .rar）</label>
+                <input type="file" class="form-control file-upload" id="fileUploadInput" placeholder="">
+                <div class="file-upload-icon">
+                    <img src="./assets/icon-upload.png" alt="">
+                </div>
+                <p class="uploaded-file-name">&nbsp;</p>
+            </div>
+            <div class="form-group apply-submit-btn-container">
+                <p class="warning-text" id="allInputCheckedWarning">请确保所有必填项内容已经填写</p>
+                <button class="apply-submit-btn">提交</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-footer">
+        <div class="qrcode-group-container">
+            <div class="common-qrcode-container rohm-wechat-qrcode">
+                <p class="qrcode-container"><img src="./assets/qrcode-wechat.png" alt=""></p>
+                <p>罗姆微信公众号</p>
+            </div>
+            <div class="common-qrcode-container rohm-microblog-qrcode">
+                <p class="qrcode-container"><img src="./assets/qrcode-microblog.png" alt=""></p>
+                <p>罗姆新浪微博</p>
+            </div>
+        </div>
+        <div class="rohm-contest-contact">
+            <h3>大赛联系方式</h3>
+            <p>联系人：李申<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1170894008"><img
+                        src="./assets/iconq-qq.png" alt=""></a></p>
+            <p>邮箱：shen.li@supplyframe.cn</p>
+            <p>电话：0512-80981663—8049</p>
+        </div>
+    </div>
+
+    <div class="common-side-bar">
+        <div class="common-side-bar-btn global-sign-up-btn">
+            <a href="//rohm.eefocus.com/activity/rohm2019/apply"><img src="./assets/icon-edit.png" alt=""></a>
+        </div>
+        <div class="common-side-bar-btn sign-up-btn-hover">
+            <a href="//rohm.eefocus.com/activity/rohm2019/apply">立即报名<img src="./assets/icon-edit.png" alt=""></a>
+        </div>
+        <div class="common-side-bar-btn global-consult-btn">
+            <img src="./assets/icon-consult.png" alt="">
+        </div>
+        <div class="common-side-bar-btn consult-btn-hover">
+            问题求助<img src="./assets/icon-consult.png" alt="">
+        </div>
+        <div class="common-side-bar-btn global-scroll-to-top-btn">
+            <img src="./assets/icon-arrow.png" alt="">
+        </div>
+    </div>
+
+    <div class="modal fade rohm-hint-modal" id="loginConfirmModal" tabindex="-1" role="dialog"
+        aria-labelledby="loginConfirmModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-header">
+                <h4 class="modal-title">提示</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-content">
+                <div class="hint-modal-body">
+                    <p class="hint-modal-content" id="hintModalContent">
+                        <p id="loginModalContent">请先登录与非账号！</p>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmToLogin">确认</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    window.onload = function () {
+        getPcbList();
+        checkPagePosition()
+        window.onscroll = function () {
+            checkPagePosition()
+        };
+        $('.file-upload-icon').click(function ($ev) {
+            $('#fileUploadInput').click();
+        });
+
+        $('#fileUploadInput').change(function ($ev) {
+            var files = $('#fileUploadInput').get(0).files;
+            if (files.length > 0) {
+                var fileNameArr = files[0].name.split('.');
+                var fileType = fileNameArr[fileNameArr.length - 1];
+                console.log(fileType);
+                if (fileType === 'zip' || fileType === "rar") {
+                    $('.uploaded-file-name').html(files[0].name);
+                } else {
+                    files = [];
+                    // $('#confirmToLogin').click(function () {
+                    //     $('#loginConfirmModal').modal('hide');
+                    // });
+                    // $('#loginModalContent').html('请上传zip或rar格式的文件');
+                    // $('#loginConfirmModal').modal('show');
+                }
+                console.log(files)
+            }
+        });
+
+        $('.apply-form-inner-container .form-control[data-necessary=true]').focus(function ($ev) {
+
+        });
+
+        $('.global-scroll-to-top-btn').click(function ($ev) {
+            window.scrollTo(0, 0);
+        });
+
+        $('.apply-submit-btn').click(function ($ev) {
+            if (validateInputValue()) {
+                $('#allInputCheckedWarning').css({
+                    visibility: 'hidden'
+                });
+                var data = {
+                    name: $('#nameInput').val(),
+                    phone: $('#phoneInput').val(),
+                    email: $('#emailInput').val(),
+                    company: $('#companyInput').val(),
+                    address: $('#addressInput').val(),
+                    sensor_board: getPcbList(),
+                    prj_name: $('#projectNameInput').val(),
+                    pri_summary: $('#projectDescriptionInput').val(),
+                    pri_desc: $('#projectFunctionInput').val(),
+                    prj_image: $('#fileUploadInput').get(0).files.length ? $('#fileUploadInput').get(0)
+                        .files[0] : '',
+                }
+                var _data = transformObjectToFormdata();
+                $.ajax({
+                    url: 'https://rohm.eefocus.com/activity/rohm2019/save',
+                    type: 'POST',
+                    async: true,
+                    data: _data,
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            } else {
+                $('#allInputCheckedWarning').css({
+                    visibility: 'visible'
+                });
+            }
+        });
+    }
+
+    function emailMatch(email) {
+        var expression = '^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$';
+        var expObj = new RegExp(expression);
+        return expObj.test(email);
+    }
+
+    function mobileMatch(mobile) {
+        var expression = '^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$';
+        var expObj = new RegExp(expression);
+        return expObj.test(mobile);
+    }
+
+    function validateInputValue() {
+        var allInputValueValidFlag = true;
+        var pcbList = getPcbList(),
+            projectImage = $('#fileUploadInput').get(0).files;
+        var _data = {
+            name: $('#nameInput').val(),
+            phone: $('#phoneInput').val(),
+            email: $('#emailInput').val(),
+            company: $('#companyInput').val(),
+            address: $('#addressInput').val(),
+            prj_name: $('#projectNameInput').val(),
+            pri_summary: $('#projectDescriptionInput').val(),
+            pri_desc: $('#projectFunctionInput').val(),
+        }
+        for (var key in _data) {
+            console.log(_data[key]);
+            if (!_data[key]) {
+                allInputValueValidFlag = false;
+            }
+        }
+        console.log(allInputValueValidFlag);
+        if (!allInputValueValidFlag) {
+            checkAllInputFilled();
+        }
+
+        if (!pcbList.length) {
+            allInputValueValidFlag = false;
+            $('.pcb-options-container .warning-text').html('请选择至少一个选项');
+        } else {
+            $('.pcb-options-container .warning-text').html('&nbsp;');
+        }
+
+        if (mobileMatch(_data.phone)) {
+            $('#phoneInput').parent('.form-group').children('.warning-text').html('&nbsp;');
+        } else {
+            allInputValueValidFlag = mobileMatch(_data.phone);
+            $('#phoneInput').parent('.form-group').children('.warning-text').html('请输入正确格式的手机号');
+        }
+
+        if (emailMatch(_data.email)) {
+            $('#emailInput').parent('.form-group').children('.warning-text').html('&nbsp;');
+        } else {
+            allInputValueValidFlag = emailMatch(_data.email);
+            $('#emailInput').parent('.form-group').children('.warning-text').html('请输入正确格式的邮箱');
+        }
+        return allInputValueValidFlag;
+    }
+
+    function getPcbList() {
+        var checkboxes = $(
+            '.apply-form-inner-container .pcb-options-container .single-option-container input[type=checkbox]');
+        var pcbList = [];
+        if (checkboxes.length > 0) {
+            $.each(checkboxes, function (index, checkbox) {
+                if (checkbox.checked === true) {
+                    pcbList.push(checkbox.value);
+                }
+            });
+        }
+        return pcbList;
+    }
+
+    function checkAllInputFilled() {
+        var allInputElements = $('.apply-form-inner-container .form-control[data-necessary=true]');
+        $.each(allInputElements, function (index, input) {
+            var inputTitle = $(input).parent('.form-group').children('label').attr('title');
+            var warningContainer = $(input).parent('.form-group').children('.warning-text');
+            if ((input.nodeName.toLowerCase() == 'input' && $(input).val() === '') || (input.nodeName
+                    .toLowerCase() == 'textarea' && $(input).html() === '')) {
+                $('#allInputCheckedWarning').css({
+                    visibility: 'visible'
+                });
+            }
+        });
+    }
+
+    function checkPagePosition() {
+        var targetScrollY = window.innerHeight;
+        if (window.scrollY >= targetScrollY) {
+            $('.global-scroll-to-top-btn').fadeIn();
+        } else {
+            $('.global-scroll-to-top-btn').fadeOut();
+        }
+    }
+
+    function transformObjectToFormdata(obj) {
+        var res_FormData = new FormData();
+        for (var key in obj) {
+            res_FormData.append(key, obj[key]);
+        }
+        return res_FormData;
+    }
+</script>
+
+</html>

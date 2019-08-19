@@ -1,0 +1,13 @@
+.resume-block-container {
+    width: 100%;
+    padding-left: 84px;
+}
+
+.resume-block-body {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+    border-left: 3px solid #cccccc;
+    box-sizing: border-box;
+}

@@ -6,23 +6,29 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "acorn": "^6.2.0",
+    "ajv": "^6.10.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
-    "css-loader": "^0.28.7",
+    "css-loader": "^2.1.1",
     "debug": "~2.6.9",
-    "express": "~4.15.5",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
     "express-favicon": "^2.0.0",
-    "file-loader": "^1.1.5",
+    "file-loader": "^1.1.11",
     "html-loader": "^0.5.1",
     "jade": "~1.11.0",
+    "jquery": "^3.4.1",
     "jsx-loader": "^0.13.2",
-    "morgan": "~1.9.0",
+    "morgan": "^1.9.1",
     "serve-favicon": "~2.4.5",
+    "typescript": "^3.3.3333",
+    "uglify-js": "^2.8.29",
     "url-loader": "^0.6.2"
   },
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^4.33.0"
   }
 }

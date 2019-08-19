@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Worker</title>
+    <script>
+        window.onload = () => {
+            let workerUsable = checkWorker();
+            if (workerUsable) {
+                workerOperations();
+            }
+        }
+
+        function checkWorker() {
+            return (typeof Worker !== "undefined");
+        }
+
+        function workerOperations() {
+            var worker = new Worker('./web_worker_test_script.js');
+            console.log('Worker created');
+            worker.postMessage('Hello worker No.1 ----- From Main.');
+            worker.onmessage = (e) => {
+                console.log(e.data);
+                // console.log();
+            }
+            // worker.postMessage('Wait for commands, Over. ----- From Main.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

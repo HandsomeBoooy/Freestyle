@@ -1,2 +1,9 @@
+
+.idea/workspace.xml
 siteservice/node_modules
 node_modules
+src/py/__pyche__
+.vscode
+.DS_Store
+lib/.DS_Store
+src/*/.DS_Store
