@@ -1,19 +1,30 @@
 class Sorting {
     constructor() {}
 
-    insertionSort(arr) {
-        if (arr && arr.length) {
-            for (let i = 1; i < arr.length; i++) {
-                if (arr[i - 1] > arr[i]) {
-                    let tempValue = arr[i],
-                        tempIndex = i;
-                    while (tempIndex > 0 && arr[i - 1] > tempValue) {
-                        arr[tempIndex] = arr[tempIndex - 1];
-                        tempIndex--;
-                    }
-                    arr[tempIndex] = tempValue;
+    insertionSorting(arr) {
+        var len = arr.length;
+        var preIndex, current;
+        for (var i = 1; i < len; i++) {
+            preIndex = i - 1;
+            current = arr[i];
+            while (preIndex >= 0 && arr[preIndex] > current) {
+                arr[preIndex + 1] = arr[preIndex];
+                preIndex--;
+            }
+            arr[preIndex + 1] = current;
+        }
+        return arr;
+    }
+    bubbleSorting(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    arr[j] = arr[j] - arr[i];
+                    arr[i] += arr[j];
+                    arr[j] = arr[i] - arr[j];
                 }
             }
         }
+        return arr;
     }
 }
