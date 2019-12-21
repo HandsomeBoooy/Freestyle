@@ -1,0 +1,1044 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>亚德诺半导体 EVAL-ADXL362评估板</title>
+    <meta name="description" content="Analog Devices EVAL-ADXL362评估板用于演示超低功耗ADXL362 3轴MEMS加速计的特性与功能。EVAL-ADXL362评估板包括众多电路板。EVAL-ADXL362Z-DB是一款超低功耗开发板。"/>
+    <meta name="keywords" content="亚德诺半导体 EVAL-ADXL362评估板"/>
+    <meta name="author" content="ZM, zhaomi@eefocus.com">
+    <!-- css for head -->
+    <link href="https://www.eefocus.com/public/vendor/bootstrap/css/bootstrap.min.css?1532672920" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://www.eefocus.com/asset/theme-eefocus/css/footer.css?1533014894" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.eefocus.com/asset/module-activity/css/topernew.css?v=2018-1533192212">
+    <link rel="stylesheet" type="text/css" href="https://www.eefocus.com/asset/theme-eefocus/css/header.css?v=2018-1533192212">
+    <link rel="stylesheet" type="text/css" href="https://www.eefocus.com/asset/theme-eefocus/css/mobilenew.css?1533798606" media="screen and (min-width: 320px) and (max-width:765px)">
+
+
+
+    <script type="text/javascript" src="https://static.semidata.info/www.eefocus.com/vendor/jquery/jquery.min.js?1399604599"></script>
+
+    <style>
+        html{ 
+      background-color: #fff;
+      -webkit-user-select:none;
+      -webkit-touch-callout: none; 
+      -webkit-text-size-adjust: none;
+    }
+    html,body{
+      position: relative;
+      background: #f7f7f7;
+    }
+    body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{
+      text-indent: 0;
+    } 
+    a,button,input,textarea,select{ 
+      background: none;
+      -webkit-tap-highlight-color:rgb(255,0,0);
+      outline:none;
+      -webkit-appearance:none; 
+    } 
+    ul, ol, li {
+        list-style-type: none;
+        vertical-align: 0;
+    }
+    
+    a{ text-decoration:none; color: #535353;outline-style: none;} 
+    a:hover, a:focus {text-decoration: none;}
+
+    a,input{-webkit-appearance: none; -webkit-tap-highlight-color:rgb(0,0,0);}
+    table{ border-collapse:collapse;}
+    textarea{resize:none;overflow:auto;}
+    a, img {-webkit-touch-callout: none; }
+    img{ border:0;-ms-interpolation-mode: bicubic; vertical-align: top;}
+
+    a, span,p,
+    ul, dl, dd, dt, ol, li, 
+    h1, h2, h3, h4, h5, h6, 
+    textarea,label,form, select, input, button,
+    fieldset, table, td{
+      font-family: PingFangSC-light,"Microsoft yahei",arial,sans-serif;
+      font-size: 12px;
+      font-weight: normal; 
+    }
+
+    .ellipsis{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+    .clear{
+      clear: both;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .dis_top {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .dis_mid {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .textright {
+        text-align: right;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+    .float_l{
+        float:left;
+    }
+    .float_r{
+        float:right;
+    }
+    h1{
+      left: 150px;
+      top: 157px;
+      width: 652px;
+      height: 72px;
+      line-height: 72px;
+      color: #FFF;
+      font-size: 60px;
+    }
+    h3{
+      left: 150px;
+      top: 241px;
+      width: 740px;
+      height: 48px;
+      line-height: 28px;
+      color: #FFF;
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 100;
+    }
+    .marT40{
+      margin-top: 40px;
+    }
+    .paddingB40{
+      padding-bottom: 40px;
+    }
+    .padding-t10{
+        padding-top: 10px;
+    }
+    .bg02{
+        background: #F6F8F9 100%;
+    }
+    body{
+       background: #fff; 
+    }
+
+    
+
+    .main{
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+        }
+        .banner{
+        background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/3-%E8%AF%84%E4%BC%B0%E6%9D%BF1920_400.jpg') center 0 no-repeat;
+        min-width:1140px;
+        height: 416px;
+        background-color: #2d1aa7;
+        }
+        .titlepart{
+            overflow: hidden;
+            line-height: 54px;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            text-align: center;
+            width: 420px;
+            height: 54px;
+            margin: 38px auto 25px;
+        }
+        .titlep01{
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title01.png') center center no-repeat;
+        }
+        .titlep02{
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title02.png')  center center no-repeat;
+        }
+        .titlep03{
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title03.png')  center center no-repeat;
+        }
+        .titlep04{
+            background: url('//upload.semidata.info/www.eefocus.com/ckeditor/images/title04.png')  center center no-repeat;
+        }
+        .titlep05{
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title05.png') center center no-repeat;
+        }
+        .titlep06{
+            background: url('//upload.semidata.info/www.eefocus.com/ckeditor/images/title06.png') center center no-repeat;
+        }
+        .titlep07{
+            width: 497px;
+            background: url('//upload.semidata.info/www.eefocus.com/ckeditor/images/title07.png') center center no-repeat;
+        }
+        h4{
+            line-height: 20px;
+            color: rgb(34, 34, 34);
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 10px;
+            margin-top:17px;
+        }
+        h5{
+            line-height: 30px;
+            color: rgb(34, 34, 34);
+            font-size: 16px;
+            text-align: left;
+        }
+        p{
+            line-height: 20px;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        p.bk{
+            color: #999;
+        }
+        p.cont{
+            color: #666;
+        }
+        .textindex1{
+            text-indent: 1em;
+        }
+
+        .cont-h5 a h5:hover{
+            color: #0CA6F0 ;
+        }
+
+        .margincenter,.downloadpart,.bottom-btn,.boardpart,
+        .table-part,.cont-h5,.floatpart{
+            margin: 0 auto;
+        }
+
+
+    /**/
+    .boardpart{
+        width: 1100px;
+        height: 262px;
+        margin-bottom: 60px;
+        }
+
+        .boardpart .leftpart{
+           width:350px;
+        }
+        .leftpart img{
+            max-width:100% 
+        }
+        .rightpart {
+            width: 730px;
+        }
+
+    /*part2*/
+    .table-part{
+        width: 965px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(238, 238, 238);
+        }
+
+        .table-part table{
+            border:0;
+            width: 95%;
+            margin: 18px auto;
+            table-layout:fixed;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+        .table-part td,.table-part th{
+            height: 35px;
+            vertical-align: middle;
+            color: rgb(34, 34, 34);
+            font-size: 14px;
+            text-align: left;
+            padding-left: 2%;
+            padding-right: 1%;
+        }
+
+        .table-part thead th{
+            border-bottom: 1px solid rgb(207, 207, 207);
+            font-weight: bold;
+        }
+        .table-part td{
+            border-bottom: 1px solid rgb(238, 238, 238);
+        }
+        .table-part .first-td,.table-part .third-td{
+            width: 10%;
+        }
+        .table-part .second-td{
+            width: 40%;
+        }
+        .table-part .forth-td{
+            width: 23%;
+        }
+        .table-part td.first-td,.table-part td.third-td{
+            color: #666;
+        }
+
+    .cont-h5{
+        width: 1081px;
+        }
+        .cont-h5-bold h5{
+            font-weight: bold;
+            color: #333;
+        }
+        .cont-h5 h5{
+            position: relative;
+        }
+        .cont-h5 h5:before{
+            content: "·";
+            position: absolute;
+            left: -15px;
+            top: 0;
+            height: 100%;
+        }
+       
+    .floatpart{
+        width: 960px;
+        }
+        .floatpart ul{
+            overflow: hidden;
+        }
+        .floatpart li{float:left;}
+        .haslis5 li{
+            width: 20%;
+        }
+        .haslis4 li{
+            width: 25%;
+        }
+        .haslis3 li{
+            width: 33.3%;
+        }
+        .haslis2 li{
+            width: 50%;
+        }
+        .floatpart .icon-bg{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .floatpart img{
+            display: block;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+        }
+        .floatpart .icon-bg p{
+            text-align: center;
+        }
+
+    .downloadpart{
+        width:1088px;
+        }
+        .downloadpart img{
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .linegay{
+            height: 3px;
+            border-bottom: 1px solid rgb(238, 238, 238);
+        }
+        .bottom-btn{
+            width:550px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .downloadbtn{
+            width: 260px;
+            height: 50px;
+            border-radius: 5px;
+            line-height: 50px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            text-align: center;
+
+        }
+        .greenbtn{
+            background-color: rgb(80, 227, 194);
+        }
+        .redbtn{
+             background-color: rgb(244, 124, 96);
+        }
+        .downloadbtn:hover{
+            opacity: .85;
+            filter: alpha(opacity=85);
+        }
+
+    .npi-video{
+        width: 834px;
+        height: 467px;
+        }
+        .npi-video iframe{
+            width:100%;
+            height: 100%;
+        }
+        .mobile-search{
+          display: none;
+        }
+
+        body{
+            max-width:100%;
+        }
+        .show-phone{
+            display: none;
+        }
+        .pi-footer.hidden-phone{
+            background-color: #f2f2f2;
+        }
+
+
+
+
+
+
+    @media (max-width: 1200px) {
+        body{
+            overflow-x: hidden;
+            width: 100%;
+        }
+        .banner{
+            min-width: 100%;
+            background-size: 1400px;
+            height: 360px;
+        }
+    }
+    @media (max-width: 1100px) {
+        
+        .boardpart,.cont-h5,.table-part,.floatpart,.downloadpart{
+            width: 95%;
+        }
+        .boardpart {
+            height: auto;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .boardpart .leftpart{
+            width: 30%;
+        }
+        .titlepart{
+            margin-top:20px;
+        }
+        .rightpart{
+           width: 68%;
+        }
+        .npi-video{
+            max-width: 95%;
+        }
+        h4{
+            margin-top:0;
+        }
+
+        .pi-footer {
+            width: 100%;
+            min-width: 320px;
+        }
+    }
+    @media (max-width: 960px) {
+        .table-part .second-td{
+            width: 30%;
+        }
+    }
+
+    
+    @media (max-width: 769px) {
+        body{
+            max-width:640px;
+        }
+        .banner{
+            background-size: 1000px;
+            height: 260px;
+        }
+        .titlepart{
+            background-size: 320px;
+            font-size: 20px;
+        }
+        .titlep07{
+            background-size: 400px;
+        }
+        h4{
+           font-size: 18px; 
+        }
+        h5 {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        p {
+            line-height: 1.4;
+            font-size: 12px;
+        }
+        .table-part .third-td{
+            width: 12%;
+        }
+        .floatpart img{
+            max-width: 80%;
+        }
+        .downloadpart img{
+            max-width: 80%;
+        }
+        .bottom-btn{
+            width: 80%;
+        }
+        .downloadbtn{
+            max-width: 45%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+        .activity-part,.paddingB10-m{
+            padding-bottom: 10px;
+        }
+        .entrance-search{
+          float: none ;
+        }
+
+        .mobile-search{
+          display: block;
+        }
+        .common-h-bottom{
+          display: none;
+          visibility: hidden;
+        }
+        .common-h-wper {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+    }
+
+    @media (max-width: 415px) {
+        .banner{
+            background-size: 600px;
+            height: 150px;
+        }
+        .titlepart{
+            margin: 10px auto 20px;
+            background-size: 260px;
+            font-size: 16px;
+            width: 100%;
+        }
+        .titlep07 {
+            background-size: 315px;
+        }
+        .boardpart .leftpart,.rightpart{
+            width: 100%;
+        }
+        .boardpart .leftpart img{
+            max-width: 80%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        h5 {
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        .cont-h5-bold h5{
+            margin-bottom: 3px;
+        }
+        .table-part{
+            overflow-x: scroll;
+        }
+
+        .table-part table{
+            width: 900px;
+        }
+
+        .npi-video {
+            height: 250px;
+        }
+        .bottom-btn {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        .downloadbtn {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        .cont-h5{
+            width: 90%;
+        }
+        .marT40{
+            margin-top:20px;
+        }
+        
+        .common-h-wper {
+            padding-bottom: 0;
+        }
+
+        .search-wrapper {
+            width: 100%;
+            height: 30px;
+        }
+
+        .hidden-phone{
+            display: none;
+        }
+        .show-phone{
+            display: block;
+        }
+      
+        
+
+    }
+    @media (max-width: 375px) {
+        
+
+    }
+    @media (max-width: 320px) {
+        .banner {
+            background-size: 500px;
+            height: 130px;
+        }
+    }
+
+</style>
+
+<title>Npi - 与非网 - EEFOCUS:中国领先的电子技术社区，为上百万电子工程师提供电子产品技术信息以及设计方案的互动交流社区平台</title>
+
+<meta name="author" content="与非网,eefocus.com">
+<meta name="generator" content="与非网,eefocus.com">
+<meta name="keywords" content="电子技术，半导体集成电路，电子工程师，芯片，传感器，FPGA，射频，微控制器，测试测量，汽车电子，消费电子，医疗电子，工业电子，通信/网络">
+<meta name="description" content="与非网(EEFOCUS)电子产业社区平台为中国电子行业首家采用强大技术平台，由专业的电子技术编辑服务，为全球3000家知名半导体厂家及电子技术系统厂商提供技术信息发布、厂商网站、技术社区建设服务，并以电子术语词典，集成电路数据手册查询，电子产品新闻访谈资讯信息以及互动技术交流社区为上百万电子技术工程师以及高校师生提供最完整的电子技术信息查询和交流服务。">
+
+
+
+
+
+</head>
+<body>
+
+<!-- pc-header-->
+<div class="common-h-wper">
+  <div class="common-h-top">
+    <div class="common-h-outer">
+      <!--Common Nav-->
+      <div class="common-h-nav">
+        <a href="https://www.eefocus.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=eefocus&amp;utm_term=eefocus" class="nav-link active" title="看行业资讯，观技术交流" target="_blank">
+          <span class="brand b-eefocus"></span>
+          <span class="web">与非网</span>
+        </a>
+
+        <a href="https://www.eeboard.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=eeboard&amp;utm_term=eeboard" class="nav-link" title="评最新板卡、拆热门产品" target="_blank">
+          <span class="brand b-eeboard"></span>
+          <span class="web">爱板网</span>
+        </a>
+        <a href="https://www.cirmall.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=cirmall&amp;utm_termcirmall" class="nav-link" title="看别人设计、晒自己方案" target="_blank">
+          <span class="brand b-cirmall"></span>
+          <span class="web">电路城</span>
+        </a>
+        <a href="https://www.moore8.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=moore8&amp;utm_term=moore8" class="nav-link" title="做行业名师、学专业技能" target="_blank">
+          <span class="brand b-moore8"></span>
+          <span class="web">摩尔吧</span>
+        </a>
+
+        <a href="http://www.bom2buy.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=eda&amp;utm_term=bom2buy" class="nav-link" title="比供应报价，推荐最优方案" target="_blank">
+          <span class="brand b-bom2buy"></span>
+          <span class="web">买芯片</span>
+        </a>
+        <a href="https://www.datasheet5.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=datasheet5&amp;utm_term=datasheet5" class="nav-link" title="查器件信息，下数据手册" target="_blank">
+          <span class="brand b-d5"></span>
+          <span class="web">元件库</span>
+        </a>
+
+        <a href="http://www.stepfpga.com/?utm_campaign=dianzixinxigang&amp;utm_medium=navi&amp;utm_source=eefocus&amp;utm_content=stepfpga&amp;utm_term=stepfpga" class="nav-link last-link" title="小脚丫" target="_blank">
+          <span class="brand b-step"></span>
+          <span class="web">小脚丫</span>      
+        </a>
+      </div>
+      <div class="search-wrapper mobile-search" id="searchWrapp">
+          <form id="form1" action="https://search.eefocus.com/s" name="form1" class="entrance-search clearfix" target="_blank">
+              <input id="Text2" class="ser_input entrance-ser-input" type="text" gtbfieldid="2" autocomplete="off" name="q" value="" maxlength="100" placeholder="资讯   电路方案   开发板   数据手册   部件采购     ...">
+              <input type="hidden" name="app_id" value="1001">
+              <input style="overflow: hidden; text-indent: -9999em;" class="ser-img" type="submit" name="sub" value="1">
+          </form>
+      </div>
+
+      <!--Common login-->
+      <div class="common-h-login clearfix">
+        <div class="common-logo-name">
+          <a href="https://www.eefocus.com" target="_blank">
+            <img src="https://www.eefocus.com/asset/theme-eefocus/image/eefocus-logo-white.png">
+          </a>
+        </div>
+      </div>
+      <!--Common wxcode-->
+      
+      <div class="common-h-wx common-h-login">
+          <a class="wx-wper-tit" id="wxWperTit" href="javascript:;"><span class="wx-l-logo"></span>技术交流群</a>
+          <div class="wx-wper-con" id="wxWperCon" style="display: none;">
+              <img src="https://upload.semidata.info/www.eefocus.com/widget/tmp.5b4ee5604c3d9.jpg" alt="二维码" width="148" height="148">
+              <span class="wx-con-info">添加小编微信，我们会将你拉到相应的技术讨论群</span>
+          </div>
+      </div>
+
+      <script type="text/javascript">
+        (function() {
+          var timer,
+              wxWperTit = document.getElementById('wxWperTit'),
+              wxWperCon = document.getElementById('wxWperCon');
+          wxWperTit.onmouseover = wxWperCon.onmouseover = function() {
+              clearTimeout(timer);
+              wxWperCon.style.display = "block";
+          }
+          wxWperTit.onmouseout = wxWperCon.onmouseout = function() {
+              timer = setTimeout(function() {
+                  wxWperCon.style.display = "none";
+              },500);
+          }
+        })();
+      </script>    
+    </div>
+  </div>
+  <div class="common-h-bottom">
+    <div class="common-h-outer">
+      <!--Common Search-->
+      <div class="common-h-search">
+        <form id="form1" action="https://search.eefocus.com/s" name="form1" target="_blank">
+
+          <div class="common-input-group">
+            <input type="hidden" name="app_id" value="1001">
+            <input type="text" class="common-form-control" gtbfieldid="2" autocomplete="off" name="q" value="" maxlength="100" placeholder="请输入关键词&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搜资讯查资料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;找开发板寻电路方案">
+            <span class="common-input-group-btn">
+                <button class="common-btn" type="submit" name="sub" value="1">搜索</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- head end -->
+
+<div class="banner"></div>
+<div class="main paddingB40">
+        <div class="titlepart titlep07">
+            三分钟快速了解视频
+        </div>
+        <div class="npi-video margincenter padding-t10">
+            
+            <!-- 兼容性好 -->
+           <iframe allow="autoplay" id="cciframe_2363D93BE51495E09C33DC5901307461" src="https://p.bokecc.com/playhtml.bo?vid=2363D93BE51495E09C33DC5901307461&siteid=2B8005D51B3FA744&autoStart=true&playerid=4EE267E5700FE6B9&playertype=1" frameborder="0" height="490" width="600"></iframe>
+
+        </div>
+
+        <div class="marT40">
+            <a href="https://url.eefocus.com/62q" target="_blank" ><div class="margincenter downloadbtn greenbtn">了解更多详情</div></a>
+        </div>
+</div>
+
+<div class="main">
+    <div class="titlepart titlep01">
+        产品介绍
+    </div>
+    <div class="boardpart">
+        <div class="leftpart float_l">
+            <img src="https://upload.semidata.info/www.eefocus.com/ckeditor/images/QQ%E5%9B%BE%E7%89%8720180815132147.png" >
+        </div>
+        <div class="rightpart float_r">
+            <h4>Analog Devices EVAL-ADXL362评估板</h4>
+            <p class="bk">制造商：Analog Devices</p>
+            <p class="cont">Analog Devices EVAL-ADXL362评估板用于演示超低功耗ADXL362 3轴MEMS加速计的特性与功能。EVAL-ADXL362评估板包括众多电路板。EVAL-ADXL362Z-DB是一款超低功耗开发板。EVAL-ADXL362Z-S是一块卫星板，而EVAL-ADXL362Z是一块印刷电路板。EVALADXL362Z-MLP提供实时评估系统，包括主板、卫星板、加速计以及所需的电缆。EVALADXL362ARDZ采用Arduino扩展板外形尺寸，具有LCD显示屏。</p>
+             
+	   </div> 
+    </div>
+</div> 
+
+<div class="clear"></div>
+
+<div class="bg02">
+    <div class="main padding-t10 paddingB40">
+        <div class="titlepart titlep02">
+            产品规格
+        </div>
+        <div class="table-part">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="first-td">产品属性</th>
+                        <th class="second-td">属性值</th>
+                        <th class="third-td">产品属性</th>
+                        <th class="forth-td">属性值</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="first-td">制造商</td>
+                        <td class="second-td">Analog Devices Inc.</td>
+                        <td class="third-td">产品种类</td>
+                        <td class="forth-td">加速传感器开发工具</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">类型</td>
+                        <td class="second-td">Accelerometer Sensor</td>
+                        <td class="third-td">产品</td>
+                        <td class="forth-td">Breakout Boards</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">工作电源电压</td>
+                        <td class="forth-td">1.6 V to 3.5 V</td>
+                        <td class="third-td">工具用于评估</td>
+                        <td class="forth-td">ADXL362</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">封装</td>
+                        <td class="forth-td">Bulk</td>
+                        <td class="third-td">描述/功能</td>
+                        <td class="forth-td">Ultralow power digital accelerometer breakout board</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">尺寸</td>
+                        <td class="second-td">20 mm x 20 mm</td>
+                        <td class="third-td">灵敏度</td>
+                        <td class="forth-td">1 mg/LSB, 2 mg/LSB, 4 mg/LSB</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">系列</td>
+                        <td class="second-td">ARDUINOSHIELDS</td>
+                        <td class="third-td">加速</td>
+                        <td class="forth-td">2 g, 4 g, 8 g</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">商标</td>
+                        <td class="second-td">Analog Devices</td>
+                        <td class="third-td">传感轴</td>
+                        <td class="forth-td">Triple Axis</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">最大工作温度</td>
+                        <td class="second-td">+ 85 C</td>
+                        <td class="third-td">最小工作温度</td>
+                        <td class="forth-td">- 40 C</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">产品类型</td>
+                        <td class="second-td">Acceleration Sensor Development Tools</td>
+                        <td class="third-td">单位重量</td>
+                        <td class="forth-td">150 g</td>
+                    </tr>
+                    <tr>
+                        <td class="first-td">工厂包装数量</td>
+                        <td class="second-td">1</td>
+                        <td class="third-td">子类别</td>
+                        <td class="forth-td">Development Tools</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>
+</div>
+<div class="main paddingB40">
+    <div class="bottom-btn marT40">
+        <a href="https://url.eefocus.com/62q" target="_blank" ><div class="downloadbtn greenbtn float_l">数据表下载</div></a>
+        <a href="https://url.eefocus.com/62q" target="_blank" ><div class="downloadbtn redbtn float_r">查询价格</div></a>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+
+<div class="footer pi-footer text-center hidden-phone">
+   <!--  <script src="http://www.eehub.cn/api/v1/js/qrcode?source=eefocus"></script> -->
+    <div class="container">
+        <div>
+            <a href="/corp/aboutEefocus.html" title="关于我们">关于我们</a> |
+            <a href="/corp/contact.html" title="联系我们">联系我们</a> |
+            <a href="/corp/EefocusHr.html" title="加入我们">加入我们</a> |
+            <a href="/corp/OnlineService.html" title="客户服务">客户服务</a> |
+            <a href="/corp/law.html" title="相关法律">相关法律</a> |
+            <a href="/corp/map.html" title="网站地图">网站地图</a> |
+            <a href="/page/app/" title="客户端">客户端</a> |
+            <a href="/corp/link.html=" 友情链接"="">友情链接</a> |
+            <a href="https://www.eefocus.com/feedback/" title="建议指正">建议指正</a> |
+            <a target="_blank" href="http://weibo.com/eefocus" class="fc" title="@与非网"><i class="wb-icon"></i>@与非网</a>
+        </div>
+        <div>
+                © 2010 - 2018 苏州灵动帧格网络科技有限公司 版权所有. <br>
+                ICP经营许可证 苏B2-20140176&nbsp;
+                <a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备14012660号</a><br>
+                <div style="width:300px;margin:0 auto; padding:5px 0;">
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001874" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://upload.semidata.info/sns.eefocus.com/freescale/article/media/2016/04/12/331491.png" lazysrc="" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">苏公网安备 32059002001874号</p></a>
+                </div>
+        </div> 
+        <img src="https://analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&amp;zone=EE_home&amp;ui=3295855" style="display:none;">
+    </div>
+</div>
+<div class="pi-footer text-center show-phone">
+    <div class="container">
+        <div>© 2010 - 2018 苏州灵动帧格网络科技有限公司 版权所有.</div>      <img src="https://analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&amp;zone=EE_npi" style="display:none;">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1502657-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['new._setAccount', 'UA-31944875-8']);
+  _gaq.push(['new._trackPageview']);
+  _gaq.push(['new._setAccount', 'UA-31944875-10']);
+  _gaq.push(['new._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F644a837956e91928688d4a74b9917d47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!-- supplyframe tag tracking code -->
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5499aafcda37a38c5f0000b5.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+<!-- end tracking code -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- track for url.eefocus.com for PI short links -->
+<script type="text/javascript">
+window.onload = function() {
+    var _pi = document.getElementsByClassName('widget-PI专区');
+    if(_pi) {
+        var _pi_a = _pi[0];
+        if(_pi_a) {
+            var _pageLinks = _pi[0].getElementsByTagName('a');
+            for(var i = 0; i <_pageLinks.length; i++) {
+                _pageLinks[i].onclick = function() {
+                    var url = this.toString() || '';
+                    if (url.indexOf('url.eefocus.com') != -1) {
+                        _gaq.push(['new._trackPageview',url]);
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1502657-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['new._setAccount', 'UA-31944875-8']);
+  _gaq.push(['new._trackPageview']);
+  _gaq.push(['new._setAccount', 'UA-31944875-10']);
+  _gaq.push(['new._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F644a837956e91928688d4a74b9917d47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!-- supplyframe tag tracking code -->
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5499aafcda37a38c5f0000b5.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+<!-- end tracking code -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- track for url.eefocus.com for PI short links -->
+<script type="text/javascript">
+window.onload = function() {
+    var _pi = document.getElementsByClassName('widget-PI专区');
+    if(_pi) {
+        var _pi_a = _pi[0];
+        if(_pi_a) {
+            var _pageLinks = _pi[0].getElementsByTagName('a');
+            for(var i = 0; i <_pageLinks.length; i++) {
+                _pageLinks[i].onclick = function() {
+                    var url = this.toString() || '';
+                    if (url.indexOf('url.eefocus.com') != -1) {
+                        _gaq.push(['new._trackPageview',url]);
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
+
+</body>
+</html>
