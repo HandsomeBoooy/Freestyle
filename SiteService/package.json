@@ -6,7 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "acorn": "^6.2.0",
+    "acorn": "^6.4.1",
     "ajv": "^6.10.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
