@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/resume', (req, res, next) => {
-    res.render('resume');
+    res.render('resume/index');
 });
 
 router.get('/addTestInfo', (req, res, next) => {
