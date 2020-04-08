@@ -3,17 +3,25 @@ class Sorting {
 
     insertionSort(arr) {
         if (arr && arr.length) {
-            for (let i = 1; i < arr.length; i++) {
-                if (arr[i - 1] > arr[i]) {
-                    let tempValue = arr[i],
-                        tempIndex = i;
-                    while (tempIndex > 0 && arr[i - 1] > tempValue) {
-                        arr[tempIndex] = arr[tempIndex - 1];
-                        tempIndex--;
-                    }
-                    arr[tempIndex] = tempValue;
+            var preIndex, current;
+            for(var i = 1; i < arr.length; i++) {
+                preIndex = i - 1;
+                current = arr[i];
+                while(preIndex >= 0 && arr[preIndex] > current) {
+                    arr[preIndex + 1] = arr[preIndex];
+                    preIndex--;
                 }
+                arr[preIndex + 1] = current;
             }
+        }
+        return arr;
+    }
+
+    ultimateSorting(arr) {
+        if (arr && arr.length) {
+            return arr.sort((a, b) => a - b);
+        } else {
+            return arr;
         }
     }
 }
