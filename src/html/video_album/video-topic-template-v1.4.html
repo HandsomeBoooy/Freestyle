@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>与非视频专题</title>
+    <link rel="stylesheet" href="https://www.eefocus.com/public/vendor/bootstrap/css/bootstrap.min.css?1574308687">
+    <link rel="stylesheet" href="https://asset.semidata.info/new.eefocus.com/theme-eefv2/css/article_v2.css">
+    <link rel="stylesheet" href="https://asset.semidata.info/new.eefocus.com/theme-eefv2/css/video-js.min.css">
+    <link rel="stylesheet" href="https://asset.semidata.info/new.eefocus.com/theme-eefv2/css/videojs-login.css">
+    <style>
+        .breadcrumb {
+            display: none;
+        }
+        .pi-zone-wrap {
+            border: none;
+            margin: 0;
+        }
+        .container * {
+            font-family: Times New Roman, Times, serif, STSongti-SC-Regular;
+        }
+        div.row.header-line,
+        div.mobile-v2-nav {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .container.pi-main-container {
+            width: 100%;
+        }
+        .pi-zone-0, .pi-zone-0 .widget-main-hot {
+            margin-bottom: 0;
+        }
+        .pi-module-content {
+            margin: 0;
+            padding: 0;
+        }
+        .common-section {
+            padding: 40px 0 40px;
+            background: none #ffffff;
+        }
+        .common-section.banner-section {
+            padding: 0;
+            background: none #ffffff;
+            text-align: center;
+        }
+        .banner-section img {
+            width: 100%;
+            max-width: 1920px;
+        }
+        .recommended-videos-section {
+            padding: 41px 0 45px;
+            background: linear-gradient(0, #2F2F2F, #151515);
+        }
+        .section-title {
+            margin-bottom: 32px;
+            color: rgba(0, 0, 0, 0.85);
+            text-align: center;
+        }
+        .recommended-videos-section .section-title {
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+        .section-title h2 {
+            margin: 0;
+            font-weight: normal;
+        }
+        .section-title hr {
+            width: 47px;
+            margin: 6px auto 0;
+            border-color: #DD3D3D;
+        }
+        .video-group {
+            /* width: 700px; */
+            margin: 0 auto;
+        }
+        .other-videos-section .video-group {
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+            border-bottom: solid 1px #EEEEEE;
+        }
+        .other-videos-section .video-group:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        .video-group .video-container,
+        .video-group .article-link-container,
+        .video-group .video-container video {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .video-group .video-container {
+            height: 394px;
+            margin: 0 auto 24px;
+            /* border: solid 1px #dedede; */
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .video-group .video-container video {
+            max-height: 394px;
+        }
+        .video-group .video-container video:focus {
+            outline: none;
+        }
+        .article-link-container .video-article-title {
+            margin: 0 0 16px;
+            text-align: left;
+        }
+        .article-link-container .video-article-title a {
+            color: #ffffff;
+            font-weight: normal;
+        }
+        .article-link-container .video-article-description {
+            margin: 0;
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: justify;
+        }
+        .other-videos-section .article-link-container .video-article-title a {
+            color: #000000;
+            font-size: 24px;
+            opacity: 0.85;
+        }
+        .article-link-container .video-article-title a:hover {
+            color: #DD3D3D;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .other-videos-section .article-link-container .video-article-description {
+            color: #000000;
+            font-size: 15px;
+            line-height: 18px;
+            opacity: 0.6;
+        }
+        @media screen and (min-width: 551px) {
+            .mobile-show {
+                display: none;
+            }
+            .video-topic-root-container .container {
+                width: 100%;
+                max-width: 860px;
+            }
+            .container.pi-main-container {
+                max-width: 100%;
+            }
+        }
+        @media screen and (max-width: 550px) {
+            .pc-show {
+                display: none;
+            }
+            .video-topic-root-container .container {
+                padding: 0 20px;
+            }
+            .recommended-videos-section {
+                padding: 32px 0 34px;
+            }
+            .other-videos-section {
+                padding: 19px 0 32px;
+            }
+            .section-title h2 {
+                font-size: 24px;
+            }
+            .other-videos-section .video-group {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+            }
+            .video-group .video-container,
+            .video-group .article-link-container {
+                width: 100%;
+            }
+            .video-group .video-container {
+                height: calc((100vw - 30px) * 9 / 16);
+            }
+            .article-link-container .video-article-title {
+                font-size: 24px;
+            }
+            .other-videos-section .article-link-container .video-article-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-topic-root-container">
+        <section class="common-section banner-section">
+            <img class="pc-show" src="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-01-2x.jpg" alt="">
+            <img class="mobile-show" src="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-mobile.png" alt="">
+        </section>
+        <section class="common-section common-video-section recommended-videos-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>最新视频</h2>
+                    <hr>
+                </div>
+                <div class="video-group">
+                    <div class="video-container">
+                        <div class="video-wrap">
+                            <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" id="video01" data-setup='{}'
+                                poster="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-mobile.png">
+                                <source src="eefocus-article-resource-lp9Z590gtSapmSmBPbX8B7xjNwg1" type="video/mp4"></source>
+                                <p class="vjs-no-js">
+                                    请更换浏览器或升级您的浏览器版本
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="article-link-container">
+                        <h2 class="video-article-title">
+                            <a href="//www.eefocus.com/industrial-electronics/461400">跨界的科技“土人”</a>
+                        </h2>
+                        <p class="video-article-description">
+                            最早认识王绍伟，是在八、九年前。从最初网上交流，到深圳大排档约着见面，我们眼看着一辆绿油油的小 QQ 驶来、靠边，走出来一位敦实矮小、笑容满面的“凤舞天”——这是他当年在与非网上的网名。初次见面，我们彼此没感觉到任何疏远生分，很快无话不谈。想来，这是因为彼此神交已久，也是因为他身上的旧 T 恤、大裤衩，还有赤脚上的一双凉拖鞋。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="common-section common-video-section other-videos-section container">
+            <div class="container">
+                <div class="section-title">
+                    <h2>更多内容</h2>
+                    <hr>
+                </div>
+                <div class="video-group">
+                    <div class="video-container">
+                        <div class="video-wrap">
+                            <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" id="video01" data-setup='{}'
+                                poster="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-mobile.png">
+                                <source src="eefocus-article-resource-llOukzN66NKzi4OZ8MkkJ6lpui1V" type="video/mp4"></source>
+                                <p class="vjs-no-js">
+                                    请更换浏览器或升级您的浏览器版本
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="article-link-container">
+                        <h2 class="video-article-title">
+                            <a href="//www.eefocus.com/industrial-electronics/461400">模块电源市场日趋成熟，并联均流有何优缺点？</a>
+                        </h2>
+                        <p class="video-article-description">
+                            最早认识王绍伟，是在八、九年前。从最初网上交流，到深圳大排档约着见面，我们眼看着一辆绿油油的小 QQ 驶来、靠边，走出来一位敦实矮小、笑容满面的“凤舞天”——这是他当年在与非网上的网名。初次见面，我们彼此没感觉到任何疏远生分，很快无话不谈。想来，这是因为彼此神交已久，也是因为他身上的旧 T 恤、大裤衩，还有赤脚上的一双凉拖鞋。
+                        </p>
+                    </div>
+                </div>
+                <div class="video-group">
+                    <div class="video-container">
+                        <div class="video-wrap">
+                            <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" id="video01" data-setup='{}'
+                                poster="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-mobile.png">
+                                <source src="eefocus-article-resource-llOukzN66NKzi4OZ8MkkJ6lpui1V" type="video/mp4"></source>
+                                <p class="vjs-no-js">
+                                    请更换浏览器或升级您的浏览器版本
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="article-link-container">
+                        <h2 class="video-article-title">
+                            <a href="//www.eefocus.com/industrial-electronics/461400">模块电源市场日趋成熟，并联均流有何优缺点？</a>
+                        </h2>
+                        <p class="video-article-description">
+                            最早认识王绍伟，是在八、九年前。从最初网上交流，到深圳大排档约着见面，我们眼看着一辆绿油油的小 QQ 驶来、靠边，走出来一位敦实矮小、笑容满面的“凤舞天”——这是他当年在与非网上的网名。初次见面，我们彼此没感觉到任何疏远生分，很快无话不谈。想来，这是因为彼此神交已久，也是因为他身上的旧 T 恤、大裤衩，还有赤脚上的一双凉拖鞋。
+                        </p>
+                    </div>
+                </div>
+                <div class="video-group">
+                    <div class="video-container">
+                        <div class="video-wrap">
+                            <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" id="video01" data-setup='{}'
+                                poster="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-mobile.png">
+                                <source src="eefocus-article-resource-llOukzN66NKzi4OZ8MkkJ6lpui1V" type="video/mp4"></source>
+                                <p class="vjs-no-js">
+                                    请更换浏览器或升级您的浏览器版本
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="article-link-container">
+                        <h2 class="video-article-title">
+                            <a href="//www.eefocus.com/industrial-electronics/461400">模块电源市场日趋成熟，并联均流有何优缺点？</a>
+                        </h2>
+                        <p class="video-article-description">
+                            最早认识王绍伟，是在八、九年前。从最初网上交流，到深圳大排档约着见面，我们眼看着一辆绿油油的小 QQ 驶来、靠边，走出来一位敦实矮小、笑容满面的“凤舞天”——这是他当年在与非网上的网名。初次见面，我们彼此没感觉到任何疏远生分，很快无话不谈。想来，这是因为彼此神交已久，也是因为他身上的旧 T 恤、大裤衩，还有赤脚上的一双凉拖鞋。
+                        </p>
+                    </div>
+                </div>
+                <div class="video-group">
+                    <div class="video-container">
+                        <div class="video-wrap">
+                            <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" id="video01" data-setup='{}'
+                                poster="http://eeb-edm.eefcdn.com/eefocus-video-topic/banner-mobile.png">
+                                <source src="eefocus-article-resource-llOukzN66NKzi4OZ8MkkJ6lpui1V" type="video/mp4"></source>
+                                <p class="vjs-no-js">
+                                    请更换浏览器或升级您的浏览器版本
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="article-link-container">
+                        <h2 class="video-article-title">
+                            <a href="//www.eefocus.com/industrial-electronics/461400">模块电源市场日趋成熟，并联均流有何优缺点？</a>
+                        </h2>
+                        <p class="video-article-description">
+                            最早认识王绍伟，是在八、九年前。从最初网上交流，到深圳大排档约着见面，我们眼看着一辆绿油油的小 QQ 驶来、靠边，走出来一位敦实矮小、笑容满面的“凤舞天”——这是他当年在与非网上的网名。初次见面，我们彼此没感觉到任何疏远生分，很快无话不谈。想来，这是因为彼此神交已久，也是因为他身上的旧 T 恤、大裤衩，还有赤脚上的一双凉拖鞋。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="https://asset.semidata.info/new.eefocus.com/theme-eefv2/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://asset.semidata.info/new.eefocus.com/theme-eefv2/js/video.min.js"></script>
+</html>

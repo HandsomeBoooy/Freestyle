@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../../lib/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <style>
+        .author-application-block {
+            width: 300px;
+            height: 124px;
+            padding: 22px 14px;
+            background-color: rgba(215, 239, 238, 1);
+            box-shadow: 0px 0px 1px 0px rgba(145, 177, 174, 1);
+            box-sizing: border-box;
+        }
+        .author-application-block .application-detail-container,
+        .author-application-block .application-qrcode-container {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .author-application-block .application-qrcode-container {
+            float: right;
+        }
+        .author-application-block .application-qrcode-container img {
+            width: 80px;
+            height: 80px;
+        }
+        .author-application-block .application-detail-container h4 {
+            margin: 0 0 5px;
+            line-height: 25px;
+            color: rgba(55, 97, 96, 1);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .author-application-block .application-detail-container p,
+        .author-application-block .application-detail-container p a {
+            margin: 0;
+            opacity: 0.9;
+            color: rgba(49, 78, 76, 1);
+            font-size: 12px;
+        }
+        .author-application-block .application-detail-container p a {
+            text-decoration: underline;
+        }
+    </style>
+    <div class="author-application-block">
+        <div class="application-detail-container">
+            <h4>马上申请成为作者</h4>
+            <p>
+                发邮件至&nbsp;<a href="mailto:editor&commat;supplyframe.cn">editor&commat;supplyframe.cn</a><br>
+                <!-- 发邮件至&nbsp;<a href="mailto:editor&#64;supplyframe.cn">editor&#64;supplyframe.cn</a><br> -->
+                或扫描右侧二维码<br>
+                请备注「专栏作者申请」
+            </p>
+        </div>
+        <div class="application-qrcode-container">
+            <img src="https://asset.semidata.info/new.eefocus.com/theme-eefv2/image/author-apply-qrcode.jpeg" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.footer-area-left').append(
+            '<p>&copy; 2010 - ' + new Date().getFullYear().toString() + ' 苏州灵动帧格网络科技有限公司 版权所有.</p>'
+        );
+    });
+</script>
+</html>
