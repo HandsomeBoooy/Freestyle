@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weekly Checkin Statistics</title>
+    <style>
+        .checkin-form-container {
+            display: block;
+            margin: auto;
+            padding: 32px 0;
+            text-align: center;
+        }
+        .input-row {
+            margin: 32px auto;
+        }
+        .input-group {
+            width: auto;
+            display: inline-block;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root-container">
+        <div class="checkin-form-container">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="day1Start">周一上班时间</label>
+                    <input type="datetime-local" id="day1Start">
+                </div>
+                <div class="input-group">
+                    <label for="day1End">周一下班时间</label>
+                    <input type="datetime-local" id="day1End">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="day2Start">周二上班时间</label>
+                    <input type="datetime-local" id="day2Start">
+                </div>
+                <div class="input-group">
+                    <label for="day2End">周二下班时间</label>
+                    <input type="datetime-local" id="day2End">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="day3Start">周三上班时间</label>
+                    <input type="datetime-local" id="day3Start">
+                </div>
+                <div class="input-group">
+                    <label for="day3End">周三下班时间</label>
+                    <input type="datetime-local" id="day3End">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="day4Start">周四上班时间</label>
+                    <input type="datetime-local" id="day4Start">
+                </div>
+                <div class="input-group">
+                    <label for="day4End">周四下班时间</label>
+                    <input type="datetime-local" id="day4End">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="day5Start">周五上班时间</label>
+                    <input type="datetime-local" id="day5Start">
+                </div>
+                <div class="input-group">
+                    <label for="day5End">周五下班时间</label>
+                    <input type="datetime-local" id="day5End">
+                </div>
+            </div>
+            <div></div>
+        </div>
+        <div class="display-screen"></div>
+    </div>
+</body>
+<script src="../../../lib/jquery-3.4.1.js"></script>
+<script>
+    (() => {
+        console.clear();
+        var inputIDGroup = ['day1Start', 'day1End', 'day2Start', 'day2End', 'day3Start', 'day3End', 'day4Start', 'day4End', 'day5Start', 'day5End'];
+        var checkinDataObj = {};
+        for (let i = 0; i < inputIDGroup.length; i++) {
+            var key = inputIDGroup[i];
+            checkinDataObj[key] = document.getElementById(key).value;
+            console.log(document.getElementById(key).value, typeof document.getElementById(key).value);
+        }
+        console.log(checkinDataObj);
+        var weeklyChecking = [{
+            start: day1Start,
+            end: day1End
+        }, {
+            start: day2Start,
+            end: day2End
+        }, {
+            start: day3Start,
+            end: day3End
+        }, {
+            start: day4Start,
+            end: day4End
+        }, {
+            start: day5Start,
+            end: day5End
+        }];
+        var workTimeTotalMinutes = 0,
+            workTimeHours = 0,
+            workTimeMinutes = 0,
+            dutyTimeTotalMinutes = 0,
+            dutyTimeHours = 0,
+            dutyTimeMinutes = 0,
+            targetWorkTimeTotal = 40 * 60,
+            workTimeNeeded = 0,
+            targetDutyTimeTotal = 45 * 60,
+            dutyTimeNeeded = 0,
+            dutyTimeHoursNeeded = 0,
+            dutyTimeMinutesNeeded = 0;
+        for (var item of weeklyChecking) {
+            var dailyTime = (item.end - item.start) / 1000 / 60;
+            dutyTimeTotalMinutes += dailyTime;
+            if (dailyTime) {
+                workTimeTotalMinutes += dailyTime - 60;
+            } else {
+                workTimeTotalMinutes += dailyTime;
+            }
+        }
+
+        // dutyTimeMinutes = dutyTimeTotalMinutes % 60;
+        // dutyTimeHours = (dutyTimeTotalMinutes - dutyTimeMinutes) / 60;
+        // dutyTimeNeeded = targetDutyTimeTotal - dutyTimeTotalMinutes;
+        // dutyTimeMinutesNeeded = dutyTimeNeeded % 60;
+        // dutyTimeHoursNeeded = (dutyTimeNeeded - dutyTimeMinutesNeeded) / 60
+
+        // workTimeMinutes = workTimeTotalMinutes % 60;
+        // workTimeHours = (workTimeTotalMinutes - workTimeMinutes) / 60;
+        // workTimeNeeded = targetWorkTimeTotal - workTimeTotalMinutes;
+        // console.log('worktime ' + workTimeHours + 'h ' + workTimeMinutes + 'm, ', workTimeNeeded + 'm needed');
+        // console.log('dutytime ' + dutyTimeHours + 'h ' + dutyTimeMinutes + 'm, ', dutyTimeHoursNeeded + 'h ' +
+            // dutyTimeMinutesNeeded + 'm needed');
+        pageInit();
+    })()
+    // (() => {})()
+    function pageInit() {
+        var formContainer = document.getElementsByTagName('form')[0];
+        console.log(formContainer);
+    }
+</script>
+
+</html>

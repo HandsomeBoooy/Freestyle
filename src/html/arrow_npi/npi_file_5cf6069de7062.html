@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>博世 BMI088高性能IMU（用于无人机/机器人）</title>
+    <meta name="description"
+        content="Bosch BMI088高性能惯性测量单元 (IMU) 专门设计用于无人机和机器人应用。该款6轴传感器在3 x 4.5 x 0.95mm³小尺寸LGA封装中集成了16位三轴陀螺仪和16位三轴加速度计。该单元采用经过汽车验证的陀螺仪技术和全新的低TCO加速度计设计。BMI088经过汽车验证的陀螺仪具有无与伦比的偏置稳定性（低于2°/h）和低于15mdps/K的低温度系数偏移 (TCO)。其他特性包括0.2mg/K的低TCO，以及在±24g的极宽测量范围内具有仅为230μg/√Hz的低频谱噪声。借助BMI088器件，即使在自然的高振动环境中也能更轻松地进行精确转向，因此改善了飞行和导航体验。" />
+    <meta name="keywords" content="博世 BMI088高性能IMU（用于无人机/机器人）" />
+    <meta name="author" content="ZM, zhaomi@eefocus.com">
+    <!-- css for head -->
+    <link href="https://www.eefocus.com/public/vendor/bootstrap/css/bootstrap.min.css?1532672920" media="screen"
+        rel="stylesheet" type="text/css">
+    <link href="https://www.eefocus.com/asset/theme-eefocus/css/footer.css?1533014894" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.eefocus.com/asset/module-activity/css/topernew.css?v=2018-1533192212">
+    <link rel="stylesheet" type="text/css" href="https://www.eefocus.com/asset/theme-eefocus/css/header2019.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://www.eefocus.com/asset/theme-eefocus/css/mobilenew.css?1533798606"
+        media="screen and (min-width: 320px) and (max-width:765px)">
+
+
+
+    <script type="text/javascript"
+        src="https://static.semidata.info/www.eefocus.com/vendor/jquery/jquery.min.js?1399604599"></script>
+
+    <style>
+        html {
+            background-color: #fff;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-text-size-adjust: none;
+        }
+
+        html,
+        body {
+            position: relative;
+            background: #f7f7f7;
+        }
+
+        body,
+        ul,
+        dl,
+        dd,
+        dt,
+        ol,
+        li,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        textarea,
+        form,
+        select,
+        fieldset,
+        table,
+        td,
+        div,
+        input,
+        button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        dl,
+        dd,
+        ul,
+        ol,
+        pre,
+        form,
+        input,
+        textarea,
+        th,
+        td,
+        select {
+            text-indent: 0;
+        }
+
+        a,
+        button,
+        input,
+        textarea,
+        select {
+            background: none;
+            -webkit-tap-highlight-color: rgb(255, 0, 0);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style-type: none;
+            vertical-align: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #535353;
+            outline-style: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+
+        a,
+        input {
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: rgb(0, 0, 0);
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        textarea {
+            resize: none;
+            overflow: auto;
+        }
+
+        a,
+        img {
+            -webkit-touch-callout: none;
+        }
+
+        img {
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+            vertical-align: top;
+        }
+
+        a,
+        span,
+        p,
+        ul,
+        dl,
+        dd,
+        dt,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        textarea,
+        label,
+        form,
+        select,
+        input,
+        button,
+        fieldset,
+        table,
+        td {
+            font-family: PingFangSC-light, "Microsoft yahei", arial, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .clear {
+            clear: both;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .dis_top {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .dis_mid {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .textright {
+            text-align: right;
+        }
+
+        .textcenter {
+            text-align: center;
+        }
+
+        .float_l {
+            float: left;
+        }
+
+        .float_r {
+            float: right;
+        }
+
+        h1 {
+            left: 150px;
+            top: 157px;
+            width: 652px;
+            height: 72px;
+            line-height: 72px;
+            color: #FFF;
+            font-size: 60px;
+        }
+
+        h3 {
+            left: 150px;
+            top: 241px;
+            width: 740px;
+            height: 48px;
+            line-height: 28px;
+            color: #FFF;
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: 100;
+        }
+
+        .marT40 {
+            margin-top: 40px;
+        }
+
+        .paddingB40 {
+            padding-bottom: 40px;
+        }
+
+        .padding-t10 {
+            padding-top: 10px;
+        }
+
+        .bg02 {
+            background: #F6F8F9 100%;
+        }
+
+        body {
+            background: #fff;
+        }
+
+
+
+        .main {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .banner {
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/3-%E5%8D%9A%E4%B8%96(1).jpg') center 0 no-repeat;
+            min-width: 1140px;
+            height: 416px;
+            background-color: #fdfdfd;
+        }
+
+        .titlepart {
+            overflow: hidden;
+            line-height: 54px;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            text-align: center;
+            width: 420px;
+            height: 54px;
+            margin: 38px auto 25px;
+        }
+
+        .titlep01 {
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title01.png') center center no-repeat;
+        }
+
+        .titlep02 {
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title02.png') center center no-repeat;
+        }
+
+        .titlep03 {
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title03.png') center center no-repeat;
+        }
+
+        .titlep04 {
+            background: url('//upload.semidata.info/www.eefocus.com/ckeditor/images/title04.png') center center no-repeat;
+        }
+
+        .titlep05 {
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title05.png') center center no-repeat;
+        }
+
+        .titlep06 {
+            background: url('//upload.semidata.info/www.eefocus.com/ckeditor/images/title06.png') center center no-repeat;
+        }
+
+        .titlep07 {
+            width: 497px;
+            background: url('https://upload.semidata.info/www.eefocus.com/ckeditor/images/title07(1).png') center center no-repeat;
+        }
+
+        h4 {
+            line-height: 20px;
+            color: rgb(34, 34, 34);
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 10px;
+            margin-top: 17px;
+        }
+
+        h5 {
+            line-height: 30px;
+            color: rgb(34, 34, 34);
+            font-size: 16px;
+            text-align: left;
+        }
+
+        p {
+            line-height: 20px;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        p.bk {
+            color: #999;
+        }
+
+        p.cont {
+            color: #666;
+        }
+
+        .textindex1 {
+            text-indent: 1em;
+        }
+
+        .cont-h5 a h5:hover {
+            color: #0CA6F0;
+        }
+
+        .margincenter,
+        .downloadpart,
+        .bottom-btn,
+        .boardpart,
+        .table-part,
+        .cont-h5,
+        .floatpart {
+            margin: 0 auto;
+        }
+
+
+        /**/
+        .boardpart {
+            width: 1100px;
+            height: 262px;
+            margin-bottom: 60px;
+        }
+
+        .boardpart .leftpart {
+            width: 350px;
+        }
+
+        .leftpart img {
+            max-width: 100%
+        }
+
+        .rightpart {
+            width: 730px;
+        }
+
+        /*part2*/
+        .table-part {
+            width: 965px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(238, 238, 238);
+        }
+
+        .table-part table {
+            border: 0;
+            width: 95%;
+            margin: 18px auto;
+            table-layout: fixed;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .table-part td,
+        .table-part th {
+            height: 35px;
+            vertical-align: middle;
+            color: rgb(34, 34, 34);
+            font-size: 14px;
+            text-align: left;
+            padding-left: 2%;
+            padding-right: 1%;
+        }
+
+        .table-part thead th {
+            border-bottom: 1px solid rgb(207, 207, 207);
+            font-weight: bold;
+        }
+
+        .table-part td {
+            border-bottom: 1px solid rgb(238, 238, 238);
+        }
+
+        .table-part .first-td,
+        .table-part .third-td {
+            width: 10%;
+        }
+
+        .table-part .second-td {
+            width: 40%;
+        }
+
+        .table-part .forth-td {
+            width: 23%;
+        }
+
+        .table-part td.first-td,
+        .table-part td.third-td {
+            color: #666;
+        }
+
+        .cont-h5 {
+            width: 1081px;
+        }
+
+        .cont-h5-bold h5 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .cont-h5 h5 {
+            position: relative;
+        }
+
+        .cont-h5 h5:before {
+            content: "·";
+            position: absolute;
+            left: -15px;
+            top: 0;
+            height: 100%;
+        }
+
+        .floatpart {
+            width: 960px;
+        }
+
+        .floatpart ul {
+            overflow: hidden;
+        }
+
+        .floatpart li {
+            float: left;
+        }
+
+        .haslis5 li {
+            width: 20%;
+        }
+
+        .haslis4 li {
+            width: 25%;
+        }
+
+        .haslis3 li {
+            width: 33.3%;
+        }
+
+        .haslis2 li {
+            width: 50%;
+        }
+
+        .floatpart .icon-bg {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .floatpart img {
+            display: block;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+        }
+
+        .floatpart .icon-bg p {
+            text-align: center;
+        }
+
+        .downloadpart {
+            width: 1088px;
+        }
+
+        .downloadpart img {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .linegay {
+            height: 3px;
+            border-bottom: 1px solid rgb(238, 238, 238);
+        }
+
+        .bottom-btn {
+            width: 550px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .downloadbtn {
+            width: 260px;
+            height: 50px;
+            border-radius: 5px;
+            line-height: 50px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            text-align: center;
+
+        }
+
+        .greenbtn {
+            background-color: rgb(80, 227, 194);
+        }
+
+        .redbtn {
+            background-color: rgb(244, 124, 96);
+        }
+
+        .downloadbtn:hover {
+            opacity: .85;
+            filter: alpha(opacity=85);
+        }
+
+        .npi-video {
+            width: 834px;
+            height: 467px;
+        }
+
+        .npi-video iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mobile-search {
+            display: none;
+        }
+
+        body {
+            max-width: 100%;
+        }
+
+        .show-phone {
+            display: none;
+        }
+
+        .pi-footer.hidden-phone {
+            background-color: #f2f2f2;
+        }
+
+
+
+
+
+
+        @media (max-width: 1200px) {
+            body {
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            .banner {
+                min-width: 100%;
+                background-size: 1400px;
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+
+            .boardpart,
+            .cont-h5,
+            .table-part,
+            .floatpart,
+            .downloadpart {
+                width: 95%;
+            }
+
+            .boardpart {
+                height: auto;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
+
+            .boardpart .leftpart {
+                width: 30%;
+            }
+
+            .titlepart {
+                margin-top: 20px;
+            }
+
+            .rightpart {
+                width: 68%;
+            }
+
+            .npi-video {
+                max-width: 95%;
+            }
+
+            h4 {
+                margin-top: 0;
+            }
+
+            .pi-footer {
+                width: 100%;
+                min-width: 320px;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .table-part .second-td {
+                width: 30%;
+            }
+        }
+
+
+        @media (max-width: 769px) {
+            body {
+                max-width: 640px;
+            }
+
+            .banner {
+                background-size: 1000px;
+                height: 260px;
+            }
+
+            .titlepart {
+                background-size: 320px;
+                font-size: 20px;
+            }
+
+            .titlep07 {
+                background-size: 400px;
+            }
+
+            h4 {
+                font-size: 18px;
+            }
+
+            h5 {
+                line-height: 1.6;
+                font-size: 14px;
+            }
+
+            p {
+                line-height: 1.4;
+                font-size: 12px;
+            }
+
+            .table-part .third-td {
+                width: 12%;
+            }
+
+            .floatpart img {
+                max-width: 80%;
+            }
+
+            .downloadpart img {
+                max-width: 80%;
+            }
+
+            .bottom-btn {
+                width: 80%;
+            }
+
+            .downloadbtn {
+                max-width: 45%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 16px;
+            }
+
+            .activity-part,
+            .paddingB10-m {
+                padding-bottom: 10px;
+            }
+
+            .entrance-search {
+                float: none;
+            }
+
+            .mobile-search {
+                display: block;
+            }
+
+            .common-h-bottom {
+                display: none;
+                visibility: hidden;
+            }
+
+            .common-h-wper {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+        }
+
+        @media (max-width: 415px) {
+            .banner {
+                background-size: 600px;
+                height: 150px;
+            }
+
+            .titlepart {
+                margin: 10px auto 20px;
+                background-size: 260px;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .titlep07 {
+                background-size: 315px;
+            }
+
+            .boardpart .leftpart,
+            .rightpart {
+                width: 100%;
+            }
+
+            .boardpart .leftpart img {
+                max-width: 80%;
+                margin: 0 auto 20px;
+                display: block;
+            }
+
+            h4 {
+                font-size: 16px;
+            }
+
+            h5 {
+                line-height: 1.2;
+                margin-bottom: 10px;
+            }
+
+            .cont-h5-bold h5 {
+                margin-bottom: 3px;
+            }
+
+            .table-part {
+                overflow-x: scroll;
+            }
+
+            .table-part table {
+                width: 900px;
+            }
+
+            .npi-video {
+                height: 250px;
+            }
+
+            .bottom-btn {
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+
+            .downloadbtn {
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+            }
+
+            .cont-h5 {
+                width: 90%;
+            }
+
+            .marT40 {
+                margin-top: 20px;
+            }
+
+            .common-h-wper {
+                padding-bottom: 0;
+            }
+
+            .search-wrapper {
+                width: 100%;
+                height: 30px;
+            }
+
+            .hidden-phone {
+                display: none;
+            }
+
+            .show-phone {
+                display: block;
+            }
+
+
+
+        }
+
+        @media (max-width: 375px) {}
+
+        @media (max-width: 320px) {
+            .banner {
+                background-size: 500px;
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Common Header-->
+    <section class="common-h-wper">
+        <header class="common-h-outer" id="commonHeader">
+            <!--Logo-->
+            <section class="common-h-logo">
+                <a href="https://www.eefocus.com/" title="与非网">
+                    <img src="https://www.eefocus.com/asset/theme-eefocus/image/2019/logo-eefocus.svg"
+                        alt="eefocus logo">
+                </a>
+            </section>
+            <!--Search-->
+            <section class="common-h-search">
+                <form id="form1" action="https://search.eefocus.com/s" name="form1" target="_blank">
+                    <div class="common-input-group">
+                        <input type="hidden" name="app_id" value="1001">
+                        <input type="text" class="common-form-control" gtbfieldid="2" autocomplete="off" name="q"
+                            value="" maxlength="100" placeholder="请输入关键词进行搜索">
+                        <span class="common-input-group-btn">
+                            <button class="common-btn" type="submit" name="sub" value="1">搜索</button>
+                        </span>
+                    </div>
+                </form>
+            </section>
+        </header>
+    </section>
+    <!-- Common Header End -->
+
+
+
+
+    <div class="banner"></div>
+    <div class="main paddingB40">
+        <div class="titlepart titlep07">
+            三分钟快速了解视频
+        </div>
+        <div class="npi-video margincenter padding-t10">
+
+            <!-- 兼容性好 -->
+            <iframe id="cciframe_004B84FBDB91E8029C33DC5901307461"
+                src="https://p.bokecc.com/playhtml.bo?vid=004B84FBDB91E8029C33DC5901307461&siteid=2B8005D51B3FA744&autoStart=true&playerid=4EE267E5700FE6B9&playertype=1"
+                frameborder="0" height="490" width="600"></iframe>
+
+
+
+        </div>
+
+        <div class="marT40">
+            <a href="http://url.eefocus.com/63f" target="_blank">
+                <div class="margincenter downloadbtn greenbtn">了解更多详情</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="titlepart titlep01">
+            产品介绍
+        </div>
+        <div class="boardpart">
+            <div class="leftpart float_l">
+                <img
+                    src="https://upload.semidata.info/www.eefocus.com/ckeditor/images/QQ%E6%88%AA%E5%9B%BE20180917145139.png">
+            </div>
+            <div class="rightpart float_r">
+                <h4>Bosch BMI088高性能IMU（用于无人机/机器人）</h4>
+                <p class="bk">制造商：Bosch Sensortec</p>
+                <p class="cont">Bosch BMI088高性能惯性测量单元 (IMU) 专门设计用于无人机和机器人应用。该款6轴传感器在3 x 4.5 x
+                    0.95mm³小尺寸LGA封装中集成了16位三轴陀螺仪和16位三轴加速度计。该单元采用经过汽车验证的陀螺仪技术和全新的低TCO加速度计设计。BMI088经过汽车验证的陀螺仪具有无与伦比的偏置稳定性（低于2°/h）和低于15mdps/K的低温度系数偏移
+                    (TCO)。其他特性包括0.2mg/K的低TCO，以及在±24g的极宽测量范围内具有仅为230μg/√Hz的低频谱噪声。借助BMI088器件，即使在自然的高振动环境中也能更轻松地进行精确转向，因此改善了飞行和导航体验。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="bg02">
+        <div class="main padding-t10 paddingB40">
+            <div class="titlepart titlep02">
+                产品规格
+            </div>
+            <div class="table-part">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="first-td">产品属性</th>
+                            <th class="second-td">属性值</th>
+                            <th class="third-td">产品属性</th>
+                            <th class="forth-td">属性值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="first-td">制造商</td>
+                            <td class="second-td">Bosch</td>
+                            <td class="third-td">最大工作温度</td>
+                            <td class="forth-td">+ 85 C</td>
+                        </tr>
+                        <tr>
+                            <td class="first-td">产品种类</td>
+                            <td class="second-td">IMU-惯性测量单元</td>
+                            <td class="third-td">封装 / 箱体</td>
+                            <td class="forth-td">LGA-16</td>
+                        </tr>
+                        <tr>
+                            <td class="first-td">传感器类型</td>
+                            <td class="forth-td">6-axis</td>
+                            <td class="third-td">封装</td>
+                            <td class="forth-td">Cut Tape</td>
+                        </tr>
+                        <tr>
+                            <td class="first-td">传感轴</td>
+                            <td class="forth-td">X, Y, Z</td>
+                            <td class="third-td">封装</td>
+                            <td class="forth-td">MouseReel</td>
+                        </tr>
+                        <tr>
+                            <td class="first-td">灵敏度</td>
+                            <td class="second-td">1365 LSB/g, 16.4 LSB/deg/s</td>
+                            <td class="third-td">封装</td>
+                            <td class="forth-td">Reel</td>
+                        </tr>
+                        <tr>
+                            <td class="first-td">加速</td>
+                            <td class="second-td">3 g, 6 g, 12 g, 24 g</td>
+                            <td class="third-td">带宽</td>
+                            <td class="forth-td">8 Hz to 685 Hz</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">输出类型</td>
+                            <td class="second-td">Digital</td>
+                            <td class="third-td">系列</td>
+                            <td class="forth-td">BMI088</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">接口类型</td>
+                            <td class="second-td">I2C, SPI</td>
+                            <td class="third-td">商标</td>
+                            <td class="forth-td">Bosch Sensortec</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">分辨率</td>
+                            <td class="second-td">16 bit</td>
+                            <td class="third-td">产品类型</td>
+                            <td class="forth-td">IMUs - Inertial Measurement Units</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">工作电源电流</td>
+                            <td class="second-td">5.15 mA</td>
+                            <td class="third-td">工厂包装数量</td>
+                            <td class="forth-td">5000</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">电源电压-最小</td>
+                            <td class="second-td">2.4 V</td>
+                            <td class="third-td">子类别</td>
+                            <td class="forth-td">Sensors</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">电源电压-最大</td>
+                            <td class="second-td">3.6 V</td>
+                            <td class="third-td">零件号别名</td>
+                            <td class="forth-td">0273.141.365-INV</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first-td">最小工作温度</td>
+                            <td class="second-td">- 40 C</td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="main padding-t10 paddingB40">
+        <div class="titlepart titlep03">
+            产品特性
+        </div>
+        <div class="cont-h5 paddingB40 paddingB10-m">
+
+            <h5>出色的抗振性和抑制能力</h5>
+            <h5>可在较大的温度变化下保持稳定</h5>
+            <h5>经过汽车验证的低漂移陀螺仪和卓越的加速度计性能</h5>
+
+
+        </div>
+
+        <div class="titlepart titlep05">
+            系统框图
+        </div>
+        <div class="textcenter downloadpart">
+            <img src="https://upload.semidata.info/www.eefocus.com/ckeditor/images/QQ%E6%88%AA%E5%9B%BE20180914184237.png"
+                alt="">
+            <div class="linegay"></div>
+            <div class="bottom-btn marT40">
+                <a href="http://url.eefocus.com/63k" target="_blank">
+                    <div class="downloadbtn greenbtn float_l">数据表下载</div>
+                </a>
+                <a href="http://url.eefocus.com/63f" target="_blank">
+                    <div class="downloadbtn redbtn float_r">查询价格</div>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+    <!--Common Footer-->
+    </div>
+    <div class="common-footer-wrap">
+        <div class="container">
+            <div class="footer-logo-wrap">
+                <img src="https://www.eefocus.com/asset/theme-eefocus/image/2019/logo-eefocus-white.svg"
+                    alt="eefocus logo">
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="footer-area-left">
+                        <ul class="footer-wxcode-item clearfix">
+                            <li>
+                                <a href="javascript:;">公众号
+                                    <span>
+                                        <img src="https://www.eefocus.com/asset/theme-eefocus/image/2019/qrcode-wechat-public.png"
+                                            alt="公众号">
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">技术交流群
+                                    <span>
+                                        <img src="https://www.eefocus.com/asset/theme-eefocus/image/2019/qrcode-tech-communication-group.png"
+                                            alt="技术交流群">
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://weibo.com/eefocus" target="_blank" rel="external nofollow">与非网微博</a>
+                            </li>
+                        </ul>
+                        <p>© 2010 - 2019 苏州灵动帧格网络科技有限公司 版权所有.</p>
+                    </div>
+                </div>
+                <div class="col-md-7 clearfix">
+                    <ul class="footer-area-right pull-right clearfix">
+                        <li>
+                            <h6>Supplyframe 旗下</h6>
+                            <a href="https://www.eefocus.com" target="_blank">与非网</a>
+                            <a href="https://www.cirmall.com" target="_blank" rel="external nofollow">电路城</a>
+                            <a href="https://www.moore8.com" target="_blank" rel="external nofollow">摩尔吧</a>
+                            <a href="https://www.datasheet5.com" target="_blank" rel="external nofollow">Datasheet5</a>
+                            <a href="https://www.findchips.com" target="_blank" rel="external nofollow">FindChips</a>
+                            <a href="https://www.bom2buy.com/" target="_blank" rel="external nofollow">bom2buy</a>
+                        </li>
+                        <li>
+                            <h6>合作机构</h6>
+                            <a href="http://www.cecport.com/" target="_blank" rel="external nofollow">中电港</a>
+                            <a href="http://www.eetop.cn" target="_blank" rel="external nofollow">EETOP</a>
+                            <a href="http://www.cecb2b.com/" target="_blank" rel="external nofollow">元器件交易网</a>
+                            <a href="https://www.arrow.com/" target="_blank" rel="external nofollow">艾睿电子</a>
+                            <a href="https://www.pulserain.com" target="_blank" rel="external nofollow">PulseRain</a>
+                        </li>
+                        <li>
+                            <h6>友情链接</h6>
+                            <a href="http://www.datasheet.net/" target="_blank"
+                                rel="external nofollow">Datasheet.net</a>
+                            <a href="http://www.iceasy.com/" target="_blank" rel="external nofollow">iCEasy</a>
+                            <a href="http://www.chinaaet.com/" target="_blank" rel="external nofollow">电子技术应用</a>
+                            <a href="http://www.eechina.com/" target="_blank" rel="external nofollow">电子工程网</a>
+                            <a href="http://www.sunplusedu.com/" target="_blank" rel="external nofollow">凌阳教育</a>
+                            <a href="http://www.myir-tech.com/" target="_blank" rel="external nofollow">米尔科技</a>
+                            <a href="https://www.hqew.com/" target="_blank" rel="external nofollow">华强电子网</a>
+                            <a href="https://www.eefocus.com/page/link" target="_blank">更多</a>
+                        </li>
+                        <li>
+                            <h6>关于我们</h6>
+                            <a href="https://www.eefocus.com/corp/aboutEefocus.html" target="_blank">公司介绍</a>
+                            <a href="https://www.eefocus.com/corp/contact.html" target="_blank">联系我们</a>
+                            <a href="https://www.eefocus.com/corp/EefocusHr.html" target="_blank">加入我们</a>
+                            <a href="https://www.eefocus.com/corp/OnlineService.html" target="_blank">客户服务</a>
+                            <a href="https://www.eefocus.com/corp/law.html" target="_blank">相关法律</a>
+                            <a href="https://www.eefocus.com/corp/map.html" target="_blank">网站地图</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="common-footer-outer">
+            <ul>
+                <li>ICP经营许可证 苏B2-20140176</li>
+                <li>
+                    <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">苏ICP备14012660号-6</a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001874"
+                        rel="external nofollow">
+                        <img
+                            src="https://upload.semidata.info/sns.eefocus.com/freescale/article/media/2016/04/12/331491.png">
+                        <span style="padding-left: 8px;">苏公网安备 32059002001874号</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Common Footer End-->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1502657-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['new._setAccount', 'UA-31944875-8']);
+        _gaq.push(['new._trackPageview']);
+        _gaq.push(['new._setAccount', 'UA-31944875-10']);
+        _gaq.push(['new._trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol +
+            "hm.baidu.com/h.js%3F644a837956e91928688d4a74b9917d47' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <!-- supplyframe tag tracking code -->
+    <script type="text/javascript">
+        (function () {
+            window._pa = window._pa || {};
+            var pa = document.createElement('script');
+            pa.type = 'text/javascript';
+            pa.async = true;
+            pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') +
+                "//tag.perfectaudience.com/serve/5499aafcda37a38c5f0000b5.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(pa, s);
+        })();
+    </script>
+    <!-- end tracking code -->
+
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+    <!-- track for url.eefocus.com for PI short links -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var _pi = document.getElementsByClassName('widget-PI专区');
+            if (_pi) {
+                var _pi_a = _pi[0];
+                if (_pi_a) {
+                    var _pageLinks = _pi[0].getElementsByTagName('a');
+                    for (var i = 0; i < _pageLinks.length; i++) {
+                        _pageLinks[i].onclick = function () {
+                            var url = this.toString() || '';
+                            if (url.indexOf('url.eefocus.com') != -1) {
+                                _gaq.push(['new._trackPageview', url]);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1502657-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['new._setAccount', 'UA-31944875-8']);
+        _gaq.push(['new._trackPageview']);
+        _gaq.push(['new._setAccount', 'UA-31944875-10']);
+        _gaq.push(['new._trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol +
+            "hm.baidu.com/h.js%3F644a837956e91928688d4a74b9917d47' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <!-- supplyframe tag tracking code -->
+    <script type="text/javascript">
+        (function () {
+            window._pa = window._pa || {};
+            var pa = document.createElement('script');
+            pa.type = 'text/javascript';
+            pa.async = true;
+            pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') +
+                "//tag.perfectaudience.com/serve/5499aafcda37a38c5f0000b5.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(pa, s);
+        })();
+    </script>
+    <!-- end tracking code -->
+
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+    <!-- track for url.eefocus.com for PI short links -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var _pi = document.getElementsByClassName('widget-PI专区');
+            if (_pi) {
+                var _pi_a = _pi[0];
+                if (_pi_a) {
+                    var _pageLinks = _pi[0].getElementsByTagName('a');
+                    for (var i = 0; i < _pageLinks.length; i++) {
+                        _pageLinks[i].onclick = function () {
+                            var url = this.toString() || '';
+                            if (url.indexOf('url.eefocus.com') != -1) {
+                                _gaq.push(['new._trackPageview', url]);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

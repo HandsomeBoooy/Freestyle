@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .jigsaw-container {
+            width: 449px;
+            height: 466px;
+            position: relative;
+            margin: auto;
+            border: solid 1px #dddddd;
+        }
+
+        .jigsaw-01,
+        .jigsaw-02,
+        .jigsaw-03,
+        .jigsaw-04,
+        .jigsaw-05,
+        .jigsaw-06,
+        .jigsaw-07 {
+            position: absolute;
+        }
+
+        .jigsaw-07 {
+            top: calc((466px - 157px) / 2);
+            left: calc((449px - 180px) / 2);
+        }
+
+        .jigsaw-01 {
+            top: 78px;
+            left: -1px;
+            z-index: 2;
+        }
+
+        .jigsaw-02 {
+            top: 0;
+            left: 133px;
+            z-index: 2;
+        }
+
+        .jigsaw-03 {
+            top: 76.5px;
+            left: 268.5px;
+            z-index: 2;
+        }
+
+        .jigsaw-04 {
+            top: 215px;
+            left: 268.5px;
+            z-index: 2;
+        }
+
+        .jigsaw-05 {
+            top: 292px;
+            left: 134px;
+            z-index: 2;
+        }
+
+        .jigsaw-06 {
+            top: 233px;
+            left: 0px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root-container">
+        <div class="jigsaw-container">
+            <img class="jigsaw-01" src="./assets/images/jigsaw-01.png" alt="">
+            <img class="jigsaw-02" src="./assets/images/jigsaw-02.png" alt="">
+            <img class="jigsaw-03" src="./assets/images/jigsaw-03.png" alt="">
+            <img class="jigsaw-04" src="./assets/images/jigsaw-04.png" alt="">
+            <img class="jigsaw-05" src="./assets/images/jigsaw-05.png" alt="">
+            <img class="jigsaw-06" src="./assets/images/jigsaw-06.png" alt="">
+            <img class="jigsaw-07" src="./assets/images/jigsaw-07.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
