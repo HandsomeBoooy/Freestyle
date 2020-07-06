@@ -1,0 +1,30 @@
+/**
+Global Variables
+*/
+$colors: (
+    black: #000000,
+    white: #ffffff,
+    boschTitle: #EA0016,
+    input_label: #101010
+);
+
+$font_size: (
+    main_para: 14px,
+    para_title: 20px
+);
+
+/**
+Global Classes
+*/
+.inline-M {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bosch-name {
+    color: map-get($map: $colors, $key: boschTitle);
+}
+
+*.pull-right {
+    float: right;
+}

@@ -1,0 +1,6 @@
+@import '../../assets/global.scss';
+div {
+    color: map-get($colors, black);
+    font-size: map-get($font_size, para_title);
+    // color: #eeeeee;
+}
