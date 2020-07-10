@@ -10,6 +10,10 @@ export class UserService{
             url: UserRouter.login.url,
             method: UserRouter.login.method,
             data,
+            headers: {
+                'apikey': 'rjpF9z4Q07BHT5i',
+                'Access-control-allow-Origin': '*'
+            }
         });
     }
 }

@@ -30,7 +30,7 @@
     "js-cookie": "^2.2.1",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10",
-    "vuex": "^3.4.0"
+    "vuex": "^3.5.1"
   },
   "eslintConfig": {
     "root": true,

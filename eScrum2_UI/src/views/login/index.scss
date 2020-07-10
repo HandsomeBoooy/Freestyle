@@ -32,6 +32,18 @@ $common-hint-font: 12px;
     
     .login-card-container {
         margin-top: 200px;
+
+        .dx-card {
+            padding-bottom: 15px;
+
+            .version-info-container {
+                width: 100%;
+                line-height: 15px;
+                color: rgba(206, 206, 206, 1);
+                font-size: 12px;
+                text-align: center;
+            }
+        }
     }
     .dx-field.dx-field-container {
         margin-bottom: 0;

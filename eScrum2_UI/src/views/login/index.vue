@@ -16,7 +16,7 @@
         </div>
 
         <div class="dx-field">
-          <dx-text-box placeholder="" width="100%" :value.sync="login">
+          <dx-text-box placeholder="" width="100%" :value.sync="uid">
             <dx-validator>
               <dx-required-rule message="Login is required" />
             </dx-validator>
@@ -31,7 +31,7 @@
             placeholder=""
             width="100%"
             mode="password"
-            :value.sync="password"
+            :value.sync="pwd"
           >
             <dx-validator>
               <dx-required-rule message="Password is required" />
@@ -40,7 +40,7 @@
         </div>
 
         <div class="dx-field">
-          <dx-check-box class="common-hint-text" :value.sync="rememberUser" text="Remember me" />
+          <dx-check-box class="common-hint-text" :value.sync="rememberUser" text="Remember me"/>
         </div>
 
         <div class="dx-field">
@@ -53,12 +53,16 @@
         </div>
 
         <div class="dx-field">
+          <p class="version-info-container">v2.0.0&nbsp;&nbsp;&nbsp;&nbsp;Updated on 2020/06/01</p>
+        </div>
+
+        <!-- <div class="dx-field">
           <router-link to="/recovery"><a>Forgot password ?</a></router-link>
         </div>
 
         <div class="dx-field">
           <dx-button type="default" text="Create an account" width="100%" />
-        </div>
+        </div> -->
     </dx-validation-group>
     </div>
   </div>
@@ -82,49 +86,43 @@ export default {
   data() {
     return {
       title: this.$appInfo.title,
-      login: "",
-      password: "",
+      uid: "",
+      pwd: "",
       rememberUser: false,
       userService: null
     };
   },
   methods: {
     onLoginClick(e) {
-      if (!e.validationGroup.validate().isValid) {
-        return;
-      }
-
-      auth.logIn();
-      this.$router.push(this.$route.query.redirect || "/home");
-
-      e.validationGroup.reset();
+      this.userService.login({
+        "uid": this.uid,
+        "pwd": btoa(this.pwd.toString())
+      }).then(res => {
+        if (res.data.SAMAccountName.length && res.data.SAMAccountName.toLowerCase() === this.uid.toLowerCase()) {
+          this.$router.push(this.$route.query.redirect || "/home");
+        }
+      }).catch(err => {
+        console.log(err);
+      });
     },
-
-    uploadFile($ev) {
-      let file = $ev.target.files[0];
-      let reader = new FileReader();
-      reader.onloadend = event => {
-        debugger;
-        console.log(event.target)
-      }
-      reader.readAsArrayBuffer(file);
-    },
-
-    dxUploadStarted($ev) {
-      let files = arguments[0].value;
-      debugger;
-      console.log(files[0], files[0].getAsDataURL());
-    },
-
-    fileManager_customizeDetailColumns(columns) {
-      console.log(columns);
-      return columns;
-    }
   },
   created() {
     this.userService = new UserService();
     // this.userService.login();
-    this.userService.login({});
+    if (Boolean(window.localStorage.getItem('pms_remember_status'))) {
+      this.uid = window.localStorage.getItem('nt_account');
+      this.pwd = window.localStorage.getItem('password');
+      this.rememberUser = Boolean(window.localStorage.getItem('pms_remember_status'));
+    }
+  },
+  watch: {
+    rememberUser(newVal, preVal) {
+      if (Boolean(newVal)) {
+        window.localStorage.setItem('pms_remember_status', Number(newVal));
+        window.localStorage.setItem('nt_account', this.uid);
+        window.localStorage.setItem('password', this.pwd);
+      }
+    }
   },
   components: {
     DxButton,

@@ -4,7 +4,7 @@ import './themes/generated/theme.additional.css';
 import Vue from "vue";
 
 import App from "./App";
-import router from "./router/router";
+import router from "./config/router";
 import appInfo from "./app-info";
 
 Vue.config.productionTip = false;
