@@ -227,6 +227,25 @@ export const Customers = [
     }
 ];
 
+export const CustomerList = [
+    {
+        id: 1,
+        name: 'MercedesBenz',
+        project_name: 'BENZ',
+        parent_id: 0
+    }, {
+        id: 2,
+        name: 'GEELY',
+        project_name: 'GEELY',
+        parent_id: 0
+    }, {
+        id: 3,
+        name: 'RBAC',
+        project_name: 'RBAC',
+        parent_id: 0
+    }
+]
+
 export const tasks = [{
     'Task_ID': 8,
     'Task_Assigned_Employee_ID': 6,

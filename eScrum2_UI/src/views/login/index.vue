@@ -94,16 +94,17 @@ export default {
   },
   methods: {
     onLoginClick(e) {
-      this.userService.login({
-        "uid": this.uid,
-        "pwd": btoa(this.pwd.toString())
-      }).then(res => {
-        if (res.data.SAMAccountName.length && res.data.SAMAccountName.toLowerCase() === this.uid.toLowerCase()) {
-          this.$router.push(this.$route.query.redirect || "/home");
-        }
-      }).catch(err => {
-        console.log(err);
-      });
+      // this.userService.login({
+      //   "uid": this.uid,
+      //   "pwd": btoa(this.pwd.toString())
+      // }).then(res => {
+      //   if (res.data.SAMAccountName.length && res.data.SAMAccountName.toLowerCase() === this.uid.toLowerCase()) {
+      //     this.$router.push(this.$route.query.redirect || "/home");
+      //   }
+      // }).catch(err => {
+      //   console.log(err);
+      // });
+      this.$router.push(this.$route.query.redirect || "/home");
     },
   },
   created() {
