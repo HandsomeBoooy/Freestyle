@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="body" style="overflow: hidden; height: 100%;">
+        <div style="position:fixed;z-index:-100; left:0px; top:2%; width:100%; height:100%">
+            <img src="/static/img/audit.png" width="100%" height="98%" />
+        </div>
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend class="textstyle">Audit Meeting</legend>
+        </fieldset>
+        <div style="height:60px" class="layui-row">
+            <ul class="steps">
+                <li> <button id="overview" type="button" class="layui-btn iconbutton" title="Audit Introduction"
+                        style="background-color:rgb(0,112,192);font-size:9px;line-height:15px">
+                        Process<br>Introduction
+                    </button></li>
+                <li><button type="button" class="layui-btn iconbutton"
+                        style="font-size:12px;line-height:15px;background-color:#78be20">Self<br>Review</button></li>
+                <li><button type="button" class="layui-btn iconbutton"
+                        style="font-size:12px;line-height:15px;background-color:#512772">Review<br>Meeting</button></li>
+                <li><button type="button" class="layui-btn iconbutton"
+                        style="font-size:12px;line-height:15px">Close</button></li>
+                <li><button type="button" class="layui-btn iconbutton"
+                        style="font-size:12px;line-height:15px">OPL</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-row main-block" style="margin-left:3%;margin-right:3%;margin-top:1%;">
+            <div class="layui-inline" style="width:250px;">
+                <div class="selectorstyletext">Department</div>
+                <div class="layui-form">
+                    <select id="selectDepartment" lay-filter="selectDepartment" data-type="reload" lay-search>
+                        <option th:each="d:${departmentList}" th:value="${d}" th:text="${d}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline" style="float:right;line-height:80px">
+                <button type="button" id="selfcheckresult" class="layui-btn"
+                    style="background-color:rgb(237,125,49);margin-left:10px;">Self-Check
+                    Result</button>
+            </div>
+            <div class="layui-inline" style="float:right;line-height:80px">
+                <button type="button" id="onsite1" class="layui-btn" style="background-color:rgb(237,125,49);">On-site
+                    Check
+                    Result</button>
+            </div>
+            <table class="layui-hide" id="checklist" lay-filter="checklist"></table>
+            <div class="myfooter">
+
+                <div class="layui-inline" style="float:left">
+                    <button type="button" id="submitButton" class="layui-btn"
+                        style="background-color:rgb(0,112,192);float:right">Save Report</button>
+                </div>
+                <div class="layui-inline" style="float:right">
+                    <button type="button" id="opl1" class="layui-btn"
+                        style="background-color:rgb(0,176,80);margin-left:10px">OPL
+                        Registration</button>
+                </div>
+                <div class="layui-inline" style="float:right">
+                    <button type="button" id="finish1" class="layui-btn" style="background-color:#000;">Close Base
+                        Audit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="selectEvaluation">
+        <select name="evaluation" lay-filter="selectEvaluation"  data-value="{{d.evaluation}}">
+               <option value="">please select.....</option>
+               <option value="0">Ok</option>
+               <option value="1">Ok + hints</option>
+               <option value="2">Minor non confirmities</option>
+               <option value="3">Major non confirmities</option>
+               <option value="4">Confirmation required</option>
+               <option value="5">Not applicable</option>
+        </select>
+    </script>
+
+    <script type="text/javascript" th:inline="javascript">
+        layui.use(['form', 'layer', 'jquery', 'element', 'table'], function () {
+            var $ = layui.jquery,
+                layer = layui.layer,
+                element = layui.element,
+                table = layui.table,
+                form = layui.form;
+
+            var tableList = []
+
+
+            function loaddata(department) {
+                table.render({
+                    elem: '#checklist',
+                    url: `/getCheckList?department=${department}`,
+                    id: 'auditchecklist',
+                    title: 'check table',
+                    toolbar: 'default',
+                    height: 'full-350',
+
+                    done: function (res, curr, count) {
+                        var that = this.elem.next();
+                        tableList = res.data;
+                        console.log(res.data)
+                        res.data.forEach(function (item, index) {
+                            if (index % 2 == 0) {
+                                var tr = that.find(".layui-table-box tbody tr[data-index='" + index + "']").css("background-color", "#eff2f3");
+                            } else {
+                                var tr = that.find(".layui-table-box tbody tr[data-index='" + index + "']").css("background-color", "#E4E5E5");
+                            }
+                            let selector = that.find(".layui-table-box tbody tr[data-index='" + index + "']").find("td div.layui-table-cell div.layui-form-select")
+                            selector[0].parentNode.children[0].value = item.evaluation
+                        })
+
+                        form.render('select')
+                        res.data.forEach(function (item, index) {
+                            let selector = that.find(".layui-table-box tbody tr[data-index='" + index + "']").find("td div.layui-table-cell div.layui-form-select")
+                            selector.addClass(`selector-${item.id}`)
+
+                        })
+
+                        // layui.each($('select'), function (index, item) {
+                        //     var elem = $(item);
+                        //        console.log(elem.val(elem.data('value')).parents('div.layui-table-cell'))
+                        //     elem.val(elem.data('value')).parents('div.layui-table-cell').css('overflow', 'visible');
+                        // });
+                    },
+                    cols: [
+                        [
+                            { title: 'Question', colspan: 4, align: 'center' },
+                            { title: 'Answer', colspan: 2, align: 'center' },
+                            { field: 'evaluation', title: 'Evaluation', rowspan: 2, templet: '#selectEvaluation' },
+                            { field: 'nonconformity', edit: 'text', title: 'Non-Conformity', rowspan: 2 },
+                        ],
+                        [
+                            { field: 'oldnumber', title: 'TISAX 4.0', align: 'center', width: 60 },
+                            { field: 'newnumber', title: 'TISAX 5.0', align: 'center', width: 60 },
+                            { field: 'question', title: 'Question' },
+                            { field: 'interviewee', title: 'Interviewee', align: 'center', width: 120 },
+                            { field: 'answer', edit: 'text', title: 'Answer', style: "color: #1F4E78" },
+                            { field: 'evidence', edit: 'text', title: 'Evidence' }
+                        ]
+                    ]
+                });
+            }
+
+            var answerMap = {}
+            var evidenceMap = {}
+            var nonconformityMap = {}
+            var evaluationMap = {}
+
+            function resetMaps() {
+                answerMap = {}
+                evidenceMap = {}
+                nonconformityMap = {}
+                evaluationMap = {}
+            }
+            table.on('edit(checklist)', function (obj) {
+                var value = obj.value //Ã¥Â¾â€”Ã¥Ë†Â°Ã¤Â¿Â®Ã¦â€�Â¹Ã¥ï¿½Å½Ã§Å¡â€žÃ¥â‚¬Â¼
+                    , data = obj.data //Ã¥Â¾â€”Ã¥Ë†Â°Ã¦â€°â‚¬Ã¥Å“Â¨Ã¨Â¡Å’Ã¦â€°â‚¬Ã¦Å“â€°Ã©â€�Â®Ã¥â‚¬Â¼
+                    , field = obj.field; //Ã¥Â¾â€”Ã¥Ë†Â°Ã¥Â¬â€”Ã¦Â®Âµ
+                if (field == "answer") {
+                    answerMap[data.id] = value;
+                }
+                if (field == "evidence") {
+                    evidenceMap[data.id] = value;
+                }
+                if (field == "nonconformity") {
+                    nonconformityMap[data.id] = value;
+                }
+            })
+
+            form.on('select(selectEvaluation)', (obj) => {
+                const value = obj.value;
+                const classList = obj.othis.attr("class").split(" ")
+                const myclassName = classList.filter(d => {
+                    return d.includes("selector")
+                })[0]
+                const id = parseInt(myclassName.split("-")[1])
+                //console.log(id, value)
+                evaluationMap[id] = value
+                form.render(undefined, 'selectEvaluation')
+            })
+
+            // $("#selectDepartment").change(function () {
+            //     console.log("aa")
+            //     alert($("#selectDepartment option:selected").val());
+            // });
+            var department = $('#selectDepartment').val();
+            form.on('select(selectDepartment)', function (data) {
+                department = $('#selectDepartment').val();
+                loaddata(department)
+            })
+
+            $("#submitButton").on("click", function () {
+                layer.confirm('<div style="font-size:16px">Save Success!</div>', {
+                    title: '<div style="font-size:16px;">Info</div>',
+                    icon: 0,
+                    area: ['20%', '20%'],
+                    btn: ["OK"],
+                    btnAlign: 'c'
+                }, function (index) {
+                    let department = $('#selectDepartment').val();
+                    layer.close(index)
+                    $.ajax({
+                        url: `/submitCheckList?department=${department}`,
+                        data: JSON.stringify({
+                            "answer": answerMap,
+                            "evidence": evidenceMap,
+                            "evaluation": evaluationMap,
+                            "nonconformity": nonconformityMap,
+                        }),
+                        dataType: 'json',
+                        contentType: 'application/json;charset=UTF-8',
+                        type: 'post',
+                        success: function (data) {
+                            resetMaps()
+                            console.log("success")
+                            if (!data.isLogin) {
+                                layer.alert("please login first", {
+                                    skin: 'layui-layer-lan',
+                                    title: "info",
+                                    btn: ["OK"]
+                                }, function () {
+                                    location.href = "/index"
+                                })
+                            }
+                            if (!data.Access) {
+                                layer.alert("You do not have the access to usb check", {
+                                    skin: 'layui-layer-lan',
+                                    title: "info",
+                                    btn: ["OK"]
+                                })
+                            } else {
+                                console.log("test")
+                                loadData(department);
+                            }
+                        },
+                        failure: function () {
+                            resetMaps()
+                            layer.alert('server error', {
+                                icon: 2,
+                                skin: 'layer-ext-moon',
+                                btn: ["OK"],
+                                title: "error"
+                            }, function () {
+                                location.href = "/";
+                            })
+                        }
+                    })
+                }
+                )
+            })
+            loaddata(department)
+            form.render()
+            // table.on('row(checklist)', function (obj) {
+            //     var data = obj.data;
+            //     layer.alert(JSON.stringify(data).replace(/,/g, "<br/>").replace(/"/g, ' ').replace(/{/g, ' ').replace(/}/g, ' ').replace(/\n/g, ' '), {
+            //            title: 'Current Row',
+            //            area: '500px',
+
+            //     });
+
+            //     obj.tr.addClass('layui-table-click').siblings().removeClass('layui-table-click');
+            // });
+
+
+            $('#onsite1').click(function () {
+                $('.layui-body').load('/onsitecheck')
+            });
+            $('#opl1').click(function () {
+                $('.layui-body').load('/oplregistration')
+            });
+            $('#finish1').click(function () {
+                $('.layui-body').load('/finishpage')
+            });
+            $('#selfcheckresult').click(function () {
+                $('.layui-body').load('/departmentselfcheck')
+            });
+        })
+    </script>
+
+</body>
+
+</html>
