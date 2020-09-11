@@ -9,3 +9,7 @@ export const deepCopy = obj => {
     }
     return res;
 }
+
+export const getCurrentChineseDate = () => {
+        return new Date().toLocaleString('ja-JP-u-ca-chinese');
+}
